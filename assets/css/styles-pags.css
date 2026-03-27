@@ -1,0 +1,135 @@
+figure img{
+    width: 200px;
+    height: 200px;
+    border-radius: 15px 15px 0 0;
+}
+
+.container-produtos{
+    max-width: 1450px;
+    display: flex;
+    flex-direction: column;
+    margin: 20px auto;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.produtos{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: 35px;
+    gap: 40px;
+}
+
+.produtos-img_fundo{
+    background-color:  #FFF2F1;
+    border-radius:  15px;
+    padding-bottom: 20px;
+    box-shadow: 0 0 10px #00000084;
+    max-width: 200px;
+    transition: 1s;
+}
+
+.produtos-img_fundo:hover{
+    transform: scale(1.10);
+}
+
+.ocultar {
+  display: none;
+}
+
+#verMaisBtn{
+    background-color: #4F2819;
+    border: none;
+    border-radius: 14px;
+    padding: 14px;
+    width: 120px;
+    color: #fff;
+    margin: 20px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+#verMaisBtn:hover{
+    background-color: #632f1b;
+}
+
+.textos-produto, .before_figcaption{
+display: flex;
+flex-direction: column;
+margin: 2px 10px;
+text-align: left;
+}
+
+.before_figcaption{
+    padding: 0 2px 0;
+    color: #4F2819;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.tracinho{
+  width: 30px;
+  height: 5px;
+  background-color: #853617; 
+  border-radius: 4px;
+  float: left;
+  margin-left: 8px;
+}
+
+.descricao{
+padding: 0 10px;
+text-align: left;
+margin-top: 5px;
+font-size: 15px;
+}
+
+
+.produtos-img_fundo-pronto{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background-color:  #fcd5d1;
+    border-radius:  75px;
+    padding-bottom: 20px;
+    box-shadow: 0 0 8px #0000009f;
+    max-width: 210px;
+    transition: 1s;
+    border: #853617 solid 1px;
+ 
+}
+
+.produtos-img_fundo-pronto:hover{
+    transform: scale(1.10);
+     background-color:  #f7c0bb;
+}
+
+
+
+.produtos-img_fundo-pronto img{
+    width: 210px;
+    height: 210px;
+    border-radius: 15px;
+    margin-top: 15px;
+}
+
+.textos-produto-p{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+margin: 10px;
+text-align: center;
+}
+
+
+.descricao-p{
+padding: 0 10px;
+text-align: center;
+margin-top: 5px;
+}
+

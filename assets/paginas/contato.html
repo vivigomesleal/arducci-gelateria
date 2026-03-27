@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=ABeeZee&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/responsive.css">
+  <link rel="stylesheet" href="../css/styles.css">
+<title>Gelateria Havana</title>
+</head>
+
+<body>
+    
+    <div class="btn-delivery">
+  <a href="https://www.instagram.com/gelateriahavanapg/" 
+     target="_blank" 
+     rel="noopener noreferrer" 
+     aria-label="Acesse nosso Instagram (abre em nova aba)">
+    <img src="/assets/images/instagram_fixo.svg" alt="INSTAGRAM">
+  </a>
+</div>
+
+  <!-- Navbar desktop -->
+  <header class="navbar">
+    <div class="logo">
+      <img src="../images/logo-havana.png" alt="">
+    </div>
+
+    <nav class="nav-links">
+      <ul>
+        <li><a href="/index.html">Início</a></li>
+        <li>
+         <div class="dropdown">
+           <button class="dropbtn"id="btndrop-desktop"aria-expanded="false"aria-controls="dropdown-desktop">
+           Cardápio 
+          <i class="fa fa-caret-down" aria-hidden="true"></i>
+          </button>
+            <nav id="dropdown-desktop" class="dropdown-content">
+              <a href="/assets/paginas/gelatos.html">Gelatos</a>
+              <a href="/assets/paginas/picoles.html">Picolés</a>
+              <a href="/assets/paginas/paletas.html">Paletas</a>
+              <a href="/assets/paginas/outros.html">Outros</a>
+            </nav>
+          </div>
+        </li>
+        <li><a href="/index.html#sobre">Sobre</a></li>
+        <li><a href="#">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+  <!-- Navegação mobile -->
+  <nav class="menu-responsivo">
+    <div class="separando-logos">
+      <div class="logo">
+        <img src="/assets/images/logo-havana.png" alt="">
+      </div>
+      <div class="menu" id="icon-menu"><i class="fas fa-bars"></i></div>
+    </div>
+
+    <div class="navegacao-responsivo" id="links-nav">
+      <ul>
+        <li><a href="/index.html">Início</a></li>
+        <li>
+          <div class="dropdown">
+            <button class="dropbtn" id="btndrop-mobile">
+              Cardápio <i class="fa fa-caret-down"></i>
+            </button>
+            <nav id="dropdown-mobile" class="dropdown-content">
+              <a href="/assets/paginas/gelatos.html">Gelatos</a>
+              <a href="/assets/paginas/picoles.html">Picolés</a>
+              <a href="/assets/paginas/paletas.html">Paletas</a>
+              <a href="/assets/paginas/outros.html">Outros</a>
+            </nav>
+          </div>
+        </li>
+        <li><a href="/index.html#sobre">Sobre</a></li>
+        <li><a href="#">Contato</a></li>
+      </ul>
+    </div>
+  </nav>
+
+
+ <section class="formulario">
+  <div class="form1">
+    <h1>Fale conosco</h1>
+    <p class="texto">Entre em contato. Deixe uma mensagem e ficaremos felizes em respondê-la.</p>
+    <span style="color:#A00; font-size:1rem; margin: 10px;">* Indica campo obrigatório.</span>
+
+    <div class="mensage">
+      <form id="contactForm" action="https://formsubmit.co/assessoria.vivigomes@gmail.com" method="post">
+        
+        <fieldset> 
+          <legend>Dados de Contato</legend> 
+          
+          <!-- CAMPO NOME -->
+          <label for="Nome">Nome <span aria-hidden="true">*</span></label>
+          <input type="text" id="Nome" name="Nome" required 
+                 autocomplete="name" 
+                 aria-required="true"
+                 aria-describedby="nome-error"> 
+          <span id="nome-error" class="error-message" role="alert" style="display:none;">Campo Nome é obrigatório.</span>
+
+          <!-- CAMPO TELEFONE -->
+          <label for="tel">Telefone</label>
+          <input type="tel" id="tel" name="tel" 
+                 autocomplete="tel" 
+                 aria-describedby="tel-error">
+          <span id="tel-error" class="error-message" role="alert" style="display:none;"></span>
+
+          <!-- CAMPO E-MAIL -->
+          <label for="email">E-mail <span aria-hidden="true">*</span></label>
+          <input type="email" id="email" name="email" required 
+                 autocomplete="email" 
+                 aria-required="true"
+                 aria-describedby="email-error">
+          <span id="email-error" class="error-message" role="alert" style="display:none;">Campo E-mail é obrigatório e deve ser um endereço válido.</span>
+        </fieldset> 
+        
+        <fieldset> 
+          <legend>Mensagem</legend> 
+          
+          <!-- CAMPO MENSAGEM: Alterado para TEXTAREA -->
+          <label for="msg">Mensagem <span aria-hidden="true">*</span></label>
+          <textarea id="msg" name="msg" required 
+                    rows="5" cols="40" 
+                    aria-required="true" 
+                    aria-describedby="msg-error"></textarea>
+          <span id="msg-error" class="error-message" role="alert" style="display:none;">Campo Mensagem é obrigatório.</span>
+        </fieldset> 
+        
+        <!-- Botão alterado para type="submit" e adicionado aria-live para feedback -->
+        <button type="submit" class="botao">Enviar</button> 
+      </form> 
+      
+      <!-- Modal de Confirmação --> 
+      <div id="confirmationModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.5); z-index:1000;"> 
+        <div id="modalContent" tabindex="-1" style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); background:#FFBBB5; padding:20px; border-radius:15px;"> 
+          <h3 id="modalTitle" style="font-size: 20px;">Confirme seus dados</h3> 
+          <p id="summary" aria-live="assertive"></p> 
+          <!-- CORREÇÃO APLICADA AQUI: Passamos o ID 'contactForm' para a função -->
+          <button class="botao" onclick="submitFormAsync('contactForm')">Confirmar e Enviar</button> 
+          <button  class="botao" onclick="closeModal()">Cancelar</button> 
+        </div> 
+      </div> 
+    </div> 
+  </div>
+</section>
+
+
+  <div class="contato-icons">
+    <a href="mailto:Contato@gelateriahavana.com.br" class="icone-contato" aria-label="Enviar email">
+      <div class="icone-bg">
+      <i class="fas fa-envelope"></i>
+      </div>
+      <span>Email</span>
+    </a>
+
+    <a href="https://wa.me/+5513981739220" class="icone-contato" target="_blank"
+      aria-label="Enviar mensagem pelo WhatsApp">
+      <div class="icone-bg">
+        <i class="fab fa-whatsapp"></i>
+      </div>
+      <span>WhatsApp</span>
+    </a>
+
+    <a href="https://www.instagram.com/gelateriahavanapg?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+      class="icone-contato" aria-label="Entre em contato pelo instagram">
+      <div class="icone-bg">
+      <i class="fab fa-instagram"></i>
+      </div>
+      <span>instagram</span>
+    </a>
+
+  </div>
+ <div>
+    <a href="https://wa.me/+5513981739220"><button class="btn-forncedor">Seja um Fornecedor </button></a>
+  </div>
+  </div>
+  </section>
+
+  <!--Mapa-->
+  
+  <div class="mapa">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3644.129015843634!2d-46.46864582388523!3d-24.026515178847497!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce1e599b180335%3A0x50d77fd10764599e!2sGelateria%20Havana!5e0!3m2!1spt-BR!2sbr!4v1748648084449!5m2!1spt-BR!2sbr"
+      width="900" height="350" style="border:0;" allowfullscreen="" loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+  <!--fim-->
+
+
+   <footer>
+    <div class="footer-container">
+      <div class="footer-logo">
+        <img src="/assets/images/logo-havana.png" alt="">
+      </div>
+
+      <div class="footer-section">
+        <ul>
+          <li><a href="/index.html">Página Inicial</a></li>
+          <li><a href="/assets/paginas/gelatos.html">Gelatos</a></li>
+          <li><a href="/index.html#sobre">Sobre Nós</a></li>
+          <li><a href="/assets/paginas/contato.html">Contato</a></li>
+          <li><a href="/assets/paginas/paletas.html">Paletas</a></li>
+          <li><a href="/assets/paginas/picoles.html">Picolés</a></li>
+          <li><a href="/assets/paginas/outros.html">Diet</a></li>
+        </ul>
+      </div>
+
+      <section class="#">
+        <h2>Horário:</h2>
+        <p><em>Segunda a Domingo<br>das 13h às 23h</em></p>
+        <p class="small-text"><em>(sujeito a alteração)</em><br><em>Verifique nossas Redes Sociais</em></p>
+      </section>
+
+      <section class="footer-location">
+        <h2>Localização:</h2>
+        <p><a href="https://maps.app.goo.gl/PGwLfbmZigVDXxCN8" target="_blank"> Avenida Pres. Castelo Branco, 6920 Cidade Ocian, Praia
+            Grande SP</a></p>
+      </section>
+
+      <div class="footer-social">
+       <a href="https://www.instagram.com/gelateriahavanapg/"  target="_blank" aria-label="Instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="mailto:Contato@gelateriahavana.com.br" aria-label="E-mail" target="_blank">
+          <i class="fas fa-envelope"></i>
+        </a>
+        <a href="https://wa.me/+5513981739220" target="_blank" aria-label="WhatsApp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+        </div>
+         </div>
+         <div class="span_footer"> <span> &copy; 2025 Gelateria Havana CNPJ:08.431.443/0001-49.
+        <a href="/assets/paginas/politica-de-privacidade.html">Política de Privacidade</a></span>
+      </div>
+    </footer>
+
+  <script src="/assets/JavaScript/script.js"></script>
+</body>
+
+</html>
