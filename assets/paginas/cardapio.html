@@ -51,7 +51,9 @@
       <div class="logo">
         <img src="../images/logo-arducci.svg" alt="">
       </div>
-      <div class="menu" id="icon-menu"><i class="fas fa-bars"></i></div>
+      <button class="menu" id="icon-menu" aria-label="Abrir menu" aria-expanded="false">
+  <i class="fas fa-bars"></i>
+</button>
     </div>
 
     <div class="navegacao-responsivo" id="links-nav">
@@ -79,36 +81,7 @@
   </nav>
 
 
-  <!-- Navegação mobile -->
-  <nav class="menu-responsivo">
-    <div class="separando-logos">
-      <div class="logo">
-        <img src="/assets/images/logo-havana.png" alt="">
-      </div>
-      <div class="menu" id="icon-menu"><i class="fas fa-bars"></i></div>
-    </div>
-
-    <div class="navegacao-responsivo" id="links-nav">
-      <ul>
-        <li><a href="/index.html">Início</a></li>
-        <li>
-          <div class="dropdown">
-            <button class="dropbtn" id="btndrop-mobile">
-              Cardápio <i class="fa fa-caret-down"></i>
-            </button>
-            <nav id="dropdown-mobile" class="dropdown-content">
-              <a href="/assets/paginas/gelatos.html">Gelatos</a>
-              <a href="/assets/paginas/picoles.html">Picolés</a>
-              <a href="/assets/paginas/paletas.html">Paletas</a>
-              <a href="/assets/paginas/outros.html">Outros</a>
-            </nav>
-          </div>
-        </li>
-        <li><a href="/index.html#sobre">Sobre</a></li>
-        <li><a href="#">Contato</a></li>
-      </ul>
-    </div>
-  </nav>
+  
 
 <section class="cardapio-hero" aria-labelledby="titulo-cardapio">
   <h1 id="titulo-cardapio" class="cardapio-titulo">
@@ -194,11 +167,48 @@
     </div>
   </article>
 
+
+  <!-- AÇAÍ -->
+  <article class="menu-item">
+    <button class="menu-toggle" aria-expanded="false">
+      <span class="menu-info">
+        <span class="menu-icon"><i class="fa-solid fa-bowl-food"></i></span>
+        <span>
+          <strong>Açaíteria</strong>
+          <small>O melhor açaí da Praia Grande</small>
+        </span>
+      </span>
+      <span class="menu-action">+</span>
+    </button>
+
+    <div class="menu-content" hidden>
+      <div class="produto-linha">
+        <div>
+          <h3>Açaí na Tigela</h3>
+          <p>Açaí puro ou com acompanhamentos.</p>
+        </div>
+        <strong>R$ —,—</strong>
+      </div>
+
+      <div class="produto-linha">
+        <div>
+          <h3>Barca de Açaí</h3>
+          <p>Açaí para compartilhar, com acompanhamentos.</p>
+        </div>
+        <strong>R$ —,—</strong>
+      </div>
+
+      <h4>Adicionais</h4>
+      <p>Frutas · Leite em pó · Paçoca · Granola</p>
+    </div>
+  </article>
+
+
   <!-- CASCÃO -->
   <article class="menu-item">
     <button class="menu-toggle" aria-expanded="false">
       <span class="menu-info">
-        <span class="menu-icon"><i class="fa-solid fa-location-dot"></i></span>
+        <span class="menu-icon"><i class="fa-solid fa-ice-cream"></i></span>
         <span>
           <strong>Cascão & Casquinha</strong>
           <small>A combinação gelato com a crocância da casquinha.</small>
@@ -238,7 +248,7 @@
   <article class="menu-item">
     <button class="menu-toggle" aria-expanded="false">
       <span class="menu-info">
-        <span class="menu-icon"><i class="fa-solid fa-lemon"></i></span>
+        <span class="menu-icon"><i class="fa-solid fa-stick"></i></span>
         <span>
           <strong>Picolés</strong>
           <small>Desde do tradicional ao premium</small>
@@ -331,46 +341,12 @@
     </div>
   </article>
 
-  <!-- AÇAÍ -->
-  <article class="menu-item">
-    <button class="menu-toggle" aria-expanded="false">
-      <span class="menu-info">
-        <span class="menu-icon"><i class="fa-solid fa-bucket"></i></span>
-        <span>
-          <strong>Açaíteria</strong>
-          <small>O melhor açaí da Praia Grande</small>
-        </span>
-      </span>
-      <span class="menu-action">+</span>
-    </button>
-
-    <div class="menu-content" hidden>
-      <div class="produto-linha">
-        <div>
-          <h3>Açaí na Tigela</h3>
-          <p>Açaí puro ou com acompanhamentos.</p>
-        </div>
-        <strong>R$ —,—</strong>
-      </div>
-
-      <div class="produto-linha">
-        <div>
-          <h3>Barca de Açaí</h3>
-          <p>Açaí para compartilhar, com acompanhamentos.</p>
-        </div>
-        <strong>R$ —,—</strong>
-      </div>
-
-      <h4>Adicionais</h4>
-      <p>Frutas · Leite em pó · Paçoca · Granola</p>
-    </div>
-  </article>
-
+  
   <!-- PETIT GATEAU -->
   <article class="menu-item">
     <button class="menu-toggle" aria-expanded="false">
       <span class="menu-info">
-        <span class="menu-icon"><i class="fa-solid fa-mug-hot"></i></span>
+        <span class="menu-icon"><i class="fa-solid fa-cake-candles"></i></span>
         <span>
           <strong>Petit Gateau</strong>
           <small>Bolinho quentinho com gelato, combinação perfeita</small>
@@ -396,7 +372,7 @@
   <article class="menu-item">
     <button class="menu-toggle" aria-expanded="false">
       <span class="menu-info">
-        <span class="menu-icon"><i class="fa-solid fa-glass-water"></i></span>
+        <span class="menu-icon"><i class="fa-solid fa-mug-saucer"></i></span>
         <span>
           <strong>Milk Shake</strong>
           <small>Escolha até 2 sabores, a calda e se quer para consumir no local ou para viagem.</small>
@@ -422,7 +398,7 @@
   <article class="menu-item">
     <button class="menu-toggle" aria-expanded="false">
       <span class="menu-info">
-        <span class="menu-icon"><i class="fa-solid fa-utensils"></i></span>
+        <span class="menu-icon"><i class="fa-solid fa-banana"></i></span>
         <span>
           <strong>Banana Split</strong>
           <small>A clássica sobremesa que todo mundo ama</small>
@@ -448,7 +424,7 @@
   <article class="menu-item">
     <button class="menu-toggle" aria-expanded="false">
       <span class="menu-info">
-        <span class="menu-icon"><i class="fa-solid fa-bottle-water"></i></span>
+        <span class="menu-icon"><i class="fa-solid fa-glass-water"></i></span>
         <span>
           <strong>Bebidas</strong>
           <small>Para acompanhar sua sobremesa</small>
@@ -498,7 +474,7 @@
   </p>
 </footer>
 
-  <script src="/assets/JavaScript/script.js"></script>
+  <script src="../JavaScript/script.js"></script>
 </body>
 
 </html>

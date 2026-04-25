@@ -147,23 +147,20 @@ body {
     background: rgba(90, 53, 43, 0.92);
     backdrop-filter: blur(12px);
     display: block;
-    position: fixed;
+    position: relative;
     top: 0;
     left: 0;
     z-index: 999;
   }
 
   .separando-logos {
-    height: 90px;
-    padding: 0 22px;
+    padding: 8px 10px;
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
 
-  .separando-logos .logo img {
-    width: 165px;
-  }
+
 
   .menu {
     width: 44px;
@@ -272,7 +269,6 @@ body {
 .hero {
   min-height: 620px;
   position: relative;
-  margin-top: 105px;
   display: flex;
   align-items: center;
   overflow: hidden;
@@ -804,8 +800,7 @@ body {
 /* Mobile */
 @media (max-width: 620px) {
   .comparativo {
-    grid-template-columns: 1fr;
-    gap: 45px;
+    gap: 15px;
   }
 
   .comparativo-divisor {
@@ -990,7 +985,7 @@ body {
 
   .contato-cards {
     grid-template-columns: 1fr;
-    max-width: 330px;
+    max-width: 300px;
   }
 
   .contato-card {
@@ -999,7 +994,7 @@ body {
 
   .contato-botao {
     width: 100%;
-    max-width: 330px;
+    max-width: 250px;
     font-size: 12px;
     padding: 18px 22px;
   }
