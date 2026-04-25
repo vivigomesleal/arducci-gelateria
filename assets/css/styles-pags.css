@@ -1,135 +1,675 @@
-figure img{
-    width: 200px;
-    height: 200px;
-    border-radius: 15px 15px 0 0;
+
+
+/* ################## PAGINA GELATOS  ############# */
+
+.catalogo-section {
+  background: #f3eee8;
+  padding: 32px 20px 55px;
 }
 
-.container-produtos{
-    max-width: 1450px;
-    display: flex;
-    flex-direction: column;
-    margin: 20px auto;
-    align-items: center;
-    justify-content: center;
+.catalogo-grid {
+  max-width: 1120px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+}
+
+.produto-card {
+  background: rgba(255, 255, 255, 0.65);
+  border: 1px solid rgba(90, 53, 43, 0.14);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 8px 18px rgba(90, 53, 43, 0.08);
+  transition: 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.produto-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+.produto-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 35px rgba(90, 53, 43, 0.18);
+}
+
+.produto-card img {
+  width: 100%;
+  display: block;
+}
+
+.produto-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 35px rgba(90, 53, 43, 0.18);
 }
 
 
-.produtos{
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    margin: 35px;
-    gap: 40px;
+
+.produto-info {
+  padding: 18px 16px 20px;
 }
 
-.produtos-img_fundo{
-    background-color:  #FFF2F1;
-    border-radius:  15px;
-    padding-bottom: 20px;
-    box-shadow: 0 0 10px #00000084;
-    max-width: 200px;
-    transition: 1s;
+.produto-info h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 17px;
+  color: #5a352b;
+  margin-bottom: 6px;
 }
 
-.produtos-img_fundo:hover{
-    transform: scale(1.10);
+.produto-info p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  line-height: 1.5;
+  color: #7d5f57;
 }
 
-.ocultar {
-  display: none;
+
+
+@media (max-width: 900px) {
+  .catalogo-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
-#verMaisBtn{
-    background-color: #4F2819;
-    border: none;
-    border-radius: 14px;
-    padding: 14px;
-    width: 120px;
-    color: #fff;
-    margin: 20px;
-    cursor: pointer;
-    font-size: 15px;
-    font-weight: 700;
+@media (max-width: 520px) {
+  .catalogo-section {
+    padding: 24px 14px 45px;
+  }
+
+  .catalogo-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .produto-card img {
+    height: 190px;
+    }
+
+
+  .produto-info h3 {
+    font-size: 16px;
+  }
+
+  .produto-info p {
+    font-size: 11px;
+  }
 }
 
-#verMaisBtn:hover{
-    background-color: #632f1b;
+/* ################## PAGINA ACAITERIA ############# */
+
+/* ################## PAGINA PICOLES ############# */
+
+/* ################## PAGINA PALETAS ############# */
+
+/* ################## PAGINA OUTROS ############# */
+
+
+/* ################## PAGINA CARDAPIO ############# */
+
+.cardapio-hero {
+  background: #5a352b;
+  padding: 62px 20px 38px;
+  text-align: center;
 }
 
-.textos-produto, .before_figcaption{
-display: flex;
-flex-direction: column;
-margin: 2px 10px;
-text-align: left;
+.cardapio-titulo {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(44px, 7vw, 72px);
+  color: #f7d982;
+  font-weight: 800;
+  line-height: 1;
+  margin-bottom: 16px;
 }
 
-.before_figcaption{
-    padding: 0 2px 0;
-    color: #4F2819;
-    font-weight: bold;
-    font-size: 18px;
+.cardapio-titulo em {
+  font-style: italic;
+  font-weight: 500;
 }
 
-.tracinho{
-  width: 30px;
-  height: 5px;
-  background-color: #853617; 
+.cardapio-linha {
+  width: 62px;
+  height: 2px;
+  background: rgba(247, 217, 130, 0.55);
+  margin: 0 auto 20px;
+}
+
+.cardapio-descricao {
+  max-width: 620px;
+  margin: 0 auto;
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(14px, 2vw, 18px);
+  line-height: 1.6;
+  color: rgba(247, 217, 130, 0.68);
+}
+
+/* Mobile */
+@media (max-width: 560px) {
+  .cardapio-hero {
+    padding: 36px 18px 34px;
+  }
+
+  .cardapio-linha {
+    margin-bottom: 18px;
+  }
+}
+
+.menu-digital {
+  background: #f3eee8;
+  padding: 35px 20px 55px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.menu-item {
+  max-width: 940px;
+  margin: 0 auto 18px;
+  background: rgba(255, 255, 255, 0.42);
+  border: 1px solid rgba(90, 53, 43, 0.13);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.menu-toggle {
+  width: 100%;
+  min-height: 72px;
+  padding: 18px 22px;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: left;
+}
+
+.menu-info {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.menu-icon {
+  width: 32px;
+  height: 32px;
+  background: #5a352b;
+  color: #f7d982;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  font-size: 13px;
+}
+
+.menu-info strong {
+  display: block;
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  color: #5a352b;
+  margin-bottom: 4px;
+}
+
+.menu-info small {
+  display: block;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  color: #9a766c;
+}
+
+.menu-action {
+  width: 28px;
+  height: 28px;
+  background: #5a352b;
+  color: #f7d982;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 18px;
+  font-weight: 700;
+  flex-shrink: 0;
+  transition: 0.3s ease;
+}
+
+.menu-toggle:hover,
+.menu-toggle:focus-visible {
+  background: rgba(90, 53, 43, 0.04);
+}
+
+.menu-toggle:focus-visible {
+  outline: 3px solid rgba(247, 217, 130, 0.9);
+  outline-offset: -3px;
+}
+
+.menu-toggle[aria-expanded="true"] .menu-action {
+  transform: rotate(180deg);
+}
+
+.menu-content {
+  padding: 0 22px 28px 22px;
+  animation: abrirMenu 0.35s ease;
+}
+
+@keyframes abrirMenu {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.menu-alerta {
+  background: rgba(90, 53, 43, 0.06);
+  color: #9a766c;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 11px;
+  line-height: 1.6;
+  padding: 12px;
+  border-radius: 5px;
+  margin: 0 0 22px;
+}
+
+.menu-preco,
+.produto-linha {
+  display: flex;
+  justify-content: space-between;
+  gap: 25px;
+  padding: 16px 0;
+  border-bottom: 1px solid rgba(90, 53, 43, 0.11);
+}
+
+.menu-content h3,
+.produto-linha h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 16px;
+  color: #5a352b;
+  margin-bottom: 4px;
+}
+
+.menu-content h4 {
+  font-family: 'Playfair Display', serif;
+  font-size: 16px;
+  color: #5a352b;
+  margin: 22px 0 12px;
+}
+
+.menu-content h5 {
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 11px;
+  color: #9a766c;
+  margin: 16px 0 6px;
+}
+
+.menu-content p,
+.menu-content li {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  color: #8b5e52;
+  line-height: 1.7;
+}
+
+.menu-content strong {
+  font-family: 'Playfair Display', serif;
+  font-size: 16px;
+  color: #5a352b;
+  white-space: nowrap;
+}
+
+.categoria p {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 14px;
+}
+
+.menu-lista {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.menu-lista li::marker {
+  color: #d8a84f;
+}
+
+.menu-observacao {
+  max-width: 940px;
+  margin: 25px auto 0;
+  background: rgba(255, 255, 255, 0.55);
+  border: 1px solid rgba(90, 53, 43, 0.12);
+  border-radius: 6px;
+  padding: 18px;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 11px;
+  line-height: 1.6;
+  color: #9a766c;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .menu-digital {
+    padding: 25px 12px 45px;
+  }
+
+  .menu-toggle {
+    padding: 16px 14px;
+    gap: 12px;
+  }
+
+  .menu-info strong {
+    font-size: 17px;
+  }
+
+  .menu-info small {
+    font-size: 11px;
+  }
+
+  .menu-content {
+    padding: 0 14px 24px;
+  }
+
+  .menu-preco,
+  .produto-linha {
+    align-items: flex-start;
+    gap: 16px;
+  }
+}
+
+/* ################## revenda  ############# */
+
+.revenda-section {
+  background: #f3eee8;
+  padding: 55px 20px 40px;
+  text-align: center;
+}
+
+.revenda-subtitulo {
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 8px;
+  font-size: 12px;
+  color: #9a766c;
+  margin-bottom: 16px;
+}
+
+.revenda-titulo {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(44px, 7vw, 68px);
+  color: #5a352b;
+  line-height: 1;
+  margin-bottom: 14px;
+}
+
+.revenda-titulo em {
+  font-style: italic;
+  font-weight: 500;
+}
+
+.revenda-frase {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: clamp(18px, 2.5vw, 26px);
+  color: #9a766c;
+}
+
+.revenda-linha {
+  width: 58px;
+  height: 2px;
+  background: #d8a84f;
+  margin: 28px auto;
+}
+
+.revenda-texto {
+  max-width: 680px;
+  margin: 0 auto 45px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  line-height: 1.7;
+  color: #9a766c;
+}
+
+.revenda-card {
+  max-width: 980px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.58);
+  border-radius: 8px;
+  padding: 42px;
+  text-align: left;
+}
+
+.revenda-card h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(28px, 4vw, 36px);
+  color: #5a352b;
+  margin-bottom: 8px;
+}
+
+.revenda-card > p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13px;
+  color: #9a766c;
+  margin-bottom: 28px;
+}
+
+.sabores-grid {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.sabores-grid label {
+  background: #f3eee8;
+  border: 1px solid rgba(90, 53, 43, 0.18);
+  border-radius: 6px;
+  padding: 14px 18px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  color: #5a352b;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.sabores-grid input {
+  position: absolute;
+  opacity: 0;
+}
+
+.sabores-grid label:hover {
+  border-color: #d8a84f;
+  background: #faf6ef;
+}
+
+.sabores-grid label:has(input:checked) {
+  background: #5a352b;
+  color: #f7d982;
+  border-color: #5a352b;
+}
+
+.pedido-box {
+  margin-top: 38px;
+  text-align: center;
+}
+
+#status-sabores {
+  display: block;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 11px;
+  color: #9a766c;
+  margin-bottom: 14px;
+}
+
+#texto-pedido {
+  width: 100%;
+  min-height: 95px;
+  resize: vertical;
+  border: 1px solid rgba(90, 53, 43, 0.14);
+  border-radius: 6px;
+  padding: 14px;
+  margin-bottom: 18px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13px;
+  color: #5a352b;
+  background: #f8f5f1;
+}
+
+.btn-whatsapp {
+  border: 0;
+  background: #5a352b;
+  color: #f7d982;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  padding: 18px 38px;
   border-radius: 4px;
-  float: left;
-  margin-left: 8px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  transition: 0.3s ease;
 }
 
-.descricao{
-padding: 0 10px;
-text-align: left;
-margin-top: 5px;
-font-size: 15px;
+.btn-whatsapp:hover,
+.btn-whatsapp:focus-visible {
+  background: #4b2b24;
+  transform: translateY(-2px);
 }
 
+#aviso-copia {
+  display: block;
+  margin-top: 12px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  color: #9a766c;
+}
 
-.produtos-img_fundo-pronto{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+.voltar-link {
+  margin-top: 28px;
+  display: block;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-size: 11px;
+  color: #9a766c;
+  text-decoration: none;
+}
+
+.voltar-link:hover {
+  color: #5a352b;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+/* Mobile */
+@media (max-width: 760px) {
+  .revenda-card {
+    padding: 28px 18px;
+  }
+
+  .sabores-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .btn-whatsapp {
+    width: 100%;
     justify-content: center;
-    background-color:  #fcd5d1;
-    border-radius:  75px;
-    padding-bottom: 20px;
-    box-shadow: 0 0 8px #0000009f;
-    max-width: 210px;
-    transition: 1s;
-    border: #853617 solid 1px;
- 
+    padding: 17px 20px;
+    font-size: 12px;
+  }
 }
 
-.produtos-img_fundo-pronto:hover{
-    transform: scale(1.10);
-     background-color:  #f7c0bb;
+/* ############## POLTICA DE PRIV ################# */
+
+.lgpd-section {
+  background: #f3eee8;
+  padding: 45px 20px;
 }
 
-
-
-.produtos-img_fundo-pronto img{
-    width: 210px;
-    height: 210px;
-    border-radius: 15px;
-    margin-top: 15px;
+.lgpd-card {
+  max-width: 900px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.65);
+  border: 1px solid rgba(247, 217, 130, 0.55);
+  border-radius: 12px;
+  padding: 34px 28px;
+  text-align: center;
+  box-shadow: 0 8px 22px rgba(90, 53, 43, 0.08);
 }
 
-.textos-produto-p{
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-margin: 10px;
-text-align: center;
+.lgpd-card h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(28px, 4vw, 40px);
+  color: #5a352b;
+  margin-bottom: 18px;
 }
 
-
-.descricao-p{
-padding: 0 10px;
-text-align: center;
-margin-top: 5px;
+.lgpd-card p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  line-height: 1.7;
+  color: #7d5f57;
+  margin-bottom: 14px;
 }
 
+.lgpd-link {
+  margin-top: 18px;
+  display: inline-block;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #5a352b;
+  text-decoration: none;
+  border-bottom: 1px solid #d8a84f;
+  padding-bottom: 5px;
+}
+
+.lgpd-link:hover,
+.lgpd-link:focus-visible {
+  color: #8b5e52;
+}
+
+@media (max-width: 560px) {
+  .lgpd-section {
+    padding: 35px 16px;
+  }
+
+  .lgpd-card {
+    padding: 28px 18px;
+  }
+
+  .lgpd-card p {
+    font-size: 13px;
+  }
+}

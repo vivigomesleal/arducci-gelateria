@@ -9,26 +9,18 @@
   <link rel="stylesheet" href="../css/styles.css">
   <link rel="stylesheet" href="../css/responsive.css">
   <link rel="stylesheet" href="../css/styles-pags.css">
-  <title>Gelateria Havana</title>
+  <title>Arducci Picolés Artesanais</title>
 </head>
 
 <body>
-    
-    <div class="btn-delivery">
-  <a href="https://www.instagram.com/gelateriahavanapg/" 
-     target="_blank" 
-     rel="noopener noreferrer" 
-     aria-label="Acesse nosso Instagram (abre em nova aba)">
-    <img src="/assets/images/instagram_fixo.svg" alt="INSTAGRAM">
-  </a>
-</div>
+  
   <!-- Navbar desktop -->
-<header class="navbar">
+ <header class="navbar">
     <div class="logo">
-      <img src="/assets/images/logo-havana.png" alt="">
+      <img  src="../images/logo-arducci.svg" alt="">
     </div>
 
-    <nav class="nav-links">
+       <nav class="nav-links">
       <ul>
         <li><a href="/index.html">Início</a></li>
         <li>
@@ -39,14 +31,16 @@
           </button>
             <nav id="dropdown-desktop" class="dropdown-content">
               <a href="/assets/paginas/gelatos.html">Gelatos</a>
+              <a href="assets/paginas/acaiteria.html">Açaíteria</a>
               <a href="/assets/paginas/picoles.html">Picolés</a>
               <a href="/assets/paginas/paletas.html">Paletas</a>
-              <a href="/assets/paginas/outros.html">Outros</a>
+              <a href="/assets/paginas/outros.html">Ver mais...</a>
             </nav>
           </div>
         </li>
         <li><a href="/index.html#sobre">Sobre</a></li>
-        <li><a href="/assets/paginas/contato.html">Contato</a></li>
+        <li><a href="/index.html#contato" >Contato</a></li>
+        <li><a href="/index.html#cardapio" >Cardápio Digital</a></li>
       </ul>
     </nav>
   </header>
@@ -55,9 +49,11 @@
   <nav class="menu-responsivo">
     <div class="separando-logos">
       <div class="logo">
-        <img src="../images/logo-havana.png" alt="">
+        <img src="../images/logo-arducci.svg" alt="">
       </div>
-      <div class="menu" id="icon-menu"><i class="fas fa-bars"></i></div>
+      <button class="menu" id="icon-menu" aria-label="Abrir menu" aria-expanded="false">
+  <i class="fas fa-bars"></i>
+</button>
     </div>
 
     <div class="navegacao-responsivo" id="links-nav">
@@ -69,226 +65,212 @@
               Cardápio <i class="fa fa-caret-down"></i>
             </button>
             <nav id="dropdown-mobile" class="dropdown-content">
-             <a href="/assets/paginas/gelatos.html">Gelatos</a>
-              <a href="#">Picolés</a>
+              <a href="/assets/paginas/gelatos.html">Gelatos</a>
+              <a href="assets/paginas/acaiteria.html">Açaíteria</a>
+              <a href="/assets/paginas/picoles.html">Picolés</a>
               <a href="/assets/paginas/paletas.html">Paletas</a>
               <a href="/assets/paginas/outros.html">Outros</a>
             </nav>
           </div>
         </li>
         <li><a href="/index.html#sobre">Sobre</a></li>
-        <li><a href="/assets/paginas/contato.html">Contato</a></li>
+        <li><a href="/index.html#contato">Contato</a></li>
+        <li><a href="/index.html#cardapio" >Cardápio Digital</a></li>
       </ul>
     </div>
   </nav>
   <!--end-->
 
-  <main class="container-produtos">
+   <section class="cardapio-hero" aria-labelledby="titulo-cardapio">
+  <h1 id="titulo-cardapio" class="cardapio-titulo">
+    Picolés <em>Artesanais</em>
+  </h1>
 
-    <h1 class="titulo-produtos">Picolés</h1>
+  <div class="cardapio-linha" aria-hidden="true"></div>
 
-    <p>Nossa Variedade tem sabor para agradar todo mundo.</p>
-
-    <section class="produtos">
-
-   <figure class="produtos-img_fundo-pronto">
-    <img src="../images/Picole-de-acai.avif" 
-         alt="Sorvete no palito de açaí roxo"> 
-    <figcaption class="textos-produto-p">
-        Açai
-    </figcaption>
-    </figure>
-
-      <figure class="produtos-img_fundo-pronto">
-        <img src="../images/Picole-de-amendoim.avif" 
-              alt="Sorvete no Palito de Amendoim">
-      <figcaption class="textos-produto-p">
-        Amendoim
-      </figcaption>
-      </figure>
-
-      <figure class="produtos-img_fundo-pronto">
-        <img src="../images/Picole-de-bombom-tentacao.avif" 
-             alt="Sorvete no palito bombom tentação por fora chocolate e dentro morango">
-        <figcaption class="textos-produto-p">
-         Bombom Tentação
-        </figcaption>
-      </figure>
-
-      <figure class="produtos-img_fundo-pronto">
-        <img src="../images/Picole-de-choco-coco.avif" 
-             alt="Sorvete no palito de casquinha de chocolate e coco por dentro">
-        <figcaption class="textos-produto-p">
-          Choco Coco
-        </figcaption>
-      </figure>
-
-      <figure class="produtos-img_fundo-pronto">
-        <img src="../images/Picole-de-chocolate.avif" 
-             alt="Sorvete no palito de chocolate ao leite">
-        <figcaption class="textos-produto-p">
-          Chocolate
-        </figcaption>
-      </figure>
-
-      <figure class="produtos-img_fundo-pronto">
-        <img src="../images/Picole-de-coco-queimado.avif"
-            alt="Sorvete no palito de coco queimado marrom claro">
-        <figcaption class="textos-produto-p">
-          Coco Queimado
-        </figcaption>
-      </figure>
-
-      <figure class="produtos-img_fundo-pronto">
-        <img src="../images/Picole-de-coco.avif" 
-             alt="sorvete no palito de coco branco">
-        <figcaption class="textos-produto-p">
-          Coco
-        </figcaption>
-      </figure>
-
-      <figure class="produtos-img_fundo-pronto">
-        <img src="../images/Picole-de-graviola.avif" 
-             alt="Sorvete no palito de graviola branco">
-        <figcaption class="textos-produto-p">
-          Graviola
-        </figcaption>
-      </figure>
-
-      <figure class="produtos-img_fundo-pronto">
-        <img src="../images/Picole-de-groselha.avif" 
-             alt="sorvete no palito de groselha vermelho">
-        <figcaption class="textos-produto-p">
-          Groselha
-        </figcaption>
-      </figure>
-
-      <figure class="produtos-img_fundo-pronto">
-        <img src="../images/Picole-de-leitecondensado.avif" 
-             alt="sorvete no palito de leite condensado creme amarelo claro">
-        <figcaption class="textos-produto-p">
-          Leite Condensado
-        </figcaption>
-      </figure>
-
-      <figure class="produtos-img_fundo-pronto">
-        <img src="../images/Picole-de-leitinho.avif" 
-              alt="sorvete no palito de leitinho branco">
-        <figcaption class="textos-produto-p">
-          leitinho
-        </figcaption>
-      </figure>
-
-      <figure class="produtos-img_fundo-pronto">
-        <img src="../images/Picole-de-limao.avif" 
-              alt="sorvete no palito de limão verde claro">
-        <figcaption class="textos-produto-p">
-          Limão
-        </figcaption>
-      </figure>
-
-      <figure class="produtos-img_fundo-pronto">
-        <img src="../images/Picole-de-maracuja.avif" alt="sorvete no palito de maracuja">
-
-        <div class="textos-produto-p">
-          <figcaption>Maracujá</figcaption>
-        </div>
-      </figure>
-
-      <figure class="produtos-img_fundo-pronto">
-        <img src="../images/Picole-de-milhoverde.avif" 
-             alt="sorvete no palito de milho amarelo claro">
-        <figcaption class="textos-produto-p">
-          Milho Verde
-        </figcaption>
-      </figure>
-
-      <figure class="produtos-img_fundo-pronto">
-        <img src="../images/Picole-de-jabuticaba.avif" 
-             alt="sorvete no palito de jabuticaba roxo medio">
-        <figcaption class="textos-produto-p">
-          Jabuticaba
-        </figcaption>
-      </figure>
-
-      <figure class="produtos-img_fundo-pronto">
-        <img src="../images/Picole-de-morango.avif" 
-              alt="sorvete no palito de morango rosa claro">
-        <figcaption class="textos-produto-p">
-          Morango
-        </figcaption>
-      </figure>
-
-      <figure class="produtos-img_fundo-pronto">
-        <img src="../images/Picole-de-skimo.avif" 
-              alt="sorvete no palito de skimo brando por dentro e choocolate ao leite por fora">
-        <figcaption class="textos-produto-p">
-          Skimó
-        </figcaption>
-      </figure>
-
-      <figure class="produtos-img_fundo-pronto">
-        <img src="../images/Picole-de-uva.avif" 
-             alt="sorvete no palito de uva roxo vivo">
-        <figcaption class="textos-produto-p">
-          Uva
-        </figcaption>
-      </figure>
+  <p class="cardapio-descricao">
+    Nossa variedade de picolés tem sabor para agradar todo mundo. Feitos com ingredientes frescos e naturais, nossos picolés são a escolha perfeita para se refrescar nos dias quentes. Venha experimentar nossos sabores irresistíveis e descubra o prazer de um picolé artesanal de qualidade.
+  </p>
+</section>
 
 
-    </section>
 
-  </main>
-
-  <!--end-->
+<section class="catalogo-section" aria-labelledby="titulo-picoles">
 
 
-  <footer>
-    <div class="footer-container">
-      <div class="footer-logo">
-        <img src="/assets/images/logo-havana.png" alt="">
+
+  <div class="catalogo-grid">
+
+    <article class="produto-card">
+      <img src="../images/Picole-de-acai.avif" alt="Sorvete no palito de açaí roxo">
+      <div class="produto-info">
+        <h3>Açaí</h3>
+        <p>Refrescante picolé de açaí com sabor intenso.</p>
       </div>
+    </article>
 
-      <div class="footer-section">
-        <ul>
-          <li><a href="/index.html">Página Inicial</a></li>
-          <li><a href="/assets/paginas/gelatos.html">Gelatos</a></li>
-          <li><a href="/index.html#sobre">Sobre Nós</a></li>
-          <li><a href="/assets/paginas/contato.html">Contato</a></li>
-          <li><a href="/assets/paginas/paletas.html">Paletas</a></li>
-          <li><a href="/assets/paginas/picoles.html">Picolés</a></li>
-          <li><a href="/assets/paginas/outros.html">Diet</a></li>
-        </ul>
+    <article class="produto-card">
+      <img src="../images/Picole-de-amendoim.avif" alt="Sorvete no palito de amendoim">
+      <div class="produto-info">
+        <h3>Amendoim</h3>
+        <p>Cremoso sabor de amendoim tradicional.</p>
       </div>
+    </article>
 
-      <section class="#">
-        <h2>Horário:</h2>
-        <p><em>Segunda a Domingo<br>das 13h às 23h</em></p>
-        <p class="small-text"><em>(sujeito a alteração)</em><br><em>Verifique nossas Redes Sociais</em></p>
-      </section>
-
-      <section class="footer-location">
-        <h2>Localização:</h2>
-        <p><a href="https://maps.app.goo.gl/PGwLfbmZigVDXxCN8" target="_blank"> Avenida Pres. Castelo Branco, 6920 Cidade Ocian, Praia
-            Grande SP</a></p>
-      </section>
-
-      <div class="footer-social">
-       <a href="https://www.instagram.com/gelateriahavanapg/"  target="_blank" aria-label="Instagram">
-          <i class="fab fa-instagram"></i>
-        </a>
-        <a href="mailto:Contato@gelateriahavana.com.br" aria-label="E-mail" target="_blank">
-          <i class="fas fa-envelope"></i>
-        </a>
-        <a href="https://wa.me/+5513981739220" target="_blank" aria-label="WhatsApp">
-          <i class="fab fa-whatsapp"></i>
-        </a>
-        </div>
-         </div>
-         <div class="span_footer"> <span> &copy; 2025 Gelateria Havana CNPJ:08.431.443/0001-49.
-        <a href="/assets/paginas/politica-de-privacidade.html">Política de Privacidade</a></span>
+    <article class="produto-card">
+      <img src="../images/Picole-de-bombom-tentacao.avif" alt="Sorvete no palito bombom tentação com chocolate e morango">
+      <div class="produto-info">
+        <h3>Bombom Tentação</h3>
+        <p>Chocolate por fora com recheio cremoso de morango.</p>
       </div>
-    </footer>
+    </article>
+
+    <article class="produto-card">
+      <img src="../images/Picole-de-choco-coco.avif" alt="Sorvete no palito de chocolate com coco">
+      <div class="produto-info">
+        <h3>Choco Coco</h3>
+        <p>Casquinha de chocolate com recheio de coco.</p>
+      </div>
+    </article>
+
+    <article class="produto-card">
+      <img src="../images/Picole-de-chocolate.avif" alt="Sorvete no palito de chocolate ao leite">
+      <div class="produto-info">
+        <h3>Chocolate</h3>
+        <p>Clássico sabor de chocolate ao leite.</p>
+      </div>
+    </article>
+
+    <article class="produto-card">
+      <img src="../images/Picole-de-coco-queimado.avif" alt="Sorvete no palito de coco queimado">
+      <div class="produto-info">
+        <h3>Coco Queimado</h3>
+        <p>Sabor marcante de coco tostado.</p>
+      </div>
+    </article>
+
+    <article class="produto-card">
+      <img src="../images/Picole-de-coco.avif" alt="Sorvete no palito de coco branco">
+      <div class="produto-info">
+        <h3>Coco</h3>
+        <p>Refrescante e suave sabor de coco.</p>
+      </div>
+    </article>
+
+    <article class="produto-card">
+      <img src="../images/Picole-de-graviola.avif" alt="Sorvete no palito de graviola">
+      <div class="produto-info">
+        <h3>Graviola</h3>
+        <p>Sabor tropical e levemente ácido.</p>
+      </div>
+    </article>
+
+    <article class="produto-card">
+      <img src="../images/Picole-de-groselha.avif" alt="Sorvete no palito de groselha vermelho">
+      <div class="produto-info">
+        <h3>Groselha</h3>
+        <p>Doce e refrescante sabor de groselha.</p>
+      </div>
+    </article>
+
+    <article class="produto-card">
+      <img src="../images/Picole-de-leitecondensado.avif" alt="Sorvete no palito de leite condensado">
+      <div class="produto-info">
+        <h3>Leite Condensado</h3>
+        <p>Cremoso e doce na medida certa.</p>
+      </div>
+    </article>
+
+    <article class="produto-card">
+      <img src="../images/Picole-de-leitinho.avif" alt="Sorvete no palito de leitinho branco">
+      <div class="produto-info">
+        <h3>Leitinho</h3>
+        <p>Suave sabor de leite cremoso.</p>
+      </div>
+    </article>
+
+    <article class="produto-card">
+      <img src="../images/Picole-de-limao.avif" alt="Sorvete no palito de limão">
+      <div class="produto-info">
+        <h3>Limão</h3>
+        <p>Refrescante e levemente ácido.</p>
+      </div>
+    </article>
+
+    <article class="produto-card">
+      <img src="../images/Picole-de-maracuja.avif" alt="Sorvete no palito de maracujá">
+      <div class="produto-info">
+        <h3>Maracujá</h3>
+        <p>Clássico tropical com toque cítrico.</p>
+      </div>
+    </article>
+
+    <article class="produto-card">
+      <img src="../images/Picole-de-milhoverde.avif" alt="Sorvete no palito de milho verde">
+      <div class="produto-info">
+        <h3>Milho Verde</h3>
+        <p>Sabor tradicional e cremoso.</p>
+      </div>
+    </article>
+
+    <article class="produto-card">
+      <img src="../images/Picole-de-jabuticaba.avif" alt="Sorvete no palito de jabuticaba">
+      <div class="produto-info">
+        <h3>Jabuticaba</h3>
+        <p>Sabor intenso e natural da fruta.</p>
+      </div>
+    </article>
+
+    <article class="produto-card">
+      <img src="../images/Picole-de-morango.avif" alt="Sorvete no palito de morango">
+      <div class="produto-info">
+        <h3>Morango</h3>
+        <p>Doce e refrescante com sabor natural.</p>
+      </div>
+    </article>
+
+    <article class="produto-card">
+      <img src="../images/Picole-de-skimo.avif" alt="Sorvete no palito tipo skimo com cobertura de chocolate">
+      <div class="produto-info">
+        <h3>Skimó</h3>
+        <p>Baunilha com cobertura de chocolate ao leite.</p>
+      </div>
+    </article>
+
+    <article class="produto-card">
+      <img src="../images/Picole-de-uva.avif" alt="Sorvete no palito de uva">
+      <div class="produto-info">
+        <h3>Uva</h3>
+        <p>Sabor intenso e refrescante.</p>
+      </div>
+    </article>
+
+  </div>
+</section>
+<footer class="footer" aria-label="Rodapé do site">
+  <nav class="footer-nav" aria-label="Links principais do rodapé">
+    <a href="#" aria-label="Acessar cardápio digital">
+      <i class="fa-solid fa-utensils" aria-hidden="true"></i>
+      <span>Cardápio Digital</span>
+    </a>
+
+    <a href="https://www.instagram.com/arduccigelateria" target="_blank" rel="noopener noreferrer" aria-label="Acessar Instagram da Arducci">
+      <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+      <span>Instagram</span>
+    </a>
+
+    <a href="#" aria-label="Ver localização da Arducci">
+      <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+      <span>Localização</span>
+    </a>
+  </nav>
+
+  <div class="footer-linha" aria-hidden="true"></div>
+
+  <p class="footer-copy">
+    © 2026 Arducci Gelateria e Açaíteria. Todos os direitos reservados.
+  </p>
+</footer>
     
   <script src="/assets/JavaScript/script.js"></script>
 </body>

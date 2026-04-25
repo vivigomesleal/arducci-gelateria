@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=ABeeZee&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/responsive.css">
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/styles-pags.css">
+<title>Arducci - Cardápio Digital</title>
+</head>
+
+<body>
+    
+  <!-- Navbar desktop -->
+  <header class="navbar">
+    <div class="logo">
+      <img  src="../images/logo-arducci.svg" alt="">
+    </div>
+
+    <nav class="nav-links">
+      <ul>
+        <li><a href="/index.html">Início</a></li>
+        <li>
+          <div class="dropdown">
+           <button class="dropbtn"id="btndrop-desktop"aria-expanded="false"aria-controls="dropdown-desktop">
+           Cardápio 
+          <i class="fa fa-caret-down" aria-hidden="true"></i>
+          </button>
+            <nav id="dropdown-desktop" class="dropdown-content">
+              <a href="/assets/paginas/gelatos.html">Gelatos</a>
+              <a href="/assets/paginas/picoles.html">Açaíteria</a>
+              <a href="/assets/paginas/picoles.html">Picolés</a>
+              <a href="/assets/paginas/paletas.html">Paletas</a>
+              <a href="/assets/paginas/outros.html">Ver mais...</a>
+            </nav>
+          </div>
+        </li>
+        <li><a href="/index.html#sobre">Sobre</a></li>
+        <li><a href="/index.html#contato" >Contato</a></li>
+        <li><a href="#" >Cardápio Digital</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Navegação mobile -->
+  <nav class="menu-responsivo">
+    <div class="separando-logos">
+      <div class="logo">
+        <img src="../images/logo-arducci.svg" alt="">
+      </div>
+      <div class="menu" id="icon-menu"><i class="fas fa-bars"></i></div>
+    </div>
+
+    <div class="navegacao-responsivo" id="links-nav">
+      <ul>
+        <li><a href="/index.html">Início</a></li>
+        <li>
+          <div class="dropdown">
+            <button class="dropbtn" id="btndrop-mobile">
+              Cardápio <i class="fa fa-caret-down"></i>
+            </button>
+            <nav id="dropdown-mobile" class="dropdown-content">
+              <a href="/assets/paginas/gelatos.html">Gelatos</a>
+              <a href="/assets/paginas/picoles.html">Açaíteria</a>
+              <a href="/assets/paginas/picoles.html">Picolés</a>
+              <a href="/assets/paginas/paletas.html">Paletas</a>
+              <a href="/assets/paginas/outros.html">Outros</a>
+            </nav>
+          </div>
+        </li>
+        <li><a href="/index.html#sobre">Sobre</a></li>
+        <li><a href="/index.html#contato">Contato</a></li>
+        <li><a href="#" >Cardápio Digital</a></li>
+      </ul>
+    </div>
+  </nav>
+
+
+  <!-- Navegação mobile -->
+  <nav class="menu-responsivo">
+    <div class="separando-logos">
+      <div class="logo">
+        <img src="/assets/images/logo-havana.png" alt="">
+      </div>
+      <div class="menu" id="icon-menu"><i class="fas fa-bars"></i></div>
+    </div>
+
+    <div class="navegacao-responsivo" id="links-nav">
+      <ul>
+        <li><a href="/index.html">Início</a></li>
+        <li>
+          <div class="dropdown">
+            <button class="dropbtn" id="btndrop-mobile">
+              Cardápio <i class="fa fa-caret-down"></i>
+            </button>
+            <nav id="dropdown-mobile" class="dropdown-content">
+              <a href="/assets/paginas/gelatos.html">Gelatos</a>
+              <a href="/assets/paginas/picoles.html">Picolés</a>
+              <a href="/assets/paginas/paletas.html">Paletas</a>
+              <a href="/assets/paginas/outros.html">Outros</a>
+            </nav>
+          </div>
+        </li>
+        <li><a href="/index.html#sobre">Sobre</a></li>
+        <li><a href="#">Contato</a></li>
+      </ul>
+    </div>
+  </nav>
+
+<section class="cardapio-hero" aria-labelledby="titulo-cardapio">
+  <h1 id="titulo-cardapio" class="cardapio-titulo">
+    Cardápio <em>Digital</em>
+  </h1>
+
+  <div class="cardapio-linha" aria-hidden="true"></div>
+
+  <p class="cardapio-descricao">
+    Conheça todos os nossos produtos, sabores e opções. Toque no nome de
+    qualquer produto para ver mais detalhes.
+  </p>
+</section>
+
+
+<section class="menu-digital" aria-labelledby="titulo-lista-cardapio">
+
+  <h2 id="titulo-lista-cardapio" class="sr-only">Lista de categorias do cardápio</h2>
+
+  <!-- GELATOS -->
+  <article class="menu-item">
+    <button class="menu-toggle" aria-expanded="false">
+      <span class="menu-info">
+        <span class="menu-icon"><i class="fa-solid fa-ice-cream"></i></span>
+        <span>
+          <strong>Gelatos Self Service</strong>
+          <small>Mais de 100 sabores artesanais — sirva-se à vontade!</small>
+        </span>
+      </span>
+      <span class="menu-action">+</span>
+    </button>
+
+    <div class="menu-content" hidden>
+      <p class="menu-alerta">
+        Funciona no sistema self-service por peso. Escolha seus sabores, finalize com a calda e cobertura de sua preferência.
+      </p>
+
+      <div class="menu-preco">
+        <div>
+          <h3>Self Service</h3>
+          <p>Sirva-se à vontade — preço por peso</p>
+        </div>
+        <strong>R$ —,— /kg</strong>
+      </div>
+
+      <h4>Sabores por categoria</h4>
+
+      <div class="categoria">
+        <h5>Tradicionais</h5>
+        <p>Chocolate · Creme · Morango · Flocos</p>
+      </div>
+
+      <div class="categoria">
+        <h5>100% Fruta</h5>
+        <p>Maracujá · Limão · Pitaya</p>
+      </div>
+
+      <div class="categoria">
+        <h5>Diet</h5>
+        <p>Chocolate · Flocos · Morango</p>
+      </div>
+
+      <div class="categoria">
+        <h5>Premium</h5>
+        <p>Pistache · Sonho com Nutella · Açaí</p>
+      </div>
+
+      <div class="categoria">
+        <h5>Limitados / Sazonais</h5>
+      </div>
+
+      <h4>Caldas disponíveis</h4>
+
+      <ul class="menu-lista">
+        <li>Chocolate</li>
+        <li>Morango Natural</li>
+        <li>Nutella</li>
+        <li>Chocolate Belga Derretido</li>
+      </ul>
+
+      <h4>Complementos</h4>
+      <p>Castanha-de-caju · M&M’s · Granola · Chantilly · Paçoca Triturada</p>
+    </div>
+  </article>
+
+  <!-- CASCÃO -->
+  <article class="menu-item">
+    <button class="menu-toggle" aria-expanded="false">
+      <span class="menu-info">
+        <span class="menu-icon"><i class="fa-solid fa-location-dot"></i></span>
+        <span>
+          <strong>Cascão & Casquinha</strong>
+          <small>A combinação gelato com a crocância da casquinha.</small>
+        </span>
+      </span>
+      <span class="menu-action">+</span>
+    </button>
+
+    <div class="menu-content" hidden>
+      <div class="produto-linha">
+        <div>
+          <h3>Casquinha</h3>
+          <p>Escolha apenas 1 sabor de gelato.</p>
+        </div>
+        <strong>R$ —,—</strong>
+      </div>
+
+      <div class="produto-linha">
+        <div>
+          <h3>Cascão de 1 Sabor</h3>
+          <p>Escolha apenas 1 sabor de gelato.</p>
+        </div>
+        <strong>R$ —,—</strong>
+      </div>
+
+      <div class="produto-linha">
+        <div>
+          <h3>Cascão de 2 Sabores</h3>
+          <p>Escolha 2 sabores de gelato.</p>
+        </div>
+        <strong>R$ —,—</strong>
+      </div>
+    </div>
+  </article>
+
+  <!-- PICOLÉS -->
+  <article class="menu-item">
+    <button class="menu-toggle" aria-expanded="false">
+      <span class="menu-info">
+        <span class="menu-icon"><i class="fa-solid fa-lemon"></i></span>
+        <span>
+          <strong>Picolés</strong>
+          <small>Desde do tradicional ao premium</small>
+        </span>
+      </span>
+      <span class="menu-action">+</span>
+    </button>
+
+    <div class="menu-content" hidden>
+      <div class="produto-linha">
+        <div>
+          <h3>Ao Leite</h3>
+          <p>Chocolate · Morango · Coco · Amendoin</p>
+        </div>
+        <strong>R$ —,—</strong>
+      </div>
+
+      <div class="produto-linha">
+        <div>
+          <h3>Frutas</h3>
+          <p>Limão · Uva · Abacaxi</p>
+        </div>
+        <strong>R$ —,—</strong>
+      </div>
+
+      <div class="produto-linha">
+        <div>
+          <h3>Sítimo</h3>
+          <p>Tradicional · Chocolate com chocolate ao leite · Coco</p>
+        </div>
+        <strong>R$ —,—</strong>
+      </div>
+    </div>
+  </article>
+
+  <!-- PALETAS -->
+  <article class="menu-item">
+    <button class="menu-toggle" aria-expanded="false">
+      <span class="menu-info">
+        <span class="menu-icon"><i class="fa-solid fa-cubes"></i></span>
+        <span>
+          <strong>Paletas Mexicanas</strong>
+          <small>Paleta artesanal com recheio cremoso</small>
+        </span>
+      </span>
+      <span class="menu-action">+</span>
+    </button>
+
+    <div class="menu-content" hidden>
+      <div class="produto-linha">
+        <div>
+          <h3>Cada unidade</h3>
+          <p>Milho com Nutella · Pistache com Chocolate · Amor com Leite Condensado · Rafaello</p>
+        </div>
+        <strong>R$ —,—</strong>
+      </div>
+    </div>
+  </article>
+
+  <!-- POTE -->
+  <article class="menu-item">
+    <button class="menu-toggle" aria-expanded="false">
+      <span class="menu-info">
+        <span class="menu-icon"><i class="fa-solid fa-cookie-bite"></i></span>
+        <span>
+          <strong>Pote para Viagem</strong>
+          <small>Leve o sabor Arducci para casa</small>
+        </span>
+      </span>
+      <span class="menu-action">+</span>
+    </button>
+
+    <div class="menu-content" hidden>
+      <p class="menu-alerta">Os sabores disponíveis variam conforme os gelatos preparados no dia.</p>
+
+      <div class="produto-linha">
+        <h3>Pote 1 litro</h3>
+        <strong>R$ —,—</strong>
+      </div>
+
+      <div class="produto-linha">
+        <h3>Pote 1,5 litros</h3>
+        <strong>R$ —,—</strong>
+      </div>
+
+      <div class="produto-linha">
+        <h3>Pote 2 litros</h3>
+        <strong>R$ —,—</strong>
+      </div>
+    </div>
+  </article>
+
+  <!-- AÇAÍ -->
+  <article class="menu-item">
+    <button class="menu-toggle" aria-expanded="false">
+      <span class="menu-info">
+        <span class="menu-icon"><i class="fa-solid fa-bucket"></i></span>
+        <span>
+          <strong>Açaíteria</strong>
+          <small>O melhor açaí da Praia Grande</small>
+        </span>
+      </span>
+      <span class="menu-action">+</span>
+    </button>
+
+    <div class="menu-content" hidden>
+      <div class="produto-linha">
+        <div>
+          <h3>Açaí na Tigela</h3>
+          <p>Açaí puro ou com acompanhamentos.</p>
+        </div>
+        <strong>R$ —,—</strong>
+      </div>
+
+      <div class="produto-linha">
+        <div>
+          <h3>Barca de Açaí</h3>
+          <p>Açaí para compartilhar, com acompanhamentos.</p>
+        </div>
+        <strong>R$ —,—</strong>
+      </div>
+
+      <h4>Adicionais</h4>
+      <p>Frutas · Leite em pó · Paçoca · Granola</p>
+    </div>
+  </article>
+
+  <!-- PETIT GATEAU -->
+  <article class="menu-item">
+    <button class="menu-toggle" aria-expanded="false">
+      <span class="menu-info">
+        <span class="menu-icon"><i class="fa-solid fa-mug-hot"></i></span>
+        <span>
+          <strong>Petit Gateau</strong>
+          <small>Bolinho quentinho com gelato, combinação perfeita</small>
+        </span>
+      </span>
+      <span class="menu-action">+</span>
+    </button>
+
+    <div class="menu-content" hidden>
+      <p class="menu-alerta">Produto feito na hora. Tempo de preparo aproximado: 15 minutos.</p>
+
+      <div class="produto-linha">
+        <div>
+          <h3>Petit Gateau Clássico</h3>
+          <p>Com gelato artesanal.</p>
+        </div>
+        <strong>R$ —,—</strong>
+      </div>
+    </div>
+  </article>
+
+  <!-- MILK SHAKE -->
+  <article class="menu-item">
+    <button class="menu-toggle" aria-expanded="false">
+      <span class="menu-info">
+        <span class="menu-icon"><i class="fa-solid fa-glass-water"></i></span>
+        <span>
+          <strong>Milk Shake</strong>
+          <small>Escolha até 2 sabores, a calda e se quer para consumir no local ou para viagem.</small>
+        </span>
+      </span>
+      <span class="menu-action">+</span>
+    </button>
+
+    <div class="menu-content" hidden>
+      <p class="menu-alerta">Escolha até 2 sabores de gelato para seu milk shake.</p>
+
+      <div class="produto-linha">
+        <div>
+          <h3>Milk Shake 300ml</h3>
+          <p>Ver sabores disponíveis no dia.</p>
+        </div>
+        <strong>R$ —,—</strong>
+      </div>
+    </div>
+  </article>
+
+  <!-- BANANA SPLIT -->
+  <article class="menu-item">
+    <button class="menu-toggle" aria-expanded="false">
+      <span class="menu-info">
+        <span class="menu-icon"><i class="fa-solid fa-utensils"></i></span>
+        <span>
+          <strong>Banana Split</strong>
+          <small>A clássica sobremesa que todo mundo ama</small>
+        </span>
+      </span>
+      <span class="menu-action">+</span>
+    </button>
+
+    <div class="menu-content" hidden>
+      <p class="menu-alerta">Servida com 3 bolas de gelato, banana, caldas e chantilly.</p>
+
+      <div class="produto-linha">
+        <div>
+          <h3>Banana Split Tradicional</h3>
+          <p>3 bolas de gelato, banana, caldas e chantilly.</p>
+        </div>
+        <strong>R$ —,—</strong>
+      </div>
+    </div>
+  </article>
+
+  <!-- BEBIDAS -->
+  <article class="menu-item">
+    <button class="menu-toggle" aria-expanded="false">
+      <span class="menu-info">
+        <span class="menu-icon"><i class="fa-solid fa-bottle-water"></i></span>
+        <span>
+          <strong>Bebidas</strong>
+          <small>Para acompanhar sua sobremesa</small>
+        </span>
+      </span>
+      <span class="menu-action">+</span>
+    </button>
+
+    <div class="menu-content" hidden>
+      <div class="produto-linha"><h3>Água Mineral</h3><strong>R$ —,—</strong></div>
+      <div class="produto-linha"><h3>Água com Gás</h3><strong>R$ —,—</strong></div>
+      <div class="produto-linha"><h3>Refrigerante Lata</h3><strong>R$ —,—</strong></div>
+      <div class="produto-linha"><h3>Refrigerante 600ml</h3><strong>R$ —,—</strong></div>
+    </div>
+  </article>
+
+  <p class="menu-observacao">
+    * Preços sujeitos a alteração sem aviso prévio. Consulte valores atualizados no estabelecimento.<br>
+    Cardápio atualizado — Arducci Gelateria & Açaíteria — Praia Grande, SP
+  </p>
+</section>
+
+
+
+  <footer class="footer" aria-label="Rodapé do site">
+  <nav class="footer-nav" aria-label="Links principais do rodapé">
+    <a href="#" aria-label="Acessar cardápio digital">
+      <i class="fa-solid fa-utensils" aria-hidden="true"></i>
+      <span>Cardápio Digital</span>
+    </a>
+
+    <a href="https://www.instagram.com/arduccigelateria" target="_blank" rel="noopener noreferrer" aria-label="Acessar Instagram da Arducci">
+      <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+      <span>Instagram</span>
+    </a>
+
+    <a href="#" aria-label="Ver localização da Arducci">
+      <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+      <span>Localização</span>
+    </a>
+  </nav>
+
+  <div class="footer-linha" aria-hidden="true"></div>
+
+  <p class="footer-copy">
+    © 2026 Arducci Gelateria e Açaíteria. Todos os direitos reservados.
+  </p>
+</footer>
+
+  <script src="/assets/JavaScript/script.js"></script>
+</body>
+
+</html>
