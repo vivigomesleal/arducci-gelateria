@@ -202,15 +202,20 @@
 }
 
 .menu-icon {
-  width: 32px;
-  height: 32px;
+  width: 45px;
+  height: 45px;
   background: #5a352b;
-  color: #f7d982;
   border-radius: 50%;
   display: grid;
   place-items: center;
   flex-shrink: 0;
   font-size: 13px;
+}
+
+.menu-icon img {
+  width: 38px;
+  height: 38px;
+  object-fit: contain;
 }
 
 .menu-info strong {
