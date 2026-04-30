@@ -1095,3 +1095,123 @@ body {
     line-height: 1.5;
   }
 }
+
+/* ############## POLTICA DE PRIV ################# */
+
+.lgpd-popup {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.lgpd-popup.ativo {
+  display: flex;
+}
+
+.lgpd-card {
+  position: relative;
+  width: min(100%, 600px);
+  background: #fffaf3;
+  border-radius: 14px;
+  padding: 32px 24px;
+  text-align: center;
+}
+
+.lgpd-close {
+  position: absolute;
+  top: 10px;
+  right: 14px;
+  border: none;
+  background: transparent;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+/* ############## cookies ################# */
+
+.cookies-popup {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.cookies-popup.ativo {
+  display: flex;
+}
+
+.cookies-card {
+  width: min(100%, 560px);
+  background: #fffaf3;
+  border: 1px solid rgba(247, 217, 130, 0.65);
+  border-radius: 14px;
+  padding: 32px 24px;
+  text-align: center;
+  box-shadow: 0 18px 45px rgba(90, 53, 43, 0.22);
+}
+
+.cookies-card h2 {
+  font-family: 'Playfair Display', serif;
+  color: #5a352b;
+  font-size: clamp(26px, 4vw, 36px);
+  margin-bottom: 16px;
+}
+
+.cookies-card p {
+  font-family: 'Montserrat', sans-serif;
+  color: #7d5f57;
+  font-size: 14px;
+  line-height: 1.7;
+  margin-bottom: 24px;
+}
+
+.cookies-botoes {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.cookies-botoes button {
+  background: #5a352b;
+  color: #f7d982;
+  border: 1px solid rgba(247, 217, 130, 0.65);
+  padding: 13px 28px;
+  border-radius: 4px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.cookies-botoes button:hover {
+  background: #4b2b24;
+  color: #ffe8a4;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 560px) {
+  .cookies-card {
+    padding: 28px 18px;
+  }
+
+  .cookies-botoes {
+    flex-direction: column;
+  }
+
+  .cookies-botoes button {
+    width: 100%;
+  }
+}

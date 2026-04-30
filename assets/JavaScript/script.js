@@ -168,3 +168,72 @@ document.addEventListener("DOMContentLoaded", () => {
     window.open(link, "_blank");
   });
 });
+
+// ############ FILTRO  ###########
+
+  document.addEventListener("DOMContentLoaded", function () {
+  const inputBusca = document.getElementById("buscarGelato");
+  const cardsGelatos = document.querySelectorAll(".produto-card");
+
+  if (!inputBusca || cardsGelatos.length === 0) return;
+
+  inputBusca.addEventListener("input", function () {
+    const textoDigitado = inputBusca.value.toLowerCase().trim();
+
+    cardsGelatos.forEach(function (card) {
+      const nomeGelato = card.querySelector("h3").textContent.toLowerCase();
+
+      card.style.display = nomeGelato.includes(textoDigitado)
+        ? "block"
+        : "none";
+    });
+  });
+});
+
+  // ############ politica de privacidade ###########
+
+ document.addEventListener("DOMContentLoaded", function () {
+  const abrirLgpd = document.getElementById("abrirLgpd");
+  const lgpdPopup = document.getElementById("lgpdPopup");
+  const fecharLgpd = document.getElementById("fecharLgpd");
+
+  if (!abrirLgpd || !lgpdPopup || !fecharLgpd) return;
+
+  abrirLgpd.addEventListener("click", function (e) {
+    e.preventDefault();
+    lgpdPopup.classList.add("ativo");
+  });
+
+  fecharLgpd.addEventListener("click", function () {
+    lgpdPopup.classList.remove("ativo");
+  });
+});
+
+ // ############ COOKIES ###########
+
+document.addEventListener("DOMContentLoaded", function () {
+  const cookiesPopup = document.getElementById("cookiesPopup");
+  const aceitarCookies = document.getElementById("aceitarCookies");
+  const recusarCookies = document.getElementById("recusarCookies");
+
+  if (!cookiesPopup || !aceitarCookies || !recusarCookies) return;
+
+  const escolhaCookies = localStorage.getItem("cookiesMetricas");
+
+  if (!escolhaCookies) {
+    cookiesPopup.classList.add("ativo");
+  }
+
+  aceitarCookies.addEventListener("click", function () {
+    localStorage.setItem("cookiesMetricas", "aceito");
+    cookiesPopup.classList.remove("ativo");
+
+    // Aqui você pode carregar o Google Analytics depois do aceite
+    // carregarGoogleAnalytics();
+  });
+
+  recusarCookies.addEventListener("click", function () {
+    localStorage.setItem("cookiesMetricas", "recusado");
+    cookiesPopup.classList.remove("ativo");
+  });
+});

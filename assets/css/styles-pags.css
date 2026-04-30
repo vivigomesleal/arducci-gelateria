@@ -11,8 +11,37 @@
   max-width: 1120px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fit, 220px);
   gap: 22px;
+}
+
+.filtro-gelatos {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 40px 0 30px;
+}
+
+.filtro-gelatos input {
+  width: min(100%, 420px);
+  padding: 12px 16px;
+
+  border: 1px solid #d8c7a1;
+  border-radius: 8px; /* 🔥 agora não fica redondo */
+
+  font-size: 15px;
+  font-family: inherit;
+
+  background: #fff;
+  outline: none;
+
+  transition: all 0.25s ease;
+}
+
+/* foco mais elegante */
+.filtro-gelatos input:focus {
+  border-color: #b78b35;
+  box-shadow: 0 0 0 2px rgba(183, 139, 53, 0.15);
 }
 
 .produto-card {
@@ -39,9 +68,8 @@
   box-shadow: 0 18px 35px rgba(90, 53, 43, 0.18);
 }
 
-.produto-card img {
-  width: 100%;
-  display: block;
+.produto-card {
+  width: 220px;
 }
 
 .produto-card:hover {
@@ -69,7 +97,24 @@
   color: #7d5f57;
 }
 
+.categoria-bloco {
+  margin-bottom: 50px;
+}
 
+.categoria-bloco h2 {
+  text-align: center;
+  margin: 35px 0 25px;
+  font-size: clamp(24px, 3vw, 34px);
+  font-family: 'Playfair Display', serif;
+  color: #5b2b18;
+}
+
+.catalogo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+  justify-items: center;
+}
 
 @media (max-width: 900px) {
   .catalogo-grid {
@@ -98,6 +143,15 @@
 
   .produto-info p {
     font-size: 11px;
+  }
+
+    .catalogo-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .categoria-bloco h2 {
+    font-size: 24px;
   }
 }
 
@@ -613,68 +667,3 @@
   }
 }
 
-/* ############## POLTICA DE PRIV ################# */
-
-.lgpd-section {
-  background: #f3eee8;
-  padding: 45px 20px;
-}
-
-.lgpd-card {
-  max-width: 900px;
-  margin: 0 auto;
-  background: rgba(255, 255, 255, 0.65);
-  border: 1px solid rgba(247, 217, 130, 0.55);
-  border-radius: 12px;
-  padding: 34px 28px;
-  text-align: center;
-  box-shadow: 0 8px 22px rgba(90, 53, 43, 0.08);
-}
-
-.lgpd-card h2 {
-  font-family: 'Playfair Display', serif;
-  font-size: clamp(28px, 4vw, 40px);
-  color: #5a352b;
-  margin-bottom: 18px;
-}
-
-.lgpd-card p {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 14px;
-  line-height: 1.7;
-  color: #7d5f57;
-  margin-bottom: 14px;
-}
-
-.lgpd-link {
-  margin-top: 18px;
-  display: inline-block;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: #5a352b;
-  text-decoration: none;
-  border-bottom: 1px solid #d8a84f;
-  padding-bottom: 5px;
-}
-
-.lgpd-link:hover,
-.lgpd-link:focus-visible {
-  color: #8b5e52;
-}
-
-@media (max-width: 560px) {
-  .lgpd-section {
-    padding: 35px 16px;
-  }
-
-  .lgpd-card {
-    padding: 28px 18px;
-  }
-
-  .lgpd-card p {
-    font-size: 13px;
-  }
-}

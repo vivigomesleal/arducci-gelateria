@@ -98,18 +98,20 @@
   <h2 id="titulo-outros" class="sr-only">
     Lista de outros produtos
   </h2>
+<div class="filtro-gelatos">
+  <input 
+    type="text" 
+    id="buscarGelato" 
+    placeholder="Buscar sabor de..."
+    aria-label="Buscar sabor de gelato"
+  >
+</div>
+  <!-- CATEGORIA 1 -->
+  <div class="categoria-bloco">
+    <h2>Sobremesas com Gelato</h2>
 
-  <div class="catalogo-grid">
-
-    <article id="acai" class="produto-card">
-      <img src="../images/acai-galeria.avif" alt="Açaí na tigela com morango, manga e leite em pó">
-      <div class="produto-info">
-        <h3>Açaí</h3>
-        <p>Nosso delicioso açaí na tigela com frutas e acompanhamentos.</p>
-      </div>
-    </article>
-
-    <article id="bananasplit" class="produto-card">
+    <div class="catalogo-grid">
+     <article id="bananasplit" class="produto-card">
       <img src="../images/bananasplit-galeria.avif" alt="Banana split feita com banana, sorvete e calda de chocolate">
       <div class="produto-info">
         <h3>Banana Split</h3>
@@ -117,7 +119,7 @@
       </div>
     </article>
 
-    <article id="cascao" class="produto-card">
+      <article id="cascao" class="produto-card">
       <img src="../images/cascao-galeria.avif" alt="Cascão com uma bola de gelato de pistache">
       <div class="produto-info">
         <h3>Cascão</h3>
@@ -125,7 +127,7 @@
       </div>
     </article>
 
-    <article id="milkshake" class="produto-card">
+      <article id="milkshake" class="produto-card">
       <img src="../images/milkshake-galeria.avif" alt="Milk shake de sorvete batido com leite, canudo e cobertura">
       <div class="produto-info">
         <h3>Milk Shake</h3>
@@ -133,7 +135,7 @@
       </div>
     </article>
 
-    <article id="petit-gateau" class="produto-card">
+   <article id="petit-gateau" class="produto-card">
       <img src="../images/petit-gateau-galeria.avif" alt="Petit gateau com gelato de creme e calda de chocolate">
       <div class="produto-info">
         <h3>Petit Gateau</h3>
@@ -141,7 +143,15 @@
       </div>
     </article>
 
-    <article id="gelatos-self-service" class="produto-card">
+    </div>
+  </div>
+
+    <!-- CATEGORIA 2 -->
+  <div class="categoria-bloco">
+    <h2>Self Service</h2>
+
+    <div class="catalogo-grid">
+       <article id="gelatos-self-service" class="produto-card">
       <img src="../images/sorvete-artesanal-galeria.jpg" alt="Pote individual de gelato por kg com vários sabores, coberturas e acompanhamentos">
       <div class="produto-info">
         <h3>Gelatos Self-service</h3>
@@ -149,23 +159,64 @@
       </div>
     </article>
 
-    <article id="pote" class="produto-card">
-      <img src="../images/para-viagem-galeria.avif" alt="Vários potes de gelato de 1 litro e meio de diversos sabores">
+       <article id="gelatos-self-service" class="produto-card">
+      <img src="../images/sorvete-artesanal-galeria.jpg" alt="Pote individual de gelato por kg com vários sabores, coberturas e acompanhamentos">
       <div class="produto-info">
-        <h3>Pote de 1,5 litros</h3>
-        <p>Leve seu sabor preferido para casa, para uma sobremesa ou até para presentear.</p>
+        <h3>Coberturas</h3>
+        <p>Nosso carro-chefe: variedade de gelatos, caldas e castanhas para o cliente montar à vontade.</p>
       </div>
     </article>
 
-    <article id="diet" class="produto-card">
-      <img src="../images/Gelato-diet.webp" alt="Imagem do gelato diet">
+    <article id="gelatos-self-service" class="produto-card">
+      <img src="../images/sorvete-artesanal-galeria.jpg" alt="Pote individual de gelato por kg com vários sabores, coberturas e acompanhamentos">
       <div class="produto-info">
-        <h3>Diet</h3>
-        <p>Temos sempre opção diet para viagem e também no self-service.</p>
+        <h3>Caldas</h3>
+        <p>Nosso carro-chefe: variedade de gelatos, caldas e castanhas para o cliente montar à vontade.</p>
       </div>
     </article>
 
+       <article id="gelatos-self-service" class="produto-card">
+      <img src="../images/sorvete-artesanal-galeria.jpg" alt="Pote individual de gelato por kg com vários sabores, coberturas e acompanhamentos">
+      <div class="produto-info">
+        <h3>Fini</h3>
+        <p> caldas e castanhas para o cliente montar à vontade.</p>
+      </div>
+    </article>
+    </div>
   </div>
+
+
+    <!-- CATEGORIA 3-->
+  <div class="categoria-bloco">
+    <h2>Para Levar</h2>
+
+    <div class="catalogo-grid">
+      <article class="produto-card">
+        <img src="../images/Gelato_acai.webp" alt="Açaí creme roxo escuro.">
+        <div class="produto-info">
+          <h3>Açaí</h3>
+          <p>O mais cremoso Açaí da Cidade. 100% artesanal puro sabor.</p>
+        </div>
+      </article>
+
+      <article class="produto-card">
+        <img src="../images/Gelato_AcaiNutella.webp" alt="Açaí com mesclas de Nutella.">
+        <div class="produto-info">
+          <h3>Açaí com Nutella</h3>
+          <p>Delicioso açaí com pedaços de Nutella.</p>
+        </div>
+      </article>
+
+      <article class="produto-card">
+        <img src="../images/acai-galeria.avif" alt="Açaí na tigela com morango, manga e leite em pó.">
+        <div class="produto-info">
+          <h3>Açaí na Tigela</h3>
+          <p>Açaí montado com frutas e acompanhamentos.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+
 </section>
 
 
