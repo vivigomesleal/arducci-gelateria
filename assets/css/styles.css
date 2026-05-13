@@ -17,7 +17,13 @@ body {
 
 
 /* ===== HEADER BASE ===== */
+.navegacao-responsivo {
+  display: none;
+}
 
+.navegacao-responsivo.show-menu {
+  display: block;
+}
 /* ===== HEADER DESKTOP ===== */
 
 .navbar {

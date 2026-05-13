@@ -222,10 +222,11 @@
     font-size: 11px;
   }
 
-  .produtos-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 14px;
+  .curiosidades-section, .contato-section, .sobre-section {
+    padding: 30px 20px;
   }
+
+  
 
   .produto-home span {
     font-size: 17px;
@@ -236,7 +237,7 @@
   }
 
   .sobre-divisor {
-    margin: 48px auto 34px;
+    margin: 18px auto;
   }
 
   .sobre-numeros {
@@ -244,28 +245,24 @@
   }
 
   .comparativo {
-    grid-template-columns: 1fr;
-    gap: 35px;
+    gap: 10px;
   }
 
   .comparativo-divisor {
     width: 80%;
-    height: 1px;
     margin: 0 auto;
   }
 
   .comparativo-card img {
     width: 150px;
-    height: 150px;
+    
   }
 
   .comparativo-card h3 {
     margin-bottom: 18px;
   }
 
-  .curiosidades-intro {
-    margin-bottom: 45px;
-  }
+  
 
   .contato-cards {
     grid-template-columns: 1fr;
@@ -273,11 +270,17 @@
   }
 
   .contato-card {
-    min-height: 150px;
+    min-height: 100px;
+    padding: 22px 5px;
   }
 
   .contato-botao {
     padding: 18px 34px;
+  }
+
+  .contato-linha {
+    height: 1px;
+     margin: 0 auto 20px;
   }
 
   .catalogo-section {
@@ -329,6 +332,36 @@
 }
 
 
+@media (max-width: 768px) {
+  .navbar {
+    display: none;
+  }
+
+  .menu-responsivo {
+    display: block;
+    width: 100%;
+    background: #5a352b;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+  }
+
+  .navegacao-responsivo {
+    display: none;
+  }
+
+  .navegacao-responsivo.ativo {
+    display: block;
+  }
+
+  .hero {
+    padding-top: 110px;
+  }
+
+
+}
+
 /* =========================================================
    MOBILE
 ========================================================= */
@@ -336,7 +369,7 @@
 @media (max-width: 620px) {
 
   .hero {
-    min-height: 500px;
+    min-height: 300px;
   }
 
   .hero h1 {
@@ -352,27 +385,23 @@
     width: 145px;
   }
 
-  .produtos-grid {
-    grid-template-columns: 1fr;
-  }
-
   .produto-home span {
     font-size: 18px;
   }
 
   .produtos-info {
-    gap: 15px;
+    gap: 5px;
     font-size: 15px;
     flex-direction: column;
   }
 
-  .sobre-texto p {
-    font-size: 19px;
-  }
+  .produtos-section {
+  padding: 30px 20px 30px;
+  
+}
 
   .sobre-numeros {
-    flex-direction: column;
-    gap: 28px;
+    gap: 5px;
   }
 
   .contato-botao {
@@ -428,7 +457,7 @@
   }
 
   .btn-pedido {
-    width: 100%;
+    width: 80%;
     text-align: center;
   }
 

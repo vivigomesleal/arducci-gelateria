@@ -1,6 +1,14 @@
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", () => {
   setupNavigation();
+  setupCardapioDigital();
+  setupRevenda();
+  setupFiltroCatalogo();
+  setupLGPD();
+  setupCookies();
+  setupSliders();
 });
+
+/* ########## NAVEGAÇÃO ########## */
 
 function setupNavigation() {
   const iconMenu = document.getElementById("icon-menu");
@@ -12,38 +20,61 @@ function setupNavigation() {
   const dropMobileBtn = document.getElementById("btndrop-mobile");
   const dropdownMobile = document.getElementById("dropdown-mobile");
 
+  function fecharMenuMobile() {
+    if (navLinks) {
+      navLinks.classList.remove("show-menu");
+    }
+
+    if (iconMenu) {
+      iconMenu.setAttribute("aria-expanded", "false");
+      iconMenu.innerHTML = '<i class="fas fa-bars"></i>';
+    }
+
+    if (dropdownMobile && dropMobileBtn) {
+      dropdownMobile.classList.remove("show");
+      dropMobileBtn.setAttribute("aria-expanded", "false");
+    }
+  }
+
   if (iconMenu && navLinks) {
-    iconMenu.addEventListener("click", function () {
+    iconMenu.addEventListener("click", () => {
       const isOpen = navLinks.classList.toggle("show-menu");
 
-      iconMenu.setAttribute("aria-expanded", isOpen);
-
+      iconMenu.setAttribute("aria-expanded", String(isOpen));
       iconMenu.innerHTML = isOpen
         ? '<i class="fas fa-times"></i>'
         : '<i class="fas fa-bars"></i>';
     });
+
+    const linksMobile = navLinks.querySelectorAll("a");
+
+    linksMobile.forEach((link) => {
+      link.addEventListener("click", fecharMenuMobile);
+    });
   }
 
   function toggleDropdown(button, dropdown) {
+    if (!button || !dropdown) return;
+
     const isOpen = dropdown.classList.toggle("show");
-    button.setAttribute("aria-expanded", isOpen);
+    button.setAttribute("aria-expanded", String(isOpen));
   }
 
   if (dropDesktopBtn && dropdownDesktop) {
-    dropDesktopBtn.addEventListener("click", function (e) {
+    dropDesktopBtn.addEventListener("click", (e) => {
       e.stopPropagation();
       toggleDropdown(dropDesktopBtn, dropdownDesktop);
     });
   }
 
   if (dropMobileBtn && dropdownMobile) {
-    dropMobileBtn.addEventListener("click", function (e) {
+    dropMobileBtn.addEventListener("click", (e) => {
       e.stopPropagation();
       toggleDropdown(dropMobileBtn, dropdownMobile);
     });
   }
 
-  document.addEventListener("click", function (e) {
+  document.addEventListener("click", (e) => {
     if (
       dropdownDesktop &&
       dropDesktopBtn &&
@@ -65,62 +96,65 @@ function setupNavigation() {
     }
   });
 
-  document.addEventListener("keydown", function (e) {
+  document.addEventListener("keydown", (e) => {
     if (e.key === "Escape") {
-      if (navLinks) {
-        navLinks.classList.remove("show-menu");
-      }
-
-      if (iconMenu) {
-        iconMenu.setAttribute("aria-expanded", "false");
-        iconMenu.innerHTML = '<i class="fas fa-bars"></i>';
-      }
+      fecharMenuMobile();
 
       if (dropdownDesktop && dropDesktopBtn) {
         dropdownDesktop.classList.remove("show");
         dropDesktopBtn.setAttribute("aria-expanded", "false");
       }
-
-      if (dropdownMobile && dropMobileBtn) {
-        dropdownMobile.classList.remove("show");
-        dropMobileBtn.setAttribute("aria-expanded", "false");
-      }
     }
   });
 }
 
-// ############ PAGINA CARDAPIO DIGITAL ###########
+/* ########## PÁGINA CARDÁPIO DIGITAL ########## */
 
-
-document.addEventListener("DOMContentLoaded", () => {
+function setupCardapioDigital() {
   const botoes = document.querySelectorAll(".menu-toggle");
+
+  if (botoes.length === 0) return;
 
   botoes.forEach((botao) => {
     botao.addEventListener("click", () => {
       const conteudo = botao.nextElementSibling;
+
+      if (!conteudo) return;
+
       const estaAberto = botao.getAttribute("aria-expanded") === "true";
 
       botao.setAttribute("aria-expanded", String(!estaAberto));
       conteudo.hidden = estaAberto;
 
       const sinal = botao.querySelector(".menu-action");
-      sinal.textContent = estaAberto ? "+" : "−";
+
+      if (sinal) {
+        sinal.textContent = estaAberto ? "+" : "−";
+      }
     });
   });
-});
+}
 
-// ############ PAGINA REVENDA  ###########
+/* ########## PÁGINA REVENDA ########## */
 
-
-
-document.addEventListener("DOMContentLoaded", () => {
+function setupRevenda() {
   const checkboxes = document.querySelectorAll(".sabores-grid input");
   const statusSabores = document.getElementById("status-sabores");
   const textoPedido = document.getElementById("texto-pedido");
   const btnWhatsApp = document.getElementById("btn-whatsapp");
   const avisoCopia = document.getElementById("aviso-copia");
 
-  const numeroWhatsApp = "+5513981739220"; // troque pelo número real
+  if (
+    checkboxes.length === 0 ||
+    !statusSabores ||
+    !textoPedido ||
+    !btnWhatsApp ||
+    !avisoCopia
+  ) {
+    return;
+  }
+
+  const numeroWhatsApp = "5513981739220";
 
   function atualizarPedido() {
     const sabores = Array.from(checkboxes)
@@ -167,33 +201,29 @@ document.addEventListener("DOMContentLoaded", () => {
 
     window.open(link, "_blank");
   });
-});
+}
 
-// ############ FILTRO  ###########
+/* ########## FILTRO CATÁLOGO ########## */
 
-  document.addEventListener("DOMContentLoaded", function () {
+function setupFiltroCatalogo() {
   const inputBusca = document.getElementById("buscarGelato");
   const catalogoSection = document.querySelector(".catalogo-section");
   const categorias = document.querySelectorAll(".categoria-bloco");
 
-  if (!inputBusca || categorias.length === 0) return;
+  if (!inputBusca || !catalogoSection || categorias.length === 0) return;
 
-  inputBusca.addEventListener("input", function () {
+  inputBusca.addEventListener("input", () => {
     const textoDigitado = inputBusca.value.toLowerCase().trim();
 
-    if (textoDigitado !== "") {
-      catalogoSection.classList.add("pesquisando");
-    } else {
-      catalogoSection.classList.remove("pesquisando");
-    }
+    catalogoSection.classList.toggle("pesquisando", textoDigitado !== "");
 
-    categorias.forEach(function (categoria) {
+    categorias.forEach((categoria) => {
       const cards = categoria.querySelectorAll(".produto-card");
       let encontrouNaCategoria = false;
 
-      cards.forEach(function (card) {
-        const nomeProduto = card.querySelector("h3").textContent.toLowerCase();
-        const descricaoProduto = card.querySelector("p").textContent.toLowerCase();
+      cards.forEach((card) => {
+        const nomeProduto = card.querySelector("h3")?.textContent.toLowerCase() || "";
+        const descricaoProduto = card.querySelector("p")?.textContent.toLowerCase() || "";
 
         const encontrou =
           nomeProduto.includes(textoDigitado) ||
@@ -206,70 +236,89 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       });
 
-      if (textoDigitado !== "" && !encontrouNaCategoria) {
-        categoria.classList.add("sem-resultados");
-      } else {
-        categoria.classList.remove("sem-resultados");
-      }
+      categoria.classList.toggle(
+        "sem-resultados",
+        textoDigitado !== "" && !encontrouNaCategoria
+      );
     });
   });
-});
+}
 
-  // ############ politica de privacidade ###########
+/* ########## POLÍTICA DE PRIVACIDADE ########## */
 
- document.addEventListener("DOMContentLoaded", function () {
+function setupLGPD() {
   const abrirLgpd = document.getElementById("abrirLgpd");
   const lgpdPopup = document.getElementById("lgpdPopup");
   const fecharLgpd = document.getElementById("fecharLgpd");
 
   if (!abrirLgpd || !lgpdPopup || !fecharLgpd) return;
 
-  abrirLgpd.addEventListener("click", function (e) {
+  abrirLgpd.addEventListener("click", (e) => {
     e.preventDefault();
     lgpdPopup.classList.add("ativo");
   });
 
-  fecharLgpd.addEventListener("click", function () {
+  fecharLgpd.addEventListener("click", () => {
     lgpdPopup.classList.remove("ativo");
   });
-});
 
- // ############ COOKIES ###########
+  lgpdPopup.addEventListener("click", (e) => {
+    if (e.target === lgpdPopup) {
+      lgpdPopup.classList.remove("ativo");
+    }
+  });
+}
 
-document.addEventListener("DOMContentLoaded", function () {
+/* ########## COOKIES ########## */
+
+function setupCookies() {
   const cookiesPopup = document.getElementById("cookiesPopup");
   const aceitarCookies = document.getElementById("aceitarCookies");
   const recusarCookies = document.getElementById("recusarCookies");
 
   if (!cookiesPopup || !aceitarCookies || !recusarCookies) return;
 
-  const escolhaCookies = localStorage.getItem("cookiesMetricas");
+  let escolhaCookies = null;
+
+  try {
+    escolhaCookies = localStorage.getItem("cookiesMetricas");
+  } catch {
+    escolhaCookies = null;
+  }
 
   if (!escolhaCookies) {
     cookiesPopup.classList.add("ativo");
   }
 
-  aceitarCookies.addEventListener("click", function () {
-    localStorage.setItem("cookiesMetricas", "aceito");
-    cookiesPopup.classList.remove("ativo");
+  aceitarCookies.addEventListener("click", () => {
+    try {
+      localStorage.setItem("cookiesMetricas", "aceito");
+    } catch {
+      console.log("LocalStorage bloqueado.");
+    }
 
-    // Aqui você pode carregar o Google Analytics depois do aceite
-    // carregarGoogleAnalytics();
-  });
-
-  recusarCookies.addEventListener("click", function () {
-    localStorage.setItem("cookiesMetricas", "recusado");
     cookiesPopup.classList.remove("ativo");
   });
-});
 
- // ############ SLIDER PAG OUTROS ###########
+  recusarCookies.addEventListener("click", () => {
+    try {
+      localStorage.setItem("cookiesMetricas", "recusado");
+    } catch {
+      console.log("LocalStorage bloqueado.");
+    }
 
+    cookiesPopup.classList.remove("ativo");
+  });
+}
 
-document.addEventListener("DOMContentLoaded", function () {
+/* ########## SLIDER PÁGINA OUTROS ########## */
+
+function setupSliders() {
   const sliders = document.querySelectorAll(".card-slider");
 
-  sliders.forEach(function (slider) {
+  if (sliders.length === 0) return;
+
+  sliders.forEach((slider) => {
     const track = slider.querySelector(".card-slider-track");
     const images = slider.querySelectorAll("img");
     const prevBtn = slider.querySelector(".prev");
@@ -278,19 +327,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (!track || images.length === 0 || !dotsContainer) return;
 
-    images.forEach(function (_, index) {
+    images.forEach((_, index) => {
       const dot = document.createElement("button");
       dot.type = "button";
-      dot.setAttribute("aria-label", "Ir para imagem " + (index + 1));
+      dot.setAttribute("aria-label", `Ir para imagem ${index + 1}`);
 
       if (index === 0) {
         dot.classList.add("active");
       }
 
-      dot.addEventListener("click", function () {
+      dot.addEventListener("click", () => {
         track.scrollTo({
           left: track.clientWidth * index,
-          behavior: "smooth"
+          behavior: "smooth",
         });
       });
 
@@ -302,35 +351,45 @@ document.addEventListener("DOMContentLoaded", function () {
     function atualizarDots() {
       const indexAtual = Math.round(track.scrollLeft / track.clientWidth);
 
-      dots.forEach(function (dot, index) {
+      dots.forEach((dot, index) => {
         dot.classList.toggle("active", index === indexAtual);
       });
     }
 
     if (nextBtn) {
-      nextBtn.addEventListener("click", function () {
+      nextBtn.addEventListener("click", () => {
         const indexAtual = Math.round(track.scrollLeft / track.clientWidth);
-        const proximoIndex = indexAtual >= images.length - 1 ? 0 : indexAtual + 1;
+        const proximoIndex =
+          indexAtual >= images.length - 1 ? 0 : indexAtual + 1;
 
         track.scrollTo({
           left: track.clientWidth * proximoIndex,
-          behavior: "smooth"
+          behavior: "smooth",
         });
       });
     }
 
     if (prevBtn) {
-      prevBtn.addEventListener("click", function () {
+      prevBtn.addEventListener("click", () => {
         const indexAtual = Math.round(track.scrollLeft / track.clientWidth);
-        const anteriorIndex = indexAtual <= 0 ? images.length - 1 : indexAtual - 1;
+        const anteriorIndex =
+          indexAtual <= 0 ? images.length - 1 : indexAtual - 1;
 
         track.scrollTo({
           left: track.clientWidth * anteriorIndex,
-          behavior: "smooth"
+          behavior: "smooth",
         });
       });
     }
 
-    track.addEventListener("scroll", atualizarDots);
+    let scrollTimer;
+
+    track.addEventListener("scroll", () => {
+      clearTimeout(scrollTimer);
+
+      scrollTimer = setTimeout(() => {
+        atualizarDots();
+      }, 50);
+    });
   });
-});
+}

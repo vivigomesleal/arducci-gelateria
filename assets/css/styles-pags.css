@@ -1,4 +1,11 @@
 
+.navegacao-responsivo {
+  display: none;
+}
+
+.navegacao-responsivo.show-menu {
+  display: block;
+}
 
 /* ################## PAGINA GELATOS  ############# */
 
@@ -500,9 +507,7 @@
 
 /* Mobile */
 @media (max-width: 560px) {
-  .cardapio-hero {
-    padding: 6px 18px 34px;
-  }
+  
 
   .cardapio-linha {
     margin-bottom: 18px;
