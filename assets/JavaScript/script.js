@@ -173,19 +173,44 @@ document.addEventListener("DOMContentLoaded", () => {
 
   document.addEventListener("DOMContentLoaded", function () {
   const inputBusca = document.getElementById("buscarGelato");
-  const cardsGelatos = document.querySelectorAll(".produto-card");
+  const catalogoSection = document.querySelector(".catalogo-section");
+  const categorias = document.querySelectorAll(".categoria-bloco");
 
-  if (!inputBusca || cardsGelatos.length === 0) return;
+  if (!inputBusca || categorias.length === 0) return;
 
   inputBusca.addEventListener("input", function () {
     const textoDigitado = inputBusca.value.toLowerCase().trim();
 
-    cardsGelatos.forEach(function (card) {
-      const nomeGelato = card.querySelector("h3").textContent.toLowerCase();
+    if (textoDigitado !== "") {
+      catalogoSection.classList.add("pesquisando");
+    } else {
+      catalogoSection.classList.remove("pesquisando");
+    }
 
-      card.style.display = nomeGelato.includes(textoDigitado)
-        ? "block"
-        : "none";
+    categorias.forEach(function (categoria) {
+      const cards = categoria.querySelectorAll(".produto-card");
+      let encontrouNaCategoria = false;
+
+      cards.forEach(function (card) {
+        const nomeProduto = card.querySelector("h3").textContent.toLowerCase();
+        const descricaoProduto = card.querySelector("p").textContent.toLowerCase();
+
+        const encontrou =
+          nomeProduto.includes(textoDigitado) ||
+          descricaoProduto.includes(textoDigitado);
+
+        card.style.display = encontrou ? "flex" : "none";
+
+        if (encontrou) {
+          encontrouNaCategoria = true;
+        }
+      });
+
+      if (textoDigitado !== "" && !encontrouNaCategoria) {
+        categoria.classList.add("sem-resultados");
+      } else {
+        categoria.classList.remove("sem-resultados");
+      }
     });
   });
 });
@@ -235,5 +260,77 @@ document.addEventListener("DOMContentLoaded", function () {
   recusarCookies.addEventListener("click", function () {
     localStorage.setItem("cookiesMetricas", "recusado");
     cookiesPopup.classList.remove("ativo");
+  });
+});
+
+ // ############ SLIDER PAG OUTROS ###########
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  const sliders = document.querySelectorAll(".card-slider");
+
+  sliders.forEach(function (slider) {
+    const track = slider.querySelector(".card-slider-track");
+    const images = slider.querySelectorAll("img");
+    const prevBtn = slider.querySelector(".prev");
+    const nextBtn = slider.querySelector(".next");
+    const dotsContainer = slider.querySelector(".slider-dots");
+
+    if (!track || images.length === 0 || !dotsContainer) return;
+
+    images.forEach(function (_, index) {
+      const dot = document.createElement("button");
+      dot.type = "button";
+      dot.setAttribute("aria-label", "Ir para imagem " + (index + 1));
+
+      if (index === 0) {
+        dot.classList.add("active");
+      }
+
+      dot.addEventListener("click", function () {
+        track.scrollTo({
+          left: track.clientWidth * index,
+          behavior: "smooth"
+        });
+      });
+
+      dotsContainer.appendChild(dot);
+    });
+
+    const dots = dotsContainer.querySelectorAll("button");
+
+    function atualizarDots() {
+      const indexAtual = Math.round(track.scrollLeft / track.clientWidth);
+
+      dots.forEach(function (dot, index) {
+        dot.classList.toggle("active", index === indexAtual);
+      });
+    }
+
+    if (nextBtn) {
+      nextBtn.addEventListener("click", function () {
+        const indexAtual = Math.round(track.scrollLeft / track.clientWidth);
+        const proximoIndex = indexAtual >= images.length - 1 ? 0 : indexAtual + 1;
+
+        track.scrollTo({
+          left: track.clientWidth * proximoIndex,
+          behavior: "smooth"
+        });
+      });
+    }
+
+    if (prevBtn) {
+      prevBtn.addEventListener("click", function () {
+        const indexAtual = Math.round(track.scrollLeft / track.clientWidth);
+        const anteriorIndex = indexAtual <= 0 ? images.length - 1 : indexAtual - 1;
+
+        track.scrollTo({
+          left: track.clientWidth * anteriorIndex,
+          behavior: "smooth"
+        });
+      });
+    }
+
+    track.addEventListener("scroll", atualizarDots);
   });
 });

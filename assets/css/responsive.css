@@ -1,0 +1,447 @@
+/* =========================================================
+   RESPONSIVO
+========================================================= */
+
+@media (max-width: 900px) {
+
+  /* HEADER */
+
+  .navbar {
+    display: none;
+  }
+
+  .menu-responsivo {
+    width: 100%;
+    height: 90px;
+    background: rgba(90, 53, 43, 0.92);
+    backdrop-filter: blur(12px);
+    display: block;
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 999;
+  }
+
+  .separando-logos {
+    padding: 8px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .menu {
+    width: 44px;
+    height: 44px;
+    border: 1px solid rgba(232, 201, 122, 0.35);
+    border-radius: 50%;
+    background: transparent;
+    color: #e8c97a;
+    font-size: 21px;
+    cursor: pointer;
+    display: grid;
+    place-items: center;
+    transition: 0.3s ease;
+    z-index: 1002;
+  }
+
+  .menu:hover {
+    background: rgba(232, 201, 122, 0.08);
+  }
+
+  .navegacao-responsivo {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: min(82%, 340px);
+    height: 100vh;
+    background: rgba(90, 53, 43, 0.92);
+    backdrop-filter: blur(18px);
+    border-left: 1px solid rgba(232, 201, 122, 0.2);
+    box-shadow: -20px 0 45px rgba(0, 0, 0, 0.28);
+    padding: 115px 26px 30px;
+
+    transform: translateX(100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.45s ease;
+    z-index: 1001;
+  }
+
+  .navegacao-responsivo.show-menu {
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .navegacao-responsivo ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .navegacao-responsivo li {
+    border-bottom: 1px solid rgba(232, 201, 122, 0.12);
+  }
+
+  .navegacao-responsivo a,
+  .navegacao-responsivo .dropbtn {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 0;
+    text-decoration: none;
+    color: #e8c97a;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+
+  .navegacao-responsivo a:hover,
+  .navegacao-responsivo .dropbtn:hover {
+    color: #fff1b8;
+    padding-left: 8px;
+  }
+
+  .navegacao-responsivo .dropdown-content {
+    position: static;
+    min-width: 100%;
+    box-shadow: none;
+    border: none;
+    border-radius: 0;
+    background: rgba(75, 43, 36, 0.45);
+    padding: 0 0 0 12px;
+    margin-bottom: 8px;
+
+    display: none;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    pointer-events: auto;
+  }
+
+  .navegacao-responsivo .dropdown-content.show {
+    display: block;
+  }
+
+  .navegacao-responsivo .dropdown-content a {
+    font-size: 12px;
+    padding: 13px 10px;
+    letter-spacing: 1.5px;
+  }
+
+  /* HERO */
+
+  .hero-content {
+    padding: 0 24px;
+  }
+
+  .hero h1 {
+    font-size: clamp(42px, 8vw, 62px);
+    line-height: 1;
+  }
+
+  .hero p {
+    font-size: 13px;
+  }
+
+  .location {
+    font-size: 14px;
+    letter-spacing: 4px;
+    margin: 20px 0;
+  }
+
+  .btn-pedido {
+    margin-left: 0;
+    padding: 15px 28px;
+    font-size: 13px;
+  }
+
+  /* PRODUTOS */
+
+  .produtos-grid {
+    gap: 16px;
+  }
+
+  /* SOBRE */
+
+  .sobre-texto p {
+    font-size: 22px;
+    line-height: 1.15;
+  }
+
+  /* CONTATO */
+
+  .contato-cards {
+    gap: 18px;
+  }
+
+  /* FOOTER */
+
+  .footer-nav {
+    gap: 40px;
+  }
+
+  .catalogo-grid {
+    grid-template-columns: repeat(2, 220px);
+    justify-content: center;
+    gap: 30px;
+  }
+
+  .categoria-bloco {
+    margin-bottom: 60px;
+  }
+
+}
+
+
+@media (max-width: 560px) {
+  
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 768px) {
+
+  .produtos-section,
+  .sobre-section,
+  .curiosidades-section,
+  .contato-section {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .produtos-subtitulo,
+  .sobre-subtitulo,
+  .contato-subtitulo {
+    letter-spacing: 5px;
+    font-size: 11px;
+  }
+
+  .produtos-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+
+  .produto-home span {
+    font-size: 17px;
+  }
+
+  .sobre-linha {
+    margin-bottom: 38px;
+  }
+
+  .sobre-divisor {
+    margin: 48px auto 34px;
+  }
+
+  .sobre-numeros {
+    gap: 20px;
+  }
+
+  .comparativo {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .comparativo-divisor {
+    width: 80%;
+    height: 1px;
+    margin: 0 auto;
+  }
+
+  .comparativo-card img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .comparativo-card h3 {
+    margin-bottom: 18px;
+  }
+
+  .curiosidades-intro {
+    margin-bottom: 45px;
+  }
+
+  .contato-cards {
+    grid-template-columns: 1fr;
+    max-width: 320px;
+  }
+
+  .contato-card {
+    min-height: 150px;
+  }
+
+  .contato-botao {
+    padding: 18px 34px;
+  }
+
+  .catalogo-section {
+    padding: 28px 14px 55px;
+  }
+
+  .filtro-gelatos {
+    margin: 25px 0 35px;
+  }
+
+  .filtro-gelatos input {
+    width: 100%;
+    font-size: 13px;
+    padding: 12px 14px;
+  }
+
+  .categoria-bloco {
+    margin-bottom: 52px;
+  }
+
+  .categoria-bloco h2 {
+    font-size: 30px;
+    margin-bottom: 25px;
+  }
+
+  .catalogo-grid {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 24px;
+  }
+
+  .produto-card {
+    width: min(100%, 260px);
+    min-height: 310px;
+  }
+
+  .produto-card img {
+    height: 185px;
+  }
+
+  .produto-info h3 {
+    font-size: 17px;
+  }
+
+  .produto-info p {
+    font-size: 12px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 620px) {
+
+  .hero {
+    min-height: 500px;
+  }
+
+  .hero h1 {
+    font-size: 42px;
+  }
+
+  .hero p {
+    font-size: 12px;
+    line-height: 1.6;
+  }
+
+  .logo img {
+    width: 145px;
+  }
+
+  .produtos-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .produto-home span {
+    font-size: 18px;
+  }
+
+  .produtos-info {
+    gap: 15px;
+    font-size: 15px;
+    flex-direction: column;
+  }
+
+  .sobre-texto p {
+    font-size: 19px;
+  }
+
+  .sobre-numeros {
+    flex-direction: column;
+    gap: 28px;
+  }
+
+  .contato-botao {
+    width: 100%;
+    max-width: 260px;
+    font-size: 12px;
+    padding: 18px 22px;
+  }
+
+  .revendedor-link {
+    letter-spacing: 3px;
+    font-size: 10px;
+  }
+
+  .footer {
+    padding: 40px 18px 25px;
+  }
+
+  .footer-nav {
+    gap: 22px;
+  }
+
+  .footer-nav a {
+    font-size: 12px;
+    letter-spacing: 4px;
+  }
+
+  .footer-nav i {
+    font-size: 20px;
+  }
+
+  .footer-copy {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE PEQUENO
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .hero h1 {
+    font-size: 36px;
+  }
+
+  .location {
+    font-size: 12px;
+    letter-spacing: 3px;
+  }
+
+  .btn-pedido {
+    width: 100%;
+    text-align: center;
+  }
+
+  .cookies-card {
+    padding: 28px 18px;
+  }
+
+  .cookies-botoes {
+    flex-direction: column;
+  }
+
+  .cookies-botoes button {
+    width: 100%;
+  }
+
+}

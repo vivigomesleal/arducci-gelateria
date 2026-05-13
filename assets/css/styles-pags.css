@@ -7,6 +7,132 @@
   padding: 32px 20px 55px;
 }
 
+.catalogo-section {
+  background: #f3eee8;
+  padding: 38px 20px 70px;
+}
+
+.filtro-gelatos {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 35px 0 45px;
+}
+
+.filtro-gelatos input {
+  width: min(100%, 440px);
+  padding: 13px 18px;
+  border: 1px solid rgba(183, 139, 53, 0.45);
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: 'Montserrat', sans-serif;
+  background: rgba(255, 255, 255, 0.75);
+  color: #5a352b;
+  outline: none;
+  transition: 0.25s ease;
+}
+
+.filtro-gelatos input:focus {
+  border-color: #b78b35;
+  box-shadow: 0 0 0 3px rgba(183, 139, 53, 0.15);
+}
+
+.categoria-bloco {
+  max-width: 1120px;
+  margin: 0 auto 70px;
+}
+
+.categoria-bloco h2 {
+  text-align: center;
+  margin: 0 0 30px;
+  font-size: clamp(30px, 4vw, 42px);
+  font-family: 'Playfair Display', serif;
+  color: #5a352b;
+  font-weight: 800;
+  position: relative;
+}
+
+.categoria-bloco h2::after {
+  content: "";
+  display: block;
+  width: 46px;
+  height: 1px;
+  background: #d8a84f;
+  margin: 14px auto 0;
+}
+
+.catalogo-grid {
+  max-width: 1120px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 220px);
+  justify-content: space-between;
+  gap: 38px;
+}
+
+.produto-card {
+  width: 220px;
+  min-height: 300px;
+  background: rgba(255, 255, 255, 0.62);
+  border: 1px solid rgba(90, 53, 43, 0.12);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 12px 28px rgba(90, 53, 43, 0.10);
+  transition: 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.produto-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 38px rgba(90, 53, 43, 0.18);
+}
+
+.produto-card img {
+  width: 100%;
+  height: 175px;
+  object-fit: cover;
+  display: block;
+  background: #fffaf3;
+}
+
+.produto-info {
+  padding: 18px 16px 22px;
+}
+
+.produto-info h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 17px;
+  color: #5a352b;
+  margin: 0 0 8px;
+}
+
+.produto-info p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  line-height: 1.6;
+  color: #7d5f57;
+  margin: 0;
+}
+
+/* Quando estiver pesquisando */
+.catalogo-section.pesquisando .categoria-bloco {
+  margin-bottom: 0;
+}
+
+.catalogo-section.pesquisando .categoria-bloco h2 {
+  display: none;
+}
+
+.catalogo-section.pesquisando .categoria-bloco.sem-resultados {
+  display: none;
+}
+
+.catalogo-section.pesquisando .catalogo-grid {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
 .catalogo-grid {
   max-width: 1120px;
   margin: 0 auto;
@@ -156,14 +282,184 @@
 }
 
 /* ################## PAGINA ACAITERIA ############# */
+/* CARD MENOR PARA ACOMPANHAMENTOS */
 
+/* =========================================================
+   ACOMPANHAMENTOS
+========================================================= */
+
+.acompanhamentos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+  gap: 18px;
+  justify-items: center;
+}
+
+.acompanhamentos-grid .produto-card {
+  width: 105px;
+  min-height: auto;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.acompanhamentos-grid .produto-card img {
+  width: 100%;
+  height: 95px;
+  object-fit: cover;
+}
+
+.acompanhamentos-grid .produto-info {
+  padding: 10px 8px 12px;
+  text-align: center;
+}
+
+.acompanhamentos-grid .produto-info h3 {
+  font-size: 11px;
+  margin-bottom: 0;
+  line-height: 1.3;
+}
+
+.acompanhamentos-grid .produto-info p {
+  display: none;
+}
+
+.acompanhamentos-grid .produto-card:hover {
+  transform: translateY(-3px);
+}
+
+
+/* RESPONSIVO */
+
+@media (max-width: 560px) {
+
+  .acompanhamentos-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+  }
+
+  .acompanhamentos-grid .produto-card {
+    width: 100%;
+    max-width: 100px;
+  }
+
+  .acompanhamentos-grid .produto-card img {
+    height: 85px;
+  }
+
+  .acompanhamentos-grid .produto-info h3 {
+    font-size: 10px;
+  }
+
+}
 /* ################## PAGINA PICOLES ############# */
 
 /* ################## PAGINA PALETAS ############# */
 
 /* ################## PAGINA OUTROS ############# */
 
+.card-slider {
+  position: relative;
+  width: 100%;
+  height: 175px;
+  overflow: hidden;
+  background: #fffaf3;
+}
 
+.card-slider-track {
+  display: flex;
+  height: 100%;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+
+.card-slider-track::-webkit-scrollbar {
+  display: none;
+}
+
+.card-slider-track img {
+  flex: 0 0 100%;
+  width: 100%;
+  height: 175px;
+  object-fit: cover;
+  scroll-snap-align: start;
+}
+
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 26px;
+  height: 26px;
+  border: 1px solid rgba(247, 217, 130, 0.35);
+  border-radius: 50%;
+  background: rgba(90, 53, 43, 0.35);
+  color: #f7d982;
+  font-size: 20px;
+  line-height: 1;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  opacity: 0;
+  transition: 0.3s ease;
+  z-index: 2;
+}
+
+.card-slider:hover .slider-btn {
+  opacity: 1;
+}
+
+.slider-btn.prev {
+  left: 8px;
+}
+
+.slider-btn.next {
+  right: 8px;
+}
+
+.slider-btn:hover {
+  background: rgba(90, 53, 43, 0.65);
+}
+
+.slider-dots {
+  position: absolute;
+  left: 50%;
+  bottom: 9px;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 5px;
+  z-index: 3;
+}
+
+.slider-dots button {
+  width: 6px;
+  height: 6px;
+  border: none;
+  border-radius: 50%;
+  padding: 0;
+  background: rgba(255, 255, 255, 0.65);
+  cursor: pointer;
+}
+
+.slider-dots button.active {
+  background: #f7d982;
+}
+
+@media (max-width: 560px) {
+  .card-slider,
+  .card-slider-track img {
+    height: 185px;
+  }
+
+  .slider-btn {
+    display: none;
+  }
+
+  .slider-dots {
+    bottom: 8px;
+  }
+}
 /* ################## PAGINA CARDAPIO ############# */
 
 .cardapio-hero {
@@ -194,7 +490,7 @@
 }
 
 .cardapio-descricao {
-  max-width: 620px;
+  max-width: 850px;
   margin: 0 auto;
   font-family: 'Montserrat', sans-serif;
   font-size: clamp(14px, 2vw, 18px);
@@ -252,7 +548,7 @@
 .menu-info {
   display: flex;
   align-items: center;
-  gap: 14px;
+  gap: 15px;
 }
 
 .menu-icon {
@@ -275,7 +571,7 @@
 .menu-info strong {
   display: block;
   font-family: 'Playfair Display', serif;
-  font-size: 20px;
+  font-size: 22px;
   color: #5a352b;
   margin-bottom: 4px;
 }
@@ -283,7 +579,7 @@
 .menu-info small {
   display: block;
   font-family: 'Montserrat', sans-serif;
-  font-size: 12px;
+  font-size: 16px;
   color: #9a766c;
 }
 
@@ -295,7 +591,7 @@
   border-radius: 50%;
   display: grid;
   place-items: center;
-  font-size: 18px;
+  font-size: 22px;
   font-weight: 700;
   flex-shrink: 0;
   transition: 0.3s ease;
@@ -336,7 +632,7 @@
   background: rgba(90, 53, 43, 0.06);
   color: #9a766c;
   font-family: 'Montserrat', sans-serif;
-  font-size: 11px;
+  font-size: 16px;
   line-height: 1.6;
   padding: 12px;
   border-radius: 5px;
@@ -355,14 +651,14 @@
 .menu-content h3,
 .produto-linha h3 {
   font-family: 'Playfair Display', serif;
-  font-size: 16px;
+  font-size: 20px;
   color: #5a352b;
   margin-bottom: 4px;
 }
 
 .menu-content h4 {
   font-family: 'Playfair Display', serif;
-  font-size: 16px;
+  font-size: 20px;
   color: #5a352b;
   margin: 22px 0 12px;
 }
@@ -370,41 +666,206 @@
 .menu-content h5 {
   font-family: 'Montserrat', sans-serif;
   text-transform: uppercase;
+  font-style: underline;
+  font-family: 600;
   letter-spacing: 2px;
-  font-size: 11px;
-  color: #9a766c;
+  font-size: 16px;
   margin: 16px 0 6px;
 }
 
 .menu-content p,
 .menu-content li {
   font-family: 'Montserrat', sans-serif;
-  font-size: 12px;
+  font-size: 16px;
   color: #8b5e52;
   line-height: 1.7;
 }
 
 .menu-content strong {
   font-family: 'Playfair Display', serif;
-  font-size: 16px;
+  font-size: 20px;
   color: #5a352b;
   white-space: nowrap;
 }
 
 .categoria p {
-  font-family: 'Playfair Display', serif;
-  font-style: italic;
-  font-size: 14px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
 }
 
-.menu-lista {
+
+/* =========================================================
+   TITULO + LINK
+========================================================= */
+
+.menu-titulo-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+
+  margin: 26px 0 20px;
+  padding-bottom: 10px;
+
+  border-bottom: 1px solid rgba(90, 53, 43, 0.12);
+}
+
+.menu-titulo-link h4 {
   margin: 0;
-  padding-left: 18px;
 }
 
-.menu-lista li::marker {
-  color: #d8a84f;
+.menu-titulo-link a {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  color: #9a766c;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+
+  border-bottom: 1px solid rgba(154, 118, 108, 0.35);
+  padding-bottom: 2px;
+
+  transition: 0.3s ease;
 }
+
+.menu-titulo-link a:hover {
+  color: #5a352b;
+  border-color: #5a352b;
+}
+
+
+/* =========================================================
+   GRID DAS CATEGORIAS
+========================================================= */
+
+.categorias-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px;
+  margin-top: 18px;
+}
+
+
+/* =========================================================
+   CATEGORIA
+========================================================= */
+
+.categoria {
+  position: relative;
+  padding-right: 18px;
+}
+
+/* linha vertical separando */
+.categoria::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  width: 1px;
+  height: 100%;
+
+  background: rgba(90, 53, 43, 0.12);
+}
+
+/* remove a última barra */
+.categoria:last-child::after {
+  display: none;
+}
+
+.categoria h5 {
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 16px;
+  color: #2f1a14;
+
+  margin: 0 0 14px;
+}
+
+
+/* =========================================================
+   LISTA DOS SABORES
+========================================================= */
+
+.lista-sabores {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.lista-sabores li {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  color: #8b5e52;
+  line-height: 1.8;
+
+  position: relative;
+  padding-left: 12px;
+}
+
+/* bolinha elegante */
+.lista-sabores li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #b78b35;
+}
+
+.lista-sabores li span {
+  font-size: 10px;
+  color: rgba(139, 94, 82, 0.58);
+  letter-spacing: 1px;
+  margin-left: 5px;
+  font-style: italic;
+}
+
+
+/* =========================================================
+   RESPONSIVO
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .categorias-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px 24px;
+  }
+
+  .categoria:nth-child(2)::after,
+  .categoria:nth-child(4)::after {
+    display: none;
+  }
+
+}
+
+@media (max-width: 560px) {
+
+  .menu-titulo-link {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  .categorias-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .categoria {
+    padding-right: 0;
+    padding-bottom: 18px;
+  }
+
+  .categoria::after {
+    width: 100%;
+    height: 1px;
+    top: auto;
+    bottom: 0;
+    right: auto;
+    left: 0;
+  }
+
+}
+
 
 .menu-observacao {
   max-width: 940px;
@@ -415,7 +876,7 @@
   padding: 18px;
   text-align: center;
   font-family: 'Montserrat', sans-serif;
-  font-size: 11px;
+  font-size: 15px;
   line-height: 1.6;
   color: #9a766c;
 }
