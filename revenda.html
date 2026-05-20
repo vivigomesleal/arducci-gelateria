@@ -6,10 +6,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css2?family=ABeeZee&display=swap" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="../css/responsive.css">
-  <link rel="stylesheet" href="../css/styles.css">
-  <link rel="stylesheet" href="../css/styles-pags.css">
+  <link rel="stylesheet" href="assets/css/styles-pags.css">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <!-- FAVICON -->
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+  <link rel="manifest" href="assets/favicon/site.webmanifest">
 <title>Arducci | Revenda de Gelatos</title>
+<meta name="author" content="Vivian-Gomes">
+  <meta name="robots" content="index, follow">
+  <meta name="title" content=" Arducci Gelateria e Açaíteria - Revenda de Gelatos em Praia Grande">
+  <meta name="description" content="Aqui na Arducci temos produtos 100% artesanais são os melhores gelatos da cidade, ficamos no inicio do bairro da ocian com divisa com a tupi frente a Praia.">
 </head>
 
 <body>
@@ -17,12 +26,12 @@
   <!-- Navbar desktop -->
   <header class="navbar">
     <div class="logo">
-      <img  src="../images/logo-arducci.svg" alt="">
+      <img  src="assets/images/logo-arducci.svg" alt="">
     </div>
 
     <nav class="nav-links">
       <ul>
-        <li><a href="/index.html">Início</a></li>
+        <li><a href="index.html">Início</a></li>
         <li>
           <div class="dropdown">
            <button class="dropbtn"id="btndrop-desktop"aria-expanded="false"aria-controls="dropdown-desktop">
@@ -30,17 +39,17 @@
           <i class="fa fa-caret-down" aria-hidden="true"></i>
           </button>
             <nav id="dropdown-desktop" class="dropdown-content">
-              <a href="../paginas/gelatos.html">Gelatos</a>
-              <a href="../paginas/acaiteria.html">Açaíteria</a>
-              <a href="../paginas/picoles.html">Picolés</a>
-              <a href="../paginas/paletas.html">Paletas</a>
-              <a href="../paginas/outros.html">Ver mais...</a>
+              <a href="gelatos.html">Gelatos</a>
+              <a href="acaiteria.html">Açaíteria</a>
+              <a href="picoles.html">Picolés</a>
+              <a href="paletas.html">Paletas</a>
+              <a href="outros.html">Ver mais...</a>
             </nav>
           </div>
         </li>
-        <li><a href="/index.html#sobre">Sobre</a></li>
-        <li><a href="/index.html#contato" >Contato</a></li>
-        <li><a href="../paginas/cardapio.html" >Cardápio Digital</a></li>
+        <li><a href="index.html#sobre">Sobre</a></li>
+        <li><a href="index.html#contato" >Contato</a></li>
+        <li><a href="cardapio.html" >Cardápio Digital</a></li>
       </ul>
     </nav>
   </header>
@@ -49,7 +58,7 @@
   <nav class="menu-responsivo">
     <div class="separando-logos">
       <div class="logo">
-        <img src="../images/logo-arducci.svg" alt="">
+        <img src="assets/images/logo-arducci.svg" alt="">
       </div>
       <button class="menu" id="icon-menu" aria-label="Abrir menu" aria-expanded="false">
   <i class="fas fa-bars"></i>
@@ -58,24 +67,24 @@
 
     <div class="navegacao-responsivo" id="links-nav">
       <ul>
-        <li><a href="/index.html">Início</a></li>
+        <li><a href="index.html">Início</a></li>
         <li>
           <div class="dropdown">
             <button class="dropbtn" id="btndrop-mobile">
               Produtos <i class="fa fa-caret-down"></i>
             </button>
             <nav id="dropdown-mobile" class="dropdown-content">
-              <a href="../paginas/gelatos.html">Gelatos</a>
-              <a href="../paginas/acaiteria.html">Açaíteria</a>
-              <a href="../paginas/picoles.html">Picolés</a>
-              <a href="../paginas/paletas.html">Paletas</a>
-              <a href="../paginas/outros.html">Ver mais...</a>
+              <a href="gelatos.html">Gelatos</a>
+              <a href="acaiteria.html">Açaíteria</a>
+              <a href="picoles.html">Picolés</a>
+              <a href="paletas.html">Paletas</a>
+              <a href="outros.html">Ver mais...</a>
             </nav>
           </div>
         </li>
-        <li><a href="/index.html#sobre">Sobre</a></li>
-        <li><a href="/index.html#contato">Contato</a></li>
-        <li><a href="../paginas/cardapio.html" >Cardápio Digital</a></li>
+        <li><a href="index.html#sobre">Sobre</a></li>
+        <li><a href="index.html#contato">Contato</a></li>
+        <li><a href="cardapio.html" >Cardápio Digital</a></li>
       </ul>
     </div>
   </nav>
@@ -103,7 +112,7 @@
     <fieldset class="sabores-grid">
       <legend class="sr-only">Selecione os sabores desejados</legend>
     
-      <label><input type="checkbox" value="Abacaxi"> Abacaxi</label>
+<label><input type="checkbox" value="Abacaxi"> Abacaxi</label>
 <label><input type="checkbox" value="Abacaxi 100%"> Abacaxi 100%</label>
 <label><input type="checkbox" value="Abacaxi ao vinho"> Abacaxi ao vinho</label>
 <label><input type="checkbox" value="Açaí 10L"> Açaí 10L</label>
@@ -114,18 +123,19 @@
 <label><input type="checkbox" value="Açaí Paçoca"> Açaí Paçoca</label>
 <label><input type="checkbox" value="Açaí Pistache"> Açaí Pistache</label>
 <label><input type="checkbox" value="Açaí Truffado"> Açaí Truffado</label>
+<label><input type="checkbox" value="Amarula"> Amarula</label>
 <label><input type="checkbox" value="Ameixa"> Ameixa</label>
 <label><input type="checkbox" value="Amora"> Amora</label>
 <label><input type="checkbox" value="Banana"> Banana</label>
 <label><input type="checkbox" value="Beijinho"> Beijinho</label>
 <label><input type="checkbox" value="Brigadeiro"> Brigadeiro</label>
-<label><input type="checkbox" value="Bom Bom"> Bom Bom</label>
+<label><input type="checkbox" value="Bombom"> Bombom</label>
 <label><input type="checkbox" value="Café com Ninho"> Café com Ninho</label>
 <label><input type="checkbox" value="Caipirinha"> Caipirinha</label>
 <label><input type="checkbox" value="Cereja"> Cereja</label>
 <label><input type="checkbox" value="Chiclete"> Chiclete</label>
 <label><input type="checkbox" value="Chocolate Branco"> Chocolate Branco</label>
-<label><input type="checkbox" value="Chocolate 70%"> Chocolate 70%</label>
+<label><input type="checkbox" value="Chocolate Nibs 70%"> Chocolate Nibs70%</label>
 <label><input type="checkbox" value="Chocolate"> Chocolate</label>
 <label><input type="checkbox" value="Chocomenta"> Chocomenta</label>
 <label><input type="checkbox" value="Coco"> Coco</label>
@@ -159,7 +169,7 @@
 <label><input type="checkbox" value="Paçoca"> Paçoca</label>
 <label><input type="checkbox" value="Pão de Mel"> Pão de Mel</label>
 <label><input type="checkbox" value="Papaya"> Papaya</label>
-<label><input type="checkbox" value="Passas"> Passas</label>
+<label><input type="checkbox" value="Passas ao rum"> Passas ao Rum</label>
 <label><input type="checkbox" value="Pistache"> Pistache</label>
 <label><input type="checkbox" value="Pitaya 100%"> Pitaya 100%</label>
 <label><input type="checkbox" value="Prestígio"> Prestígio</label>
@@ -189,7 +199,7 @@
       <small id="aviso-copia" aria-live="polite"></small>
     </div>
 
-    <a href="/index.html" class="voltar-link">← Voltar</a>
+    <a href="index.html" class="voltar-link">← Voltar</a>
   </form>
 </section>
 
@@ -198,7 +208,7 @@
 
  <footer class="footer" aria-label="Rodapé do site">
   <nav class="footer-nav" aria-label="Links principais do rodapé">
-    <a href="../paginas/cardapio.html" aria-label="Acessar cardápio digital">
+    <a href="cardapio.html" aria-label="Acessar cardápio digital">
       <i class="fa-solid fa-utensils" aria-hidden="true"></i>
       <span>Cardápio Digital</span>
     </a>
@@ -217,11 +227,11 @@
   <div class="footer-linha" aria-hidden="true"></div>
 
   <p class="footer-copy">
-    © 2026 Arducci Gelateria e Açaíteria. Todos os direitos reservados.
+    © 2026 Arducci Gelateria e Açaíteria. Todos os direitos reservados. | <a href="#" id="abrirLgpd">Política de Privacidade</a>
   </p>
 </footer>
 
-  <script src="../JavaScript/script.js"></script>
+  <script src="assets/JavaScript/script.js"></script>
 </body>
 
 </html>

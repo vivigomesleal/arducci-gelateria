@@ -7,10 +7,19 @@
   <link href="https://fonts.googleapis.com/css2?family=ABeeZee&display=swap"
   rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="../css/styles.css">
-  <link rel="stylesheet" href="../css/responsive.css">
-  <link rel="stylesheet" href="../css/styles-pags.css">
+  <link rel="stylesheet" href="assets/css/styles-pags.css">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <!-- FAVICON -->
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+  <link rel="manifest" href="assets/favicon/site.webmanifest">
   <title>Arducci | Paletas Mexicanas</title>
+  <meta name="author" content="Vivian-Gomes">
+  <meta name="robots" content="index, follow">
+  <meta name="title" content="Arducci Gelateria e Açaíteria em Praia Grande">
+  <meta name="description" content="Aqui na Arducci temos produtos 100% artesanais são os melhores gelatos da cidade, ficamos no inicio do bairro da ocian com divisa com a tupi frente a Praia.">
 </head>
 
 <body>
@@ -18,12 +27,12 @@
   <!-- Navbar desktop -->
   <header class="navbar">
     <div class="logo">
-      <img  src="../images/logo-arducci.svg" alt="">
+      <img  src="assets/images/logo-arducci.svg" alt="">
     </div>
 
        <nav class="nav-links">
       <ul>
-        <li><a href="/index.html">Início</a></li>
+        <li><a href="index.html">Início</a></li>
         <li>
           <div class="dropdown">
            <button class="dropbtn"id="btndrop-desktop"aria-expanded="false"aria-controls="dropdown-desktop">
@@ -31,17 +40,17 @@
           <i class="fa fa-caret-down" aria-hidden="true"></i>
           </button>
             <nav id="dropdown-desktop" class="dropdown-content">
-              <a href="../paginas/gelatos.html">Gelatos</a>
-              <a href="../paginas/acaiteria.html">Açaíteria</a>
-              <a href="../paginas/picoles.html">Picolés</a>
-              <a href="../paginas/paletas.html">Paletas</a>
-              <a href="../paginas/outros.html">Ver mais...</a>
+              <a href="gelatos.html">Gelatos</a>
+              <a href="acaiteria.html">Açaíteria</a>
+              <a href="picoles.html">Picolés</a>
+              <a href="paletas.html">Paletas</a>
+              <a href="outros.html">Ver mais...</a>
             </nav>
           </div>
         </li>
-        <li><a href="/index.html#sobre">Sobre</a></li>
-        <li><a href="/index.html#contato" >Contato</a></li>
-        <li><a href="../paginas/cardapio.html" >Cardápio Digital</a></li>
+        <li><a href="index.html#sobre">Sobre</a></li>
+        <li><a href="index.html#contato" >Contato</a></li>
+        <li><a href="cardapio.html" >Cardápio Digital</a></li>
       </ul>
     </nav>
   </header>
@@ -50,7 +59,7 @@
   <nav class="menu-responsivo">
     <div class="separando-logos">
       <div class="logo">
-        <img src="../images/logo-arducci.svg" alt="">
+        <img src="assets/images/logo-arducci.svg" alt="">
       </div>
       <button class="menu" id="icon-menu" aria-label="Abrir menu" aria-expanded="false">
   <i class="fas fa-bars"></i>
@@ -59,24 +68,24 @@
 
     <div class="navegacao-responsivo" id="links-nav">
       <ul>
-        <li><a href="/index.html">Início</a></li>
+        <li><a href="index.html">Início</a></li>
         <li>
           <div class="dropdown">
             <button class="dropbtn" id="btndrop-mobile">
               Produtos <i class="fa fa-caret-down"></i>
             </button>
             <nav id="dropdown-mobile" class="dropdown-content">
-              <a href="../paginas/gelatos.html">Gelatos</a>
-              <a href="../paginas/acaiteria.html">Açaíteria</a>
-              <a href="../paginas/picoles.html">Picolés</a>
-              <a href="../paginas/paletas.html">Paletas</a>
-              <a href="../paginas/outros.html">Ver mais...</a>
+              <a href="gelatos.html">Gelatos</a>
+              <a href="acaiteria.html">Açaíteria</a>
+              <a href="picoles.html">Picolés</a>
+              <a href="paletas.html">Paletas</a>
+              <a href="outros.html">Ver mais...</a>
             </nav>
           </div>
         </li>
-        <li><a href="/index.html#sobre">Sobre</a></li>
-        <li><a href="/index.html#contato">Contato</a></li>
-        <li><a href="../paginas/cardapio.html" >Cardápio Digital</a></li>
+        <li><a href="index.html#sobre">Sobre</a></li>
+        <li><a href="index.html#contato">Contato</a></li>
+        <li><a href="cardapio.html" >Cardápio Digital</a></li>
       </ul>
     </div>
   </nav>
@@ -95,7 +104,7 @@
 </section>
 
 
- <section class="catalogo-section" aria-labelledby="titulo-paletas">
+ <section class="catalogo-section" class="categoria-bloco reveal-up" aria-labelledby="titulo-paletas">
 <div class="filtro-gelatos">
   <input 
     type="text" 
@@ -111,7 +120,7 @@
   <div class="catalogo-grid">
 
     <article class="produto-card">
-      <img src="../images/paletas/Paleta_Acai.webp" alt="Paleta de açaí com recheio de leite condensado">
+      <img src="assets/images/paletas/Paleta_acai.webp" alt="Paleta de açaí com recheio de leite condensado">
       <div class="produto-info">
         <h3>Açaí com Leite Condensado</h3>
         <p>Açaí cremoso com recheio de leite condensado.</p>
@@ -119,47 +128,33 @@
     </article>
 
     <article class="produto-card">
-      <img src="../images/paletas/Paleta_Amora.webp" alt="Paleta de amora com recheio de leite condensado">
+      <img src="assets/images/paletas/Paleta_Amora.webp" alt="Paleta de amora com recheio de leite condensado">
       <div class="produto-info">
         <h3>Amora com Leite Condensado</h3>
         <p>Sabor marcante de amora com recheio de leite condensado.</p>
       </div>
     </article>
 
-    <article class="produto-card">
-      <img src="../images/Palleta-Bombom-com-trufa.avif" alt="Paleta de bombom com recheio de trufa de chocolate">
-      <div class="produto-info">
-        <h3>Bombom com Trufa</h3>
-        <p>Chocolate intenso com recheio cremoso de trufa.</p>
-      </div>
-    </article>
 
     <article class="produto-card">
-      <img src="../images/Palleta-choc-belga.avif" alt="Paleta de chocolate belga com recheio trufado">
+      <img src="assets/images/paletas/paleta_belga.webp" alt="Paleta de chocolate belga com recheio trufado">
       <div class="produto-info">
         <h3>Chocolate Belga</h3>
         <p>Chocolate premium com recheio cremoso.</p>
       </div>
     </article>
 
-    <article class="produto-card">
-      <img src="../images/Paleta_GregoFrutasVermelhas.avif" alt="Paleta de iogurte grego com frutas vermelhas">
-      <div class="produto-info">
-        <h3>Iogurte Grego com Frutas Vermelhas</h3>
-        <p>Refrescante com toque suave e frutas selecionadas.</p>
-      </div>
-    </article>
 
     <article class="produto-card">
-      <img src="../images/Palleta-maracuja-com-Amora.avif" alt="Paleta de maracujá com recheio de amora">
+      <img src="assets/images/paletas/paleta_maracujacomamora.webp" alt="Paleta de maracujá com recheio de amora">
       <div class="produto-info">
         <h3>Maracujá com Amora</h3>
-        <p>Combinação tropical com leve acidez e doçura.</p>
+        <p>Combinação tropical de frutas que combinam.</p>
       </div>
     </article>
 
     <article class="produto-card">
-      <img src="../images/Palleta-maracuja-com-leitecondensado.avif" alt="Paleta de maracujá com recheio de leite condensado">
+      <img src="assets/images/paletas/paleta_maraccomleiee.webp" alt="Paleta de maracujá com recheio de leite condensado">
       <div class="produto-info">
         <h3>Maracujá com Leite Condensado</h3>
         <p>Equilíbrio perfeito entre doce e cítrico.</p>
@@ -167,15 +162,15 @@
     </article>
 
     <article class="produto-card">
-      <img src="../images/Palleta-maracuja-com-Recheiodeamora.avif" alt="Paleta de maracujá com recheio de amora">
+      <img src="assets/images/paletas/Paleta_maracujacommanga.webp" alt="Paleta de maracujá com recheio de manga">
       <div class="produto-info">
-        <h3>Maracujá com Recheio de Amora</h3>
+        <h3>Maracujá com Recheio de Manga</h3>
         <p>Sabor intenso com recheio frutado.</p>
       </div>
     </article>
 
     <article class="produto-card">
-      <img src="../images/Palleta-morango-com-leitecondensado.avif" alt="Paleta de morango com recheio de leite condensado">
+      <img src="assets/images/paletas/paleta_morangocomleite.webp" alt="Paleta de morango com recheio de leite condensado">
       <div class="produto-info">
         <h3>Morango com Leite Condensado</h3>
         <p>Clássico doce e cremoso com fruta.</p>
@@ -183,20 +178,34 @@
     </article>
 
     <article class="produto-card">
-      <img src="../images/Palleta-ninho-trufado.svg" alt="Paleta de leite ninho trufado">
+      <img src="assets/images/paletas/paleta_rafaello.webp" alt="Paleta de leite ninho trufado">
       <div class="produto-info">
         <h3>Ninho Trufado</h3>
         <p>Leite ninho com recheio cremoso e sofisticado.</p>
       </div>
     </article>
 
-    
+     <article class="produto-card">
+      <img src="assets/images/paletas/paleta_delirio.webp" alt="delirio">
+      <div class="produto-info">
+        <h3>Delírio</h3>
+        <p>Sorvete de ninho com recheio de morango e cobertura de chocolate.</p>
+      </div>
+    </article>
+
+    <article class="produto-card">
+      <img src="assets/images/paletas/paleta_manga.webp" alt="Manga">
+      <div class="produto-info">
+        <h3>Manga</h3>
+        <p>100% natural.</p>
+      </div>
+    </article>
   </div>
 </section>
 
 <footer class="footer" aria-label="Rodapé do site">
   <nav class="footer-nav" aria-label="Links principais do rodapé">
-    <a href="../paginas/cardapio.html" aria-label="Acessar cardápio digital">
+    <a href="cardapio.html" aria-label="Acessar cardápio digital">
       <i class="fa-solid fa-utensils" aria-hidden="true"></i>
       <span>Cardápio Digital</span>
     </a>
@@ -215,11 +224,11 @@
   <div class="footer-linha" aria-hidden="true"></div>
 
   <p class="footer-copy">
-    © 2026 Arducci Gelateria e Açaíteria. Todos os direitos reservados.
+    © 2026 Arducci Gelateria e Açaíteria. Todos os direitos reservados. | <a href="#" id="abrirLgpd">Política de Privacidade</a>
   </p>
 </footer>
   
-  <script src="../JavaScript/script.js"></script>
+  <script src="assets/JavaScript/script.js"></script>
 </body>
 
 </html>

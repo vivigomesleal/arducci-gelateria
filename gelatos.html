@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=ABeeZee&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <link rel="stylesheet" href="assets/css/styles-pags.css">
+  <!-- FAVICON -->
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+  <link rel="manifest" href="assets/favicon/site.webmanifest">
+  <title>Arducci | Gelateria</title>
+  <meta name="author" content="Vivian-Gomes">
+  <meta name="robots" content="index, follow">
+  <meta name="title" content="Arducci Gelateria e Açaíteria em Praia Grande">
+  <meta name="description" content="Aqui na Arducci temos produtos 100% artesanais são os melhores gelatos da cidade, ficamos no inicio do bairro da ocian com divisa com a tupi frente a Praia.">
+</head>
+
+<body>
+    
+  <!-- Navbar desktop -->
+   <header class="navbar">
+    <div class="logo">
+      <img  src="assets/images/logo-arducci.svg" alt="">
+    </div>
+
+    <nav class="nav-links">
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li>
+          <div class="dropdown">
+           <button class="dropbtn"id="btndrop-desktop"aria-expanded="false"aria-controls="dropdown-desktop">
+           Produtos
+          <i class="fa fa-caret-down" aria-hidden="true"></i>
+          </button>
+            <nav id="dropdown-desktop" class="dropdown-content">
+              <a href="gelatos.html">Gelatos</a>
+              <a href="acaiteria.html">Açaíteria</a>
+              <a href="picoles.html">Picolés</a>
+              <a href="paletas.html">Paletas</a>
+              <a href="outros.html">Ver mais...</a>
+            </nav>
+          </div>
+        </li>
+        <li><a href="index.html#sobre">Sobre</a></li>
+        <li><a href="index.html#contato" >Contato</a></li>
+        <li><a href="cardapio.html" >Cardápio Digital</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Navegação mobile -->
+  <nav class="menu-responsivo">
+    <div class="separando-logos">
+      <div class="logo">
+        <img src="assets/images/logo-arducci.svg" alt="">
+      </div>
+      <button class="menu" id="icon-menu" aria-label="Abrir menu" aria-expanded="false">
+  <i class="fas fa-bars"></i>
+</button>
+    </div>
+
+    <div class="navegacao-responsivo" id="links-nav">
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li>
+          <div class="dropdown">
+            <button class="dropbtn" id="btndrop-mobile">
+              Produtos <i class="fa fa-caret-down"></i>
+            </button>
+            <nav id="dropdown-mobile" class="dropdown-content">
+              <a href="gelatos.html">Gelatos</a>
+              <a href="acaiteria.html">Açaíteria</a>
+              <a href="picoles.html">Picolés</a>
+              <a href="paletas.html">Paletas</a>
+              <a href="outros.html">Ver mais...</a>
+            </nav>
+          </div>
+        </li>
+        <li><a href="index.html#sobre">Sobre</a></li>
+        <li><a href="index.html#contato">Contato</a></li>
+        <li><a href="cardapio.html" >Cardápio Digital</a></li>
+      </ul>
+    </div>
+  </nav>
+  
+
+  <section class="cardapio-hero" aria-labelledby="titulo-cardapio">
+  <h1 id="titulo-cardapio" class="cardapio-titulo">
+    Gelatos <em>Artesanais</em>
+  </h1>
+
+  <div class="cardapio-linha" aria-hidden="true"></div>
+
+  <p class="cardapio-descricao">
+    Conheça nossos mais de 100 sabores de gelatos artesanais disponiveis na nossa gelateria, feitos com ingredientes selecionados e receitas exclusivas.
+     Venha experimentar o verdadeiro sabor do gelato italiano em cada colherada!
+  </p>
+</section>
+
+<section class="catalogo-section" aria-labelledby="titulo-catalogo">
+
+  <h2 id="titulo-catalogo" class="sr-only">
+    Lista de gelatos artesanais
+  </h2>
+
+      <div class="filtro-gelatos">
+  <input 
+    type="text" 
+    id="buscarGelato" 
+    placeholder="Buscar sabor de gelato..."
+    aria-label="Buscar sabor de gelato"
+  >
+</div>
+
+  <div class="catalogo-grid">
+
+
+
+<!-- LISTA COMPLETA DE GELATOS -->
+
+<article class="produto-card"><img src="assets/images/gelato/Gelato_Abacaxi.webp"><div class="produto-info"><h3>Abacaxi</h3><p>Sabor natural com base leite e pedaços da fruta</p></div></article>
+
+<article class="produto-card"><img src="assets/images/gelato/Gelato_Abacaxi_Vinho.webp"><div class="produto-info"><h3>Abacaxi ao Vinho</h3><p>Sabor natural com base leite e pedaços da fruta e mesclas de licor de vinho</p></div></article>
+
+<article class="produto-card"><img src="assets/images/gelato/Gelato_acai.webp"><div class="produto-info"><h3>Açaí</h3><p>O mais cremoso e artesanal 100% de puro sabor</p></div></article>
+
+<!-- <article class="produto-card"><img src="assets/images/gelato/Gelato_Amarula.webp"><div class="produto-info"><h3>Amarula</h3><p>Sabor artesanal e cremoso.</p></div></article> -->
+
+<article class="produto-card"><img src="assets/images/gelato/Gelato_Ameixa.webp"><div class="produto-info"><h3>Ameixa</h3><p>Cremoso sabor de Ameixa com pedaços.</p></div></article>
+
+<article class="produto-card"><img src="assets/images/gelato/Gelato_Amora.webp"><div class="produto-info"><h3>Amora</h3><p>Feito com Amoras 100% orgânicas e naturais.</p></div></article>
+
+<article class="produto-card"><img src="assets/images/gelato/Gelato_Banana.webp"><div class="produto-info"><h3>Banana</h3><p>O verdadeiro creme de banana base leite mesclaado com doce de banana</p></div></article>
+
+<!-- <article class="produto-card"><img src="assets/images/gelato/Gelato_Beijinho.webp"><div class="produto-info"><h3>Beijinho</h3><p>Sabor artesanal e cremoso.</p></div></article> -->
+
+<article class="produto-card"><img src="assets/images/gelato/Gelato_Bombom.webp"><div class="produto-info"><h3>Bombom</h3><p>Cremoso sabor de Bombom com pedaços.</p></div></article>
+
+<article class="produto-card"><img src="assets/images/gelato/Gelato_brigadeiro.webp"><div class="produto-info"><h3>Brigadeiro</h3><p>Sabor tradicional de chocolate com mesclas de creme de brigadeiro com granulado</p></div></article>
+
+<article class="produto-card"><img src="assets/images/gelato/Gelato_CafeNinho.webp"><div class="produto-info"><h3>Café com Ninho</h3><p>Sabor artesanal de café solúvel e cremoso creme de ninho.</p></div></article>
+
+<article class="produto-card"><img src="assets/images/gelato/Gelato_Caipirinha.webp"><div class="produto-info"><h3>Caipirinha</h3><p>Sabor com teor alcoólico, com vodka com mesclas de licor de limão.</p></div></article>
+
+<article class="produto-card"><img src="assets/images/gelato/Gelato_CarameloSalgadoBrownie.webp"><div class="produto-info"><h3>Caramelo Salgado e Brownie</h3><p>Sabor Caramelo Salgado artesanal mesclado com trufa e pedaços de brownie</p></div></article>
+
+<article class="produto-card"><img src="assets/images/gelato/Gelato_Cereja.webp"><div class="produto-info"><h3>Cereja</h3><p>Sabor de cereja base leite com pedaços de cereja orgânicas</p></div></article>
+
+<article class="produto-card"><img src="assets/images/gelato/Gelato_Chiclete.webp"><div class="produto-info"><h3>Chiclete</h3><p>Sabor creme de tutti-frutti</p></div></article>
+
+<article class="produto-card"><img src="assets/images/gelato/Gelato_Chocolate.webp"><div class="produto-info"><h3>Chocolate</h3><p>Sabor tradicional</p></div></article>
+
+<!-- <article class="produto-card"><img src="assets/images/gelato/Gelato_ChocolateBranco.webp"><div class="produto-info"><h3>Chocolate Branco</h3><p>Sabor artesanal e cremoso.</p></div></article> -->
+
+<article class="produto-card"><img src="assets/images/gelato/Gelato_ChocolateGengibre.webp"><div class="produto-info"><h3>Chocolate e Gengibre</h3><p>Sabor chocolate tradicional com pedaços de gengibe</p></div></article>
+
+<article class="produto-card"><img src="assets/images/gelato/Gelato_Choc70.webp"><div class="produto-info"><h3>Chocolate 70%</h3><p>Sabor forte de chocolate 70% com leite.</p></div></article>
+
+<article class="produto-card"><img src="assets/images/gelato/Gelato_Chocomenta.webp"><div class="produto-info"><h3>Chocomenta</h3><p>Sabor artesanal de menta com pedaços de chocolate.</p></div></article>
+
+<article class="produto-card"><img src="assets/images/gelato/Gelato_Coco.webp"><div class="produto-info"><h3>Coco</h3><p>Sabor artesanal com pedaços da fruta.</p></div></article>
+
+<!-- <article class="produto-card"><img src="assets/images/gelato/Gelato_CocoQueimado.webp"><div class="produto-info"><h3>Coco Queimado</h3><p>Sabor artesanal e cremoso.</p></div></article> -->
+
+<article class="produto-card"><img src="assets/images/gelato/Gelato_Creme.webp"><div class="produto-info"><h3>Creme</h3><p>Sabor Tradicional</p></div></article>
+
+<article class="produto-card"><img src="assets/images/gelato/Gelato_CremeCeu.webp"><div class="produto-info"><h3>Creme céu</h3><p>Sabor de groselha azul</p></div></article>
+
+<!-- <article class="produto-card"><img src="assets/images/gelato/Gelato_Crocante.webp"><div class="produto-info"><h3>Crocante</h3><p>Sabor artesanal e cremoso.</p></div></article> -->
+
+<article class="produto-card"><img src="assets/images/gelato/Gelato_Cupuacu.webp"><div class="produto-info"><h3>Cupuaçu</h3><p>Sabor do verdadeiro creme da fruta de região amazônica.</p></div></article>
+
+<article class="produto-card"><img src="assets/images/gelato/Gelato_Delirio.webp"><div class="produto-info"><h3>Delírio</h3><p>Sabor de creme de ninho com mesclas de geléria de morango.</p></div></article>
+
+<!-- <article class="produto-card"><img src="assets/images/gelato/Gelato_DiamanteNegro.webp"><div class="produto-info"><h3>Diamante Negro</h3><p>Sabor artesanal e cremoso.</p></div></article> -->
+
+<article class="produto-card"><img src="assets/images/gelato/Gelato_DoceLeite.webp"><div class="produto-info"><h3>Doce de Leite</h3><p>Sabor do tradicional doce em versão de gelato com mesclas de doce de leite.</p></div></article>
+
+<!-- <article class="produto-card"><img src="assets/images/gelato/Gelato_Ferrero.webp"><div class="produto-info"><h3>Ferrero</h3><p>Sabor artesanal e cremoso.</p></div></article> -->
+
+<article class="produto-card"><img src="assets/images/gelato/Gelato_Flocos.webp"><div class="produto-info"><h3>Flocos</h3><p>Sabor tradicional de baunilha com pedaços de chocolate.</p></div></article>
+
+<article class="produto-card"><img src="assets/images/gelato/Gelato_FlorestaNegra.webp"><div class="produto-info"><h3>Floresta Negra</h3><p>Sabor tradicional de chocolate com pedaços de chocolates e cereja.</p></div></article>
+
+<article class="produto-card"><img src="assets/images/gelato/Gelato_jaca.webp"><div class="produto-info"><h3>Jaca</h3><p>Sabor artesanal usado fruta e com pedaços naturais da fruta e com base leite.</p></div></article>
+
+<article class="produto-card"><img src="assets/images/gelato/Gelato_Jabuticaba.webp"><div class="produto-info"><h3>Jabuticaba</h3><p>Sabor artesanal com poupa da fruta de origem orgânica.</p></div></article>
+
+<article class="produto-card"><img src="assets/images/gelato/Gelato_LakaCookies.webp"><div class="produto-info"><h3>Laka com Cookies</h3><p>Sabor de chocolate branco com mesclas de creme de laka com cookies.</p></div></article>
+
+<article class="produto-card"><img src="assets/images/gelato/Gelato_LeiteCondensado.webp"><div class="produto-info"><h3>Leite Condensado</h3><p>Sabor tradicional e cremoso.</p></div></article>
+
+<article class="produto-card"><img src="assets/images/gelato/Gelato_Limao.webp"><div class="produto-info"><h3>Limão</h3><p>Sabor artesanal 100% natural em base água.</p></div></article>
+
+<article class="produto-card"><img src="assets/images/gelato/Gelato_Manga.webp"><div class="produto-info"><h3>Manga</h3><p>Sabor artesanal e cremoso como uma versão de vitamina de manga com 100% de fruta natural.</p></div></article>
+
+<article class="produto-card"><img src="assets/images/gelato/Gelato_maracuja.webp"><div class="produto-info"><h3>Maracujá</h3><p>Feito 100% da fruta natural e base agua.</p></div></article>
+
+<article class="produto-card"><img src="assets/images/gelato/Gelato_Milho.webp"><div class="produto-info"><h3>Milho</h3><p>Puro creme do Milho Verde.</p></div></article>
+
+<article class="produto-card"><img src="assets/images/gelato/Gelatos_Morango.webp"><div class="produto-info"><h3>Morango</h3><p>Sabor tradicional base leite e pedaços da fruta 100% natural.</p></div></article>
+
+<article class="produto-card"><img src="assets/images/gelato/Gelato_MorangoAmor.webp"><div class="produto-info"><h3>Morango do Amor</h3><p>Sabor de massa de ninho comm mesclas de calda e pedaços de morango e creme de ninho</p></div></article>
+
+<article class="produto-card"><img src="assets/images/gelato/Gelato_MousseLimao.webp"><div class="produto-info"><h3>Mousse de Limão</h3><p>Feito 100% natural com a fruta e com mesclas de geléia de limão e base leite</p></div></article>
+
+<article class="produto-card"><img src="assets/images/gelato/Gelato_MousseMaracuja.webp"><div class="produto-info"><h3>Mousse de Maracujá</h3><p>Feito 100% da fruta natural a base leite e leite condensado.</p></div></article>
+
+<article class="produto-card"><img src="assets/images/gelato/Gelato_Nozes.webp"><div class="produto-info"><h3>Nozes</h3><p> Feito com nozes de verdade e em pedaços inteiros</p></div></article>
+
+<article class="produto-card"><img src="assets/images/gelato/Gelato_NinhoNutella.webp"><div class="produto-info"><h3>Ninho com Nutella</h3><p>Sabor cremoso de ninho com mesclas de creme de Nutella Original.</p></div></article>
+
+<article class="produto-card"><img src="assets/images/gelato/Gelato_Ovomaltine.webp"><div class="produto-info"><h3>Ovomaltine</h3><p>Sabor do tradicional gelato de chocolate com mesclas de creme de ovomaltine original.</p></div></article>
+
+<article class="produto-card"><img src="assets/images/gelato/Gelato_Papaya.webp"><div class="produto-info"><h3>Papaya</h3><p>Sabor 100% fruta base leite</p></div></article>
+
+<article class="produto-card"><img src="assets/images/gelato/Gelato_PassasRum.webp"><div class="produto-info"><h3>Passas</h3><p>Sabor tradicional de sabor de rum com bastante uvas passas.</p></div></article>
+
+<article class="produto-card"><img src="assets/images/gelato/Gelato_Pacoca.webp"><div class="produto-info"><h3>Paçoca</h3><p>Sabor base de puro creme de paçoca e muitos pedaços.</p></div></article>
+
+<article class="produto-card"><img src="assets/images/gelato/Gelato_PinaColada.webp"><div class="produto-info"><h3>Piña Colada</h3><p>Sabor alcoólico, sabor abacaxi com coco uma bebida caribenha.</p></div></article>
+
+<article class="produto-card"><img src="assets/images/gelato/Gelato_Pistache.webp"><div class="produto-info"><h3>Pistache</h3><p>Sabor artesanal e cremoso do puro creme feito naturalmente com pistaches e pedaços.</p></div></article>
+
+<article class="produto-card"><img src="assets/images/gelato/Gelato_Pitaya.webp"><div class="produto-info"><h3>Pitaya</h3><p>Sabor 100% fruta com base agua.</p></div></article>
+
+<article class="produto-card"><img src="assets/images/gelato/Gelato_Paodemel.webp"><div class="produto-info"><h3>Pão de Mel</h3><p>Sabor do tradicional doce de bolo de mel com chocolate.</p></div></article>
+
+<article class="produto-card"><img src="assets/images/gelato/Gelato_Rafaello.webp"><div class="produto-info"><h3>Rafaello</h3><p>Sabor do Chocolate Rafaello de chocolate branco com coco e amêndoas.</p></div></article>
+
+<article class="produto-card"><img src="assets/images/gelato/Gelato_Sensacao.webp"><div class="produto-info"><h3>Sensação</h3><p>Sabor tradicional de morango com pedaços de chocolate.</p></div></article>
+
+<article class="produto-card"><img src="assets/images/gelato/Gelato_Tapioca.webp"><div class="produto-info"><h3>Tapioca</h3><p>Sabor do tradicional bolo de tapioca com leite.</p></div></article>
+
+<article class="produto-card"><img src="assets/images/gelato/Gelato_Truffa.webp"><div class="produto-info"><h3>Trufa</h3><p>Sabor do tradicional chocolate com mesclas de truffa de chocolate ao leite e branco</p></div></article>
+
+<article class="produto-card"><img src="assets/images/gelato/Gelato_Uva.webp"><div class="produto-info"><h3>Uva</h3><p>Sabor artesanal do sabor natural</p></div></article>
+
+<article class="produto-card"><img src="assets/images/gelato/Gelato_YorgutecomAmarena.webp"><div class="produto-info"><h3>Yogurte com Amarena</h3><p>Sabor Yogurte com mesclas de geléia de Amarena (cereja silvestre com um sabor cítrico).</p></div></article>
+
+<article class="produto-card"><img src="assets/images/gelato/Gelato_YogurteDamasco.webp"><div class="produto-info"><h3>Yogurte Damasco com Nozes</h3><p>Sabor Yogurte com mesclas de geléia de damasco e peços de nozes</p></div></article>
+
+<article class="produto-card"><img src="assets/images/gelato/Gelato_YogurteFrutasVermelhas.webp"><div class="produto-info"><h3>Yogurt Frutas Vermelhas</h3><p>Sabor Yogurte com mesclas de geléia de frutas vermelhas.</p></div></article>
+  </div>
+</section>
+
+
+
+
+ <footer class="footer" aria-label="Rodapé do site">
+  <nav class="footer-nav" aria-label="Links principais do rodapé">
+    <a href="cardapio.html" aria-label="Acessar cardápio digital">
+      <i class="fa-solid fa-utensils" aria-hidden="true"></i>
+      <span>Cardápio Digital</span>
+    </a>
+
+    <a href="https://www.instagram.com/arduccigelateria" target="_blank" rel="noopener noreferrer" aria-label="Acessar Instagram da Arducci">
+      <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+      <span>Instagram</span>
+    </a>
+    
+    <a href="https://maps.app.goo.gl/BMY7o64pJAgCP1gQ9" aria-label="Ver localização da Arducci">
+      <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+      <span>Localização</span>
+    </a>
+  </nav>
+
+  <div class="footer-linha" aria-hidden="true"></div>
+
+  <p class="footer-copy">
+    © 2026 Arducci Gelateria e Açaíteria. Todos os direitos reservados. | <a href="#" id="abrirLgpd">Política de Privacidade</a>
+  </p>
+</footer>
+    
+  <script src="assets/JavaScript/script.js"></script>
+</body>
+
+</html>

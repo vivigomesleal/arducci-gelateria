@@ -6,13 +6,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css2?family=ABeeZee&display=swap" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="../css/styles.css">
-  <link rel="stylesheet" href="../css/responsive.css">
-  <link rel="stylesheet" href="../css/styles-pags.css">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/styles-pags.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <!-- FAVICON -->
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+  <link rel="manifest" href="assets/favicon/site.webmanifest">
+
   <title>Arducci | Açaíteria</title>
   <meta name="author" content="Vivian-Gomes">
   <meta name="robots" content="index, follow">
-  <meta name="title" content="Gelateria Havana Praia Grande">
+  <meta name="title" content="Arducci Gelateria e Açaíteria em Praia Grande">
   <meta name="description" content="Aqui na Arducci temos produtos 100% artesanais são os melhores gelatos da cidade, ficamos no inicio do bairro da ocian com divisa com a tupi frente a Praia.">
 </head>
 
@@ -21,12 +27,12 @@
   <!-- Navbar desktop -->
    <header class="navbar">
     <div class="logo">
-      <img  src="../images/logo-arducci.svg" alt="">
+      <img  src="assets/images/logo-arducci.svg" alt="">
     </div>
 
     <nav class="nav-links">
       <ul>
-        <li><a href="/index.html">Início</a></li>
+        <li><a href="index.html">Início</a></li>
         <li>
           <div class="dropdown">
            <button class="dropbtn"id="btndrop-desktop"aria-expanded="false"aria-controls="dropdown-desktop">
@@ -34,17 +40,17 @@
           <i class="fa fa-caret-down" aria-hidden="true"></i>
           </button>
             <nav id="dropdown-desktop" class="dropdown-content">
-              <a href="../paginas/gelatos.html">Gelatos</a>
-              <a href="../paginas/acaiteria.html">Açaíteria</a>
-              <a href="../paginas/picoles.html">Picolés</a>
-              <a href="../paginas/paletas.html">Paletas</a>
-              <a href="../paginas/outros.html">Ver mais...</a>
+              <a href="gelatos.html">Gelatos</a>
+              <a href="acaiteria.html">Açaíteria</a>
+              <a href="picoles.html">Picolés</a>
+              <a href="paletas.html">Paletas</a>
+              <a href="outros.html">Ver mais...</a>
             </nav>
           </div>
         </li>
-        <li><a href="/index.html#sobre">Sobre</a></li>
-        <li><a href="/index.html#contato" >Contato</a></li>
-        <li><a href="../paginas/cardapio.html" >Cardápio Digital</a></li>
+        <li><a href="index.html#sobre">Sobre</a></li>
+        <li><a href="index.html#contato" >Contato</a></li>
+        <li><a href="cardapio.html" >Cardápio Digital</a></li>
       </ul>
     </nav>
   </header>
@@ -53,7 +59,7 @@
   <nav class="menu-responsivo">
     <div class="separando-logos">
       <div class="logo">
-        <img src="../images/logo-arducci.svg" alt="">
+        <img src="assets/images/logo-arducci.svg" alt="">
       </div>
       <button class="menu" id="icon-menu" aria-label="Abrir menu" aria-expanded="false">
   <i class="fas fa-bars"></i>
@@ -62,24 +68,24 @@
 
     <div class="navegacao-responsivo" id="links-nav">
       <ul>
-        <li><a href="/index.html">Início</a></li>
+        <li><a href="index.html">Início</a></li>
         <li>
           <div class="dropdown">
             <button class="dropbtn" id="btndrop-mobile">
               Produtos <i class="fa fa-caret-down"></i>
             </button>
             <nav id="dropdown-mobile" class="dropdown-content">
-              <a href="../paginas/gelatos.html">Gelatos</a>
-              <a href="../paginas/acaiteria.html">Açaíteria</a>
-              <a href="../paginas/picoles.html">Picolés</a>
-              <a href="../paginas/paletas.html">Paletas</a>
-              <a href="../paginas/outros.html">Ver mais...</a>
+              <a href="gelatos.html">Gelatos</a>
+              <a href="acaiteria.html">Açaíteria</a>
+              <a href="picoles.html">Picolés</a>
+              <a href="paletas.html">Paletas</a>
+              <a href="outros.html">Ver mais...</a>
             </nav>
           </div>
         </li>
-        <li><a href="/index.html#sobre">Sobre</a></li>
-        <li><a href="/index.html#contato">Contato</a></li>
-        <li><a href="../paginas/cardapio.html" >Cardápio Digital</a></li>
+        <li><a href="index.html#sobre">Sobre</a></li>
+        <li><a href="index.html#contato">Contato</a></li>
+        <li><a href="cardapio.html" >Cardápio Digital</a></li>
       </ul>
     </div>
   </nav>
@@ -87,7 +93,7 @@
 
   <section class="cardapio-hero" aria-labelledby="titulo-cardapio">
   <h1 id="titulo-cardapio" class="cardapio-titulo">
-    Açaí<em>Artesanail</em>
+    Açaí <em>Artesanal</em>
   </h1>
 
   <div class="cardapio-linha" aria-hidden="true"></div>
@@ -115,21 +121,39 @@
 
     <div class="catalogo-grid">
       <article class="produto-card">
-        <img src="../images/acaiteria/acai-1.webp" alt="Açaí na tigela com morango, manga e leite em pó.">
+        <img src="assets/images/acaiteria/acai-1.webp" alt="Açaí na tigela com morango, manga e leite em pó.">
         <div class="produto-info">
           <h3>Açaí na Tigela</h3>
           <p>Açaí montado com frutas e acompanhamentos.</p>
         </div>
       </article>
       
+      <article class="produto-card">
+          <img src="assets/images/acaiteria/Acaiporkg.webp" alt="Açaí no copo com granola, leite condensado e frutas.">
+          <div class="produto-info">
+            <h3>Açaí por kg</h3>
+            <p>Açaí por kg do self service o cliente que monta.</p>
+          </div>  
+        </article>
       
       <article class="produto-card">
-        <img src="../images/acaiteria/barca.webp" alt="Açaí na tigela com morango, manga e leite em pó.">
+      <img src="assets/images/paletas/Paleta_acai.webp" alt="Paleta de açaí com recheio de leite condensado">
+      <div class="produto-info">
+        <h3>Paleta de Açaí</h3>
+        <p>Açaí cremoso com recheio de leite condensado.</p>
+      </div>
+    </article>
+
+      
+      <article class="produto-card">
+        <img src="assets/images/acaiteria/barca.webp" alt="Açaí na tigela com morango, manga e leite em pó.">
         <div class="produto-info">
           <h3>Açaí na Barca</h3>
           <p>Açaí montado com frutas e acompanhamentos.</p>
         </div>
       </article>
+
+      
     </div>
   </div>
 
@@ -141,14 +165,14 @@
     <div class="catalogo-grid acompanhamentos-grid">
 
       <article class="produto-card">
-        <img src="../images/acaiteria/Acomp_frutas.webp" alt="frutas">
+        <img src="assets/images/acaiteria/Acomp_frutas.webp" alt="frutas">
         <div class="produto-info">
           <h3>Frutas</h3>
         </div>
       </article>
 
       <article class="produto-card">
-        <img src="../images/acaiteria/Acomp_leite.webp" alt="leitecondensado">
+        <img src="assets/images/acaiteria/Acomp_leite.webp" alt="leitecondensado">
         <div class="produto-info">
           <h3>Leite Condensado</h3>
           <p>Versão maior para eventos, família ou revenda.</p>
@@ -156,7 +180,7 @@
       </article>
 
       <article class="produto-card">
-        <img src="../images/acaiteria/Acomp_leiteempo.webp" alt="Leite em pó">
+        <img src="assets/images/acaiteria/Acomp_leiteempo.webp" alt="Leite em pó">
         <div class="produto-info">
           <h3>Leite em pó</h3>
           <p>Açaí montado com frutas e acompanhamentos.</p>
@@ -164,7 +188,7 @@
       </article>
 
        <article class="produto-card">
-        <img src="../images/acaiteria/Acomp_granola.webp" alt="Granola">
+        <img src="assets/images/acaiteria/Acomp_granola.webp" alt="Granola">
         <div class="produto-info">
           <h3>Granola</h3>
           <p>Açaí montado com frutas e acompanhamentos.</p>
@@ -173,7 +197,7 @@
 
        
        <article class="produto-card">
-        <img src="../images/acaiteria/Acomp_amen.webp" alt="amendoim">
+        <img src="assets/images/acaiteria/Acomp_amen.webp" alt="amendoim">
         <div class="produto-info">
           <h3>Amendoim</h3>
           <p>Açaí montado com frutas e acompanhamentos.</p>
@@ -181,7 +205,7 @@
       </article>
 
        <article class="produto-card">
-        <img src="../images/acaiteria/Acomp_pacoca.webp" alt="Paçoca">
+        <img src="assets/images/acaiteria/Acomp_pacoca.webp" alt="Paçoca">
         <div class="produto-info">
           <h3>Paçoca</h3>
           <p>Açaí montado com frutas e acompanhamentos.</p>
@@ -189,7 +213,7 @@
       </article>
 
        <article class="produto-card">
-        <img src="../images/acaiteria/Acomp+mel.webp" alt="Mel">
+        <img src="assets/images/acaiteria/Acomp+mel.webp" alt="Mel">
         <div class="produto-info">
           <h3>Mel</h3>
           <p>Açaí montado com frutas e acompanhamentos.</p>
@@ -197,7 +221,7 @@
       </article>
 
        <article class="produto-card">
-        <img src="../images/acaiteria/Acomp_sucrilhos.webp" alt="Sucrilhos">
+        <img src="assets/images/acaiteria/Acomp_sucrilhos.webp" alt="Sucrilhos">
         <div class="produto-info">
           <h3>Sucrilhos</h3>
           <p>Açaí montado com frutas e acompanhamentos.</p>
@@ -205,7 +229,7 @@
       </article>
 
        <article class="produto-card">
-        <img src="../images/acaiteria/Acomp_ovomaltine.webp" alt="Ovomaltine">
+        <img src="assets/images/acaiteria/ovomaltine.webp" alt="Ovomaltine">
         <div class="produto-info">
           <h3>Ovomaltine</h3>
           <p>Açaí montado com frutas e acompanhamentos.</p>
@@ -213,7 +237,7 @@
       </article>
 
        <article class="produto-card">
-        <img src="../images/acaiteria/Acomp_nutella.webp" alt="Nutella">
+        <img src="assets/images/acaiteria/Acomp_nutella.webp" alt="Nutella">
         <div class="produto-info">
           <h3>Nutella</h3>
           <p>Açaí montado com frutas e acompanhamentos.</p>
@@ -221,7 +245,7 @@
       </article>
 
        <article class="produto-card">
-        <img src="../images/acaiteria/Acomp_confetes.webp" alt="Confete">
+        <img src="assets/images/acaiteria/Acomp_confetes.webp" alt="Confete">
         <div class="produto-info">
           <h3>Confete</h3>
           <p>Açaí montado com frutas e acompanhamentos.</p>
@@ -236,7 +260,7 @@
 
  <footer class="footer" aria-label="Rodapé do site">
   <nav class="footer-nav" aria-label="Links principais do rodapé">
-    <a href="../paginas/cardapio.html" aria-label="Acessar cardápio digital">
+    <a href="cardapio.html" aria-label="Acessar cardápio digital">
       <i class="fa-solid fa-utensils" aria-hidden="true"></i>
       <span>Cardápio Digital</span>
     </a>
@@ -255,11 +279,11 @@
   <div class="footer-linha" aria-hidden="true"></div>
 
   <p class="footer-copy">
-    © 2026 Arducci Gelateria e Açaíteria. Todos os direitos reservados.
+    © 2026 Arducci Gelateria e Açaíteria. Todos os direitos reservados. | <a href="#" id="abrirLgpd">Política de Privacidade</a>
   </p>
 </footer>
     
-  <script src="../JavaScript/script.js"></script>
+  <script src="assets/JavaScript/script.js"></script>
 </body>
 
 </html>

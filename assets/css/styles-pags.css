@@ -1133,3 +1133,217 @@
   }
 }
 
+/* ################## animatiom  ############# */
+
+/* ===== CARDÁPIO DIGITAL - ANIMAÇÕES ===== */
+
+.cardapio-titulo,
+.cardapio-linha,
+.cardapio-descricao,
+.menu-item {
+  opacity: 0;
+}
+
+/* NÃO deixe .categoria invisível aqui */
+.menu-alerta,
+.menu-preco,
+.menu-titulo-link,
+.menu-content > h4,
+.menu-content > p,
+.produto-linha,
+.categoria {
+  opacity: 0;
+  transform: translateY(22px);
+}
+
+.cardapio-titulo.ativo,
+.cardapio-linha.ativo,
+.cardapio-descricao.ativo {
+  animation: descerCardapio 0.85s ease forwards;
+}
+
+.cardapio-linha.ativo {
+  animation-delay: 0.15s;
+}
+
+.cardapio-descricao.ativo {
+  animation-delay: 0.3s;
+}
+
+.menu-item.ativo {
+  animation: subirCardapio 0.85s ease forwards;
+}
+
+.menu-alerta.ativo,
+.menu-preco.ativo,
+.menu-titulo-link.ativo,
+.menu-content > h4.ativo,
+.menu-content > p.ativo,
+.produto-linha.ativo,
+.categoria.ativo {
+  animation: itemMenuSobe 0.55s ease forwards;
+}
+
+@keyframes itemMenuSobe {
+  from {
+    opacity: 0;
+    transform: translateY(22px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes descerCardapio {
+  from {
+    opacity: 0;
+    transform: translateY(-35px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes subirCardapio {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== REVENDA - ANIMAÇÕES ===== */
+
+.revenda-subtitulo,
+.revenda-titulo,
+.revenda-frase,
+.revenda-linha,
+.revenda-texto,
+.revenda-card,
+.sabores-grid label,
+.pedido-box,
+.voltar-link {
+  opacity: 0;
+}
+
+/* TOPO */
+
+.revenda-subtitulo.ativo,
+.revenda-titulo.ativo,
+.revenda-frase.ativo,
+.revenda-linha.ativo,
+.revenda-texto.ativo {
+  animation: descerRevenda 0.85s ease forwards;
+}
+
+.revenda-titulo.ativo { animation-delay: 0.15s; }
+.revenda-frase.ativo { animation-delay: 0.3s; }
+.revenda-linha.ativo { animation-delay: 0.45s; }
+.revenda-texto.ativo { animation-delay: 0.6s; }
+
+/* CARD */
+
+.revenda-card.ativo {
+  animation: subirRevenda 0.9s ease forwards;
+}
+
+/* SABORES */
+
+.sabores-grid label.ativo {
+  animation: subirRevenda 0.55s ease forwards;
+}
+
+/* PEDIDO */
+
+.pedido-box.ativo,
+.voltar-link.ativo {
+  animation: subirRevenda 0.75s ease forwards;
+}
+
+/* ANIMAÇÕES */
+
+@keyframes descerRevenda {
+  from {
+    opacity: 0;
+    transform: translateY(-32px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes subirRevenda {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== REVEAL GLOBAL ===== */
+
+/* ===== ANIMAÇÃO PÁGINA GELATOS ===== */
+
+.filtro-gelatos,
+.catalogo-grid .produto-card {
+  opacity: 0;
+  transform: translateY(35px);
+}
+
+.filtro-gelatos.ativo {
+  animation: gelatoSobe 0.75s ease forwards;
+}
+
+.catalogo-grid .produto-card.ativo {
+  animation: gelatoSobe 0.8s ease forwards;
+}
+
+
+@keyframes gelatoSobe {
+  from {
+    opacity: 0;
+    transform: translateY(35px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== CATEGORIA BLOCO ===== */
+
+.categoria-bloco h2 {
+  opacity: 0;
+  transform: translateX(-45px);
+}
+
+.categoria-bloco h2.ativo {
+  animation: categoriaEsquerda 0.9s ease forwards;
+}
+
+@keyframes categoriaEsquerda {
+  from {
+    opacity: 0;
+    transform: translateX(-45px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

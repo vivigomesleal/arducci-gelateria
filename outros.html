@@ -6,10 +6,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css2?family=ABeeZee&display=swap" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="../css/styles.css">
-  <link rel="stylesheet" href="../css/responsive.css">
-  <link rel="stylesheet" href="../css/styles-pags.css">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <link rel="stylesheet" href="assets/css/styles-pags.css">
+  <!-- FAVICON -->
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+  <link rel="manifest" href="assets/favicon/site.webmanifest">
   <title>Arducci | Veja mais...</title>
+  <meta name="author" content="Vivian-Gomes">
+  <meta name="robots" content="index, follow">
+  <meta name="title" content="Arducci Gelateria e Açaíteria em Praia Grande">
+  <meta name="description" content="Aqui na Arducci temos produtos 100% artesanais são os melhores gelatos da cidade, ficamos no inicio do bairro da ocian com divisa com a tupi frente a Praia.">
 </head>
 
 <body>
@@ -17,12 +26,12 @@
   <!-- Navbar desktop -->
  <header class="navbar">
     <div class="logo">
-      <img  src="../images/logo-arducci.svg" alt="">
+      <img  src="assets/images/logo-arducci.svg" alt="">
     </div>
 
        <nav class="nav-links">
       <ul>
-        <li><a href="/index.html">Início</a></li>
+        <li><a href="index.html">Início</a></li>
         <li>
           <div class="dropdown">
            <button class="dropbtn"id="btndrop-desktop"aria-expanded="false"aria-controls="dropdown-desktop">
@@ -30,17 +39,17 @@
           <i class="fa fa-caret-down" aria-hidden="true"></i>
           </button>
             <nav id="dropdown-desktop" class="dropdown-content">
-              <a href="../paginas/gelatos.html">Gelatos</a>
-              <a href="../paginas/acaiteria.html">Açaíteria</a>
-              <a href="../paginas/picoles.html">Picolés</a>
-              <a href="../paginas/paletas.html">Paletas</a>
-              <a href="../paginas/outros.html">Ver mais...</a>
+              <a href="gelatos.html">Gelatos</a>
+              <a href="acaiteria.html">Açaíteria</a>
+              <a href="picoles.html">Picolés</a>
+              <a href="paletas.html">Paletas</a>
+              <a href="outros.html">Ver mais...</a>
             </nav>
           </div>
         </li>
-        <li><a href="/index.html#sobre">Sobre</a></li>
-        <li><a href="/index.html#contato" >Contato</a></li>
-        <li><a href="../paginas/cardapio.html" >Cardápio Digital</a></li>
+        <li><a href="index.html#sobre">Sobre</a></li>
+        <li><a href="index.html#contato" >Contato</a></li>
+        <li><a href="cardapio.html" >Cardápio Digital</a></li>
       </ul>
     </nav>
   </header>
@@ -49,7 +58,7 @@
   <nav class="menu-responsivo">
     <div class="separando-logos">
       <div class="logo">
-        <img src="../images/logo-arducci.svg" alt="">
+        <img src="assets/images/logo-arducci.svg" alt="">
       </div>
       <button class="menu" id="icon-menu" aria-label="Abrir menu" aria-expanded="false">
   <i class="fas fa-bars"></i>
@@ -58,24 +67,24 @@
 
     <div class="navegacao-responsivo" id="links-nav">
       <ul>
-        <li><a href="/index.html">Início</a></li>
+        <li><a href="index.html">Início</a></li>
         <li>
           <div class="dropdown">
             <button class="dropbtn" id="btndrop-mobile">
               Produtos <i class="fa fa-caret-down"></i>
             </button>
             <nav id="dropdown-mobile" class="dropdown-content">
-              <a href="../paginas/gelatos.html">Gelatos</a>
-              <a href="../paginas/acaiteria.html">Açaíteria</a>
-              <a href="../paginas/picoles.html">Picolés</a>
-              <a href="../paginas/paletas.html">Paletas</a>
-              <a href="../paginas/outros.html">Veja mais...</a>
+              <a href="gelatos.html">Gelatos</a>
+              <a href="acaiteria.html">Açaíteria</a>
+              <a href="picoles.html">Picolés</a>
+              <a href="paletas.html">Paletas</a>
+              <a href="outros.html">Ver mais...</a>
             </nav>
           </div>
         </li>
-        <li><a href="/index.html#sobre">Sobre</a></li>
-        <li><a href="/index.html#contato">Contato</a></li>
-        <li><a href="../paginas/cardapio.html" >Cardápio Digital</a></li>
+        <li><a href="index.html#sobre">Sobre</a></li>
+        <li><a href="index.html#contato">Contato</a></li>
+        <li><a href="cardapio.html" >Cardápio Digital</a></li>
       </ul>
     </div>
   </nav>
@@ -89,7 +98,7 @@
   <div class="cardapio-linha" aria-hidden="true"></div>
 
   <p class="cardapio-descricao">
-    Nossa variedade de sobremesas, caldas, castanhas e acompanhamentos para você aproveitar o melhor do nosso cardápio.
+    Mais do que uma gelateria, uma experiência completa com sobremesas, sabores exclusivos e opções para levar pra casa.
   </p>
 </section>
 
@@ -103,7 +112,7 @@
     type="text" 
     id="buscarGelato" 
     placeholder="Buscar sabor de..."
-    aria-label="Buscar sabor de gelato"
+    aria-label="Buscar sabor do produto"
   >
 </div>
   <!-- CATEGORIA 1 -->
@@ -114,8 +123,8 @@
     <article class="produto-card">
   <div class="card-slider">
     <div class="card-slider-track">
-      <img src="../images/ver-mais/bananasplit.webp" alt="Banana split com gelato e calda">
-      <img src="../images/ver-mais/bananaspli2.webp" alt="Cascão com gelato">
+      <img src="assets/images/ver-mais/bananasplit.webp" alt="Banana split com gelato e calda">
+      <img src="assets/images/ver-mais/bananaspli2.webp" alt="Cascão com gelato">
     </div>
 
     <button class="slider-btn prev" type="button" aria-label="Imagem anterior">‹</button>
@@ -126,15 +135,15 @@
 
   <div class="produto-info">
     <h3>Banana Split</h3>
-    <p>Uma tradicional e querida sobremesa</p>
+    <p>Uma tradicional e querida sobremesa. Que é 3 sabores de gelato com banana, chantilly, calda e confeitos.</p>
   </div>
 </article>
 
       <article class="produto-card">
   <div class="card-slider">
     <div class="card-slider-track">
-      <img src="../images/ver-mais/cascao.webp" alt="Cascão com gelato">
-      <img src="../images/ver-mais/casca2.webp" alt="Cascão com gelato">
+      <img src="assets/images/ver-mais/cascao.webp" alt="Cascão com gelato">
+      <img src="assets/images/ver-mais/casca2.webp" alt="Cascão com gelato">
     </div>
 
     <button class="slider-btn prev" type="button" aria-label="Imagem anterior">‹</button>
@@ -150,7 +159,7 @@
 </article>
 
       <article id="milkshake" class="produto-card">
-      <img src="../images/ver-mais/milkshake.webp" alt="Milk shake de sorvete batido com leite, canudo e cobertura">
+      <img src="assets/images/ver-mais/milkshake.webp" alt="Milk shake de sorvete batido com leite, canudo e cobertura">
       <div class="produto-info">
         <h3>Milk Shake</h3>
         <p>Versão cremosa no copo, com até 2 sabores escolhidos pelo cliente.</p>
@@ -160,8 +169,8 @@
    <article class="produto-card">
   <div class="card-slider">
     <div class="card-slider-track">
-      <img src="../images/ver-mais/petit.webp" alt="Petit gateau com gelato de creme e calda de chocolate">
-      <img src="../images/ver-mais/petit-2.webp" alt="Cascão com gelato">
+      <img src="assets/images/ver-mais/petit.webp" alt="Petit gateau com gelato de creme e calda de chocolate">
+      <img src="assets/images/ver-mais/petit-2.webp" alt="Cascão com gelato">
     </div>
 
     <button class="slider-btn prev" type="button" aria-label="Imagem anterior">‹</button>
@@ -187,8 +196,9 @@
       <article class="produto-card">
   <div class="card-slider">
     <div class="card-slider-track">
-      <img src="../images/ver-mais/bananasplit.webp" alt="Banana split com gelato e calda">
-      <img src="../images/ver-mais/bananaspli2.webp" alt="Cascão com gelato">
+      <img src="assets/images/ver-mais/self1.webp" alt="frezzer de gelato por kg">
+      <img src="assets/images/ver-mais/self2.webp" alt="frezzer de gelato por kg">
+      <img src="assets/images/ver-mais/self3.webp" alt="frezzer de gelato por kg">
     </div>
 
     <button class="slider-btn prev" type="button" aria-label="Imagem anterior">‹</button>
@@ -199,15 +209,15 @@
 
   <div class="produto-info">
     <h3>Gelato por kilo</h3>
-    <p>Exclusividade e melhor gelateria por kg.</p>
+    <p>Exclusividade temos desde Tradicionais, Frutados, Premium, Sazonais e Diet. São 3 frezzer com 51 sabores.</p>
   </div>
 </article>
 
        <article class="produto-card">
   <div class="card-slider">
     <div class="card-slider-track">
-      <img src="../images/ver-mais/coberturas.webp" alt="Coberturas cremosas e quentes  ">
-      <img src="../images/ver-mais/coberturas2.webp" alt="Coberturas cremosas e quentes  ">
+      <img src="assets/images/ver-mais/coberturas.webp" alt="Coberturas cremosas e quentes  ">
+      <img src="assets/images/ver-mais/coberturas2.webp" alt="Coberturas cremosas e quentes  ">
     </div>
 
     <button class="slider-btn prev" type="button" aria-label="Imagem anterior">‹</button>
@@ -218,7 +228,7 @@
 
   <div class="produto-info">
     <h3>Coberturas Cremosas e Quentes</h3>
-    <p>Para complementar na sua escolha do por kg, qual vai deixar o sabor mais especial.</p>
+    <p>Para complementar temos cremes, frutas, marshmallow e caldas.</p>
   </div>
 </article>
 
@@ -226,8 +236,8 @@
 <article class="produto-card">
   <div class="card-slider">
     <div class="card-slider-track">
-      <img src="../images/ver-mais/taças.webp" alt="Banana split com gelato e calda">
-      <img src="../images/ver-mais/tacas2.webp" alt="Cascão com gelato">
+      <img src="assets/images/ver-mais/taças.webp" alt="Banana split com gelato e calda">
+      <img src="assets/images/ver-mais/tacas2.webp" alt="Cascão com gelato">
     </div>
 
     <button class="slider-btn prev" type="button" aria-label="Imagem anterior">‹</button>
@@ -238,7 +248,7 @@
 
   <div class="produto-info">
     <h3>Complementos </h3>
-    <p>Nas taçinhas tem desde FINI, até castanhas e farofinha doce</p>
+    <p>Nas taçinhas tem Doces Fini, ChocoBol, Granulado, Castanha, Amendoim, Leite em pó, Farofa doce, Jujuba, Confetes, Canudinhos etc</p>
   </div>
 </article>
 </div>
@@ -252,9 +262,9 @@
       <article class="produto-card">
   <div class="card-slider">
     <div class="card-slider-track">
-      <img src="../images/ver-mais/poteacai.webp" alt="Pote de Açaí">
-        <img src="../images/ver-mais/poteacai2.webp" alt="Pote de Açaí">
-        <img src="../images/ver-mais/acai3.webp" alt="Pote de Açaí">
+      <img src="assets/images/ver-mais/poteacai.webp" alt="Pote de Açaí">
+        <img src="assets/images/ver-mais/poteacai2.webp" alt="Pote de Açaí">
+        <img src="assets/images/ver-mais/acai3.webp" alt="Pote de Açaí">
     </div>
 
     <button class="slider-btn prev" type="button" aria-label="Imagem anterior">‹</button>
@@ -272,9 +282,9 @@
       <article class="produto-card">
   <div class="card-slider">
     <div class="card-slider-track">
-      <img src="../images/ver-mais/potemaracuja.webp" alt="Pote de Açaí">
-        <img src="../images/ver-mais/potedelirio.webp" alt="Pote de Açaí">
-        <img src="../images/ver-mais/potelimao.webp" alt="Pote de Açaí">
+      <img src="assets/images/ver-mais/potemaracuja.webp" alt="Pote de Açaí">
+        <img src="assets/images/ver-mais/potedelirio.webp" alt="Pote de Açaí">
+        <img src="assets/images/ver-mais/potelimao.webp" alt="Pote de Açaí">
     </div>
 
     <button class="slider-btn prev" type="button" aria-label="Imagem anterior">‹</button>
@@ -291,29 +301,43 @@
       
 
       <article class="produto-card">
-        <img src="../images/ver-mais/potediet.webp" alt="Pote de Diet">
+        <img src="assets/images/ver-mais/potediet.webp" alt="Pote de Diet">
         <div class="produto-info">
           <h3>Pote de Diet</h3>
-          <p>Açaí montado com frutas e acompanhamentos.</p>
+          <p>Sabores dietéticos para quem curte sem açúcar</p>
         </div>
       </article>
+    
 
-      <article class="produto-card">
-        <img src="" alt="">
-        <div class="produto-info">
-          <h3>Embalagem de Viagem</h3>
-          <p>Pega seu gelato por kg e leva para casa.</p>
-        </div>
-      </article>
+<article class="produto-card">
+  <div class="card-slider">
+    <div class="card-slider-track">
+      <img src="assets/images/ver-mais/embalagem1.webp" alt="Embalagem de Viagem">
+      <img src="assets/images/ver-mais/embalagem2.webp" alt="Embalagem de Viagem">
+    </div>
+
+    <button class="slider-btn prev" type="button" aria-label="Imagem anterior">‹</button>
+    <button class="slider-btn next" type="button" aria-label="Próxima imagem">›</button>
+
+    <div class="slider-dots"></div>
+  </div>
+
+  <div class="produto-info">
+    <h3>Embalagem de Viagem</h3>
+    <p>Pega seu gelato por kg e leva para casa.</p>
+  </div>
+</article>
+
     </div>
   </div>
 
+  
 </section>
 
 
  <footer class="footer" aria-label="Rodapé do site">
   <nav class="footer-nav" aria-label="Links principais do rodapé">
-    <a href="../paginas/cardapio.html" aria-label="Acessar cardápio digital">
+    <a href="cardapio.html" aria-label="Acessar cardápio digital">
       <i class="fa-solid fa-utensils" aria-hidden="true"></i>
       <span>Cardápio Digital</span>
     </a>
@@ -332,11 +356,11 @@
   <div class="footer-linha" aria-hidden="true"></div>
 
   <p class="footer-copy">
-    © 2026 Arducci Gelateria e Açaíteria. Todos os direitos reservados.
+    © 2026 Arducci Gelateria e Açaíteria. Todos os direitos reservados. | <a href="#" id="abrirLgpd">Política de Privacidade</a>
   </p>
 </footer>
     
-  <script src="../JavaScript/script.js"></script>
+  <script src="assets/JavaScript/script.js"></script>
 </body>
 
 </html>

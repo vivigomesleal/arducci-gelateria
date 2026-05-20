@@ -840,3 +840,434 @@ body {
   transform: translateY(-2px);
 }
 
+/* animation */
+
+/* ===== HERO - ENTRADA LATERAL SUAVE ===== */
+
+.hero-content .location,
+.hero-content .typewriter-title,
+.hero-content p,
+.hero-content .btn-pedido {
+  opacity: 0;
+  transform: translateX(-38px);
+  animation: heroSlideIn 0.9s ease forwards;
+}
+
+.hero-content .location {
+  animation-delay: 0.2s;
+}
+
+.hero-content .typewriter-title {
+  animation-delay: 0.45s;
+}
+
+.hero-content p {
+  animation-delay: 0.7s;
+}
+
+.hero-content .btn-pedido {
+  animation-delay: 0.95s;
+}
+
+@keyframes heroSlideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-38px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* ===== HERO ENTRADA ===== */
+
+.hero-content {
+  animation: heroFade 1s ease forwards;
+}
+
+@keyframes heroFade {
+  from {
+    opacity: 0;
+    transform: translateX(-35px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* ===== MAQUINA DE ESCREVER ===== */
+
+.hero-title,
+.hero-title em {
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 0;
+  border-right: 3px solid #ffe69a00;
+}
+
+/* PRIMEIRA LINHA */
+
+.hero-title {
+  animation:
+    typing1 1.3s steps(12) 0.5s forwards,
+    blink 0.7s infinite;
+}
+
+/* SEGUNDA LINHA */
+
+.hero-title em {
+  animation:
+    typing2 1.5s steps(11) 1.8s forwards,
+    blink 0.7s infinite;
+}
+
+/* ANIMAÇÕES */
+
+@keyframes typing1 {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 9ch;
+  }
+}
+
+@keyframes typing2 {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 11ch;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+.nav-links {
+  opacity: 0;
+  transform: translateY(12px);
+  animation: navFade 0.8s ease forwards;
+  animation-delay: 0.4s;
+}
+
+@keyframes navFade {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== ESTADO INICIAL ===== */
+
+.produtos-subtitulo,
+.produtos-titulo,
+.produto-home {
+  opacity: 0;
+}
+
+/* TITULO DIREITA */
+
+.produtos-subtitulo.ativo {
+  animation: direitaTitulo 1s ease forwards;
+}
+
+/* TITULO ESQUERDA */
+
+.produtos-titulo.ativo {
+  animation: esquerdaTitulo 1s ease forwards;
+}
+
+/* CARDS */
+
+.produto-home.ativo {
+  animation: subirCards 1s ease forwards;
+}
+
+/* DELAY FILEIRAS */
+
+.produto-home:nth-child(1).ativo,
+.produto-home:nth-child(2).ativo,
+.produto-home:nth-child(3).ativo {
+  animation-delay: 0.2s;
+}
+
+.produto-home:nth-child(4).ativo,
+.produto-home:nth-child(5).ativo,
+.produto-home:nth-child(6).ativo {
+  animation-delay: 0.5s;
+}
+
+.produto-home:nth-child(7).ativo,
+.produto-home:nth-child(8).ativo,
+.produto-home:nth-child(9).ativo {
+  animation-delay: 0.8s;
+}
+
+/* ===== ANIMAÇÕES ===== */
+
+@keyframes direitaTitulo {
+  from {
+    opacity: 0;
+    transform: translateX(45px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes esquerdaTitulo {
+  from {
+    opacity: 0;
+    transform: translateX(-45px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes subirCards {
+  from {
+    opacity: 0;
+    transform: translateY(45px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.produtos-info p {
+  opacity: 0;
+  transform: translateY(12px);
+}
+
+.produtos-info p.ativo {
+  animation: navFade 0.8s ease forwards;
+}
+
+.produtos-info p:nth-child(1).ativo {
+  animation-delay: 0.2s;
+}
+
+.produtos-info p:nth-child(2).ativo {
+  animation-delay: 0.4s;
+}
+
+.produtos-info p:nth-child(3).ativo {
+  animation-delay: 0.6s;
+}
+
+/* ===== SOBRE / CURIOSIDADES / CONTATO - ESTADO INICIAL ===== */
+
+.sobre-subtitulo,
+.sobre-titulo,
+.sobre-texto p,
+.sobre-numeros div,
+.curiosidades-titulo,
+.curiosidades-linha,
+.curiosidades-intro,
+.comparativo-card,
+.comparativo-divisor,
+.contato-subtitulo,
+.contato-titulo,
+.contato-card,
+.contato-botao {
+  opacity: 0;
+}
+
+/* ===== SOBRE ===== */
+
+.sobre-subtitulo.ativo {
+  animation: entraEsquerda 0.9s ease forwards;
+}
+
+.sobre-titulo.ativo {
+  animation: entraDireita 0.9s ease forwards;
+}
+
+.sobre-texto p.ativo {
+  animation: subirSuave 0.9s ease forwards;
+}
+
+.sobre-texto p:nth-child(1).ativo {
+  animation-delay: 0.15s;
+}
+
+.sobre-texto p:nth-child(2).ativo {
+  animation-delay: 0.35s;
+}
+
+.sobre-texto p:nth-child(3).ativo {
+  animation-delay: 0.55s;
+}
+
+.sobre-numeros div.ativo {
+  animation: descerSuave 0.9s ease forwards;
+}
+
+.sobre-numeros div:nth-child(1).ativo {
+  animation-delay: 0.2s;
+}
+
+.sobre-numeros div:nth-child(2).ativo {
+  animation-delay: 0.4s;
+}
+
+.sobre-numeros div:nth-child(3).ativo {
+  animation-delay: 0.6s;
+}
+
+/* ===== CURIOSIDADES ===== */
+
+.curiosidades-titulo.ativo,
+.curiosidades-linha.ativo,
+.curiosidades-intro.ativo,
+.comparativo-card.ativo,
+.comparativo-divisor.ativo {
+  animation: subirSuave 0.9s ease forwards;
+}
+
+.curiosidades-linha.ativo {
+  animation-delay: 0.15s;
+}
+
+.curiosidades-intro.ativo {
+  animation-delay: 0.3s;
+}
+
+.comparativo-card:nth-of-type(1).ativo {
+  animation-delay: 0.45s;
+}
+
+.comparativo-divisor.ativo {
+  animation-delay: 0.6s;
+}
+
+.comparativo-card:nth-of-type(2).ativo {
+  animation-delay: 0.75s;
+}
+
+/* ===== CONTATO ===== */
+
+.contato-subtitulo.ativo {
+  animation: entraEsquerda 0.9s ease forwards;
+}
+
+.contato-titulo.ativo {
+  animation: entraDireita 0.9s ease forwards;
+}
+
+.contato-card.ativo,
+.contato-botao.ativo {
+  animation: subirSuave 0.9s ease forwards;
+}
+
+.contato-card:nth-child(1).ativo {
+  animation-delay: 0.2s;
+}
+
+.contato-card:nth-child(2).ativo {
+  animation-delay: 0.4s;
+}
+
+.contato-card:nth-child(3).ativo {
+  animation-delay: 0.6s;
+}
+
+.contato-botao.ativo {
+  animation-delay: 0.8s;
+}
+
+/* ===== ANIMAÇÕES GERAIS ===== */
+
+@keyframes entraEsquerda {
+  from {
+    opacity: 0;
+    transform: translateX(-45px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes entraDireita {
+  from {
+    opacity: 0;
+    transform: translateX(45px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes subirSuave {
+  from {
+    opacity: 0;
+    transform: translateY(35px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes descerSuave {
+  from {
+    opacity: 0;
+    transform: translateY(-28px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== FOOTER ANIMATION ===== */
+
+.footer {
+  opacity: 0;
+  transform: translateY(35px);
+}
+
+.footer.ativo {
+  animation: footerSobe 0.9s ease forwards;
+}
+
+@keyframes footerSobe {
+  from {
+    opacity: 0;
+    transform: translateY(35px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

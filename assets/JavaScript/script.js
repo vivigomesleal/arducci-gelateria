@@ -208,7 +208,7 @@ function setupRevenda() {
 function setupFiltroCatalogo() {
   const inputBusca = document.getElementById("buscarGelato");
   const catalogoSection = document.querySelector(".catalogo-section");
-  const categorias = document.querySelectorAll(".categoria-bloco");
+  const categorias = document.querySelectorAll(".categoria-bloco,.catalogo-grid");
 
   if (!inputBusca || !catalogoSection || categorias.length === 0) return;
 
@@ -392,4 +392,240 @@ function setupSliders() {
       }, 50);
     });
   });
+}
+
+/* ########## SLIDER PÁGINA OUTROS ########## */
+
+document.addEventListener("DOMContentLoaded", () => {
+  const elementos = document.querySelectorAll(`
+    .produtos-section,
+    .sobre-section,
+    .curiosidades-section,
+    .contato-section,
+    .produto-home,
+    .comparativo-card,
+    .contato-card
+  `);
+
+  elementos.forEach((el) => {
+    if (
+      el.classList.contains("produto-home") ||
+      el.classList.contains("comparativo-card") ||
+      el.classList.contains("contato-card")
+    ) {
+      el.classList.add("reveal-card");
+    } else {
+      el.classList.add("reveal");
+    }
+  });
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("ativo");
+      }
+    });
+  }, {
+    threshold: 0.15
+  });
+
+  elementos.forEach((el) => observer.observe(el));
+});
+
+/* ########## SLIDER PÁGINA OUTROS ########## */
+
+
+const elementosAnimados = document.querySelectorAll(`
+  .produtos-subtitulo,
+  .produtos-titulo,
+  .produto-home,
+  .produtos-info p,
+
+  .sobre-subtitulo,
+  .sobre-titulo,
+  .sobre-texto p,
+  .sobre-numeros div,
+
+  .curiosidades-titulo,
+  .curiosidades-linha,
+  .curiosidades-intro,
+  .comparativo-card,
+  .comparativo-divisor,
+
+  .contato-subtitulo,
+  .contato-titulo,
+  .contato-card,
+  .contato-botao
+`);
+
+const observerAnimacoes = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("ativo");
+      observerAnimacoes.unobserve(entry.target);
+    }
+  });
+}, {
+  threshold: 0.15
+});
+
+elementosAnimados.forEach((item) => {
+  observerAnimacoes.observe(item);
+});
+
+
+// ################# animation paginas   ################
+
+document.addEventListener("DOMContentLoaded", () => {
+  const elementosCardapio = document.querySelectorAll(`
+    .cardapio-titulo,
+    .cardapio-linha,
+    .cardapio-descricao,
+    .menu-item
+  `);
+
+  const observerCardapio = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("ativo");
+        observerCardapio.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.15
+  });
+
+  elementosCardapio.forEach((item) => {
+    observerCardapio.observe(item);
+  });
+
+  const botoesMenu = document.querySelectorAll(".menu-toggle");
+
+  botoesMenu.forEach((botao) => {
+    botao.addEventListener("click", () => {
+      const artigo = botao.closest(".menu-item");
+      const conteudo = artigo.querySelector(".menu-content");
+      const itensInternos = conteudo.querySelectorAll(`
+        .menu-alerta,
+        .menu-preco,
+        .menu-titulo-link,
+        .categoria,
+        .menu-content > h4,
+        .menu-content > p,
+        .produto-linha
+      `);
+
+      setTimeout(() => {
+        itensInternos.forEach((item, index) => {
+          item.classList.remove("ativo");
+
+          setTimeout(() => {
+            item.classList.add("ativo");
+          }, index * 90);
+        });
+      }, 80);
+    });
+  });
+});
+
+
+// ##########  animation revenda ###################
+
+document.addEventListener("DOMContentLoaded", () => {
+  const elementosRevenda = document.querySelectorAll(`
+    .revenda-subtitulo,
+    .revenda-titulo,
+    .revenda-frase,
+    .revenda-linha,
+    .revenda-texto,
+    .revenda-card,
+    .pedido-box,
+    .voltar-link
+  `);
+
+  const observerRevenda = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("ativo");
+        observerRevenda.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.15
+  });
+
+  elementosRevenda.forEach((item) => {
+    observerRevenda.observe(item);
+  });
+
+  const sabores = document.querySelectorAll(".sabores-grid label");
+
+  const observerSabores = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const listaSabores = [...sabores];
+        const index = listaSabores.indexOf(entry.target);
+
+        entry.target.style.animationDelay = `${(index % 12) * 0.06}s`;
+        entry.target.classList.add("ativo");
+
+        observerSabores.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.12
+  });
+
+  sabores.forEach((sabor) => {
+    observerSabores.observe(sabor);
+  });
+});
+
+// ############ paginas ##############
+
+document.addEventListener("DOMContentLoaded", () => {
+  const gelatoAnimados = document.querySelectorAll(`
+  .filtro-gelatos,
+  .categoria-bloco h2,
+  .catalogo-grid .produto-card
+`);
+
+  const observerGelatos = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("ativo");
+        observerGelatos.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.12
+  });
+
+  gelatoAnimados.forEach((item, index) => {
+    item.style.animationDelay = `${(index % 3) * 0.12}s`;
+    observerGelatos.observe(item);
+  });
+});
+
+// ############ footer animation ####################
+
+const footer = document.querySelector(".footer");
+
+if (footer) {
+  const observerFooter = new IntersectionObserver((entries) => {
+
+    entries.forEach((entry) => {
+
+      if (entry.isIntersecting) {
+        entry.target.classList.add("ativo");
+        observerFooter.unobserve(entry.target);
+      }
+
+    });
+
+  }, {
+    threshold: 0.15
+  });
+
+  observerFooter.observe(footer);
 }
