@@ -184,21 +184,26 @@
   }
 
   .catalogo-grid {
-    grid-template-columns: repeat(2, 220px);
+    grid-template-columns: repeat(2, 150px);
     justify-content: center;
-    gap: 30px;
+    gap: 20px;
   }
 
   .categoria-bloco {
     margin-bottom: 60px;
   }
-
-}
-
-
-@media (max-width: 560px) {
   
+   .categorias-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px 24px;
+  }
+
+  .categoria:nth-child(2)::after,
+  .categoria:nth-child(4)::after {
+    display: none;
+  }
 }
+
 
 
 /* =========================================================
@@ -306,19 +311,29 @@
     margin-bottom: 25px;
   }
 
+  
+
   .catalogo-grid {
-    grid-template-columns: 1fr;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(2, 1fr));
     justify-items: center;
-    gap: 24px;
+    gap: 10px;
+  }
+
+  .catalogo-grid {
+  grid-template-columns: repeat(auto-fit, minmax(150px, 2fr));
   }
 
   .produto-card {
-    width: min(100%, 260px);
-    min-height: 310px;
+    width: 100%;
+    max-width: 150px;
+    min-height: 150px;
   }
 
+  
+
   .produto-card img {
-    height: 185px;
+    height: 150px;
   }
 
   .produto-info h3 {
@@ -326,7 +341,7 @@
   }
 
   .produto-info p {
-    font-size: 12px;
+    font-size: 13px;
   }
 
 }
@@ -335,6 +350,21 @@
 @media (max-width: 768px) {
   .navbar {
     display: none;
+  }
+
+  .revenda-card {
+    padding: 28px 18px;
+  }
+
+  .sabores-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .btn-whatsapp {
+    width: 100%;
+    justify-content: center;
+    padding: 17px 20px;
+    font-size: 12px;
   }
 
   .menu-responsivo {
@@ -370,6 +400,55 @@
 
   .hero {
     min-height: 300px;
+  }
+  
+   .menu-digital {
+    padding: 25px 12px 45px;
+  }
+
+  .menu-toggle {
+    padding: 16px 14px;
+    gap: 12px;
+  }
+
+  .menu-info strong {
+    font-size: 17px;
+  }
+
+  .menu-info small {
+    font-size: 11px;
+  }
+
+  .menu-content {
+    padding: 0 14px 24px;
+  }
+
+  .menu-preco,
+  .produto-linha {
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .menu-titulo-link {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  
+
+  .categoria {
+    padding-right: 0;
+    padding-bottom: 18px;
+  }
+
+  .categoria::after {
+    width: 100%;
+    height: 1px;
+    top: auto;
+    bottom: 0;
+    right: auto;
+    left: 0;
   }
 
   .hero h1 {
@@ -416,6 +495,7 @@
     font-size: 10px;
   }
 
+
   .footer {
     padding: 40px 18px 25px;
   }
@@ -440,6 +520,27 @@
 
 }
 
+@media (max-width: 560px) {
+
+  .acompanhamentos-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+  }
+
+  .acompanhamentos-grid .produto-card {
+    width: 100%;
+    max-width: 100px;
+  }
+
+  .acompanhamentos-grid .produto-card img {
+    height: 85px;
+  }
+
+  .acompanhamentos-grid .produto-info h3 {
+    font-size: 10px;
+  }
+
+}
 
 /* =========================================================
    MOBILE PEQUENO
@@ -449,6 +550,11 @@
 
   .hero h1 {
     font-size: 36px;
+  }
+
+  .produto-card {
+    width: min(100%, 150px);
+    min-height: 150px;
   }
 
   .location {
