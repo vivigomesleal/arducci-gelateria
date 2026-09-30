@@ -1353,11 +1353,11 @@ font-family: 'Playfair Display', serif;
 margin: 0 0 5px;
 font-family: 'Cinzel', serif;
   font-weight: 600;
-  font-size: clamp(20px, 3vw, 18px);
+  font-size: clamp(20px, 3vw, 15px);
   line-height: 1.05;
   color: #432916;
-opacity: 0.75;
-
+opacity: 0.65;
+   
 
 }
 

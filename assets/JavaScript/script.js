@@ -332,7 +332,7 @@ const rotaObserver = new IntersectionObserver(
             }
 
         });
-
+     
     },
     {
         threshold: 0.2
