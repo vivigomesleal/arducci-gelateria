@@ -203,6 +203,144 @@ function setupRevenda() {
   });
 }
 
+/* =========================================
+   ROTA GASTRONÔMICA - GALERIA
+========================================= */
+
+const rotaSlider = document.getElementById("rotaSlider");
+const rotaPrev = document.getElementById("rotaPrev");
+const rotaNext = document.getElementById("rotaNext");
+const rotaContador = document.getElementById("rotaContador");
+
+const rotaSlides = document.querySelectorAll(".rota-slide");
+
+let rotaAtual = 0;
+
+
+/* Atualiza contador */
+
+function atualizarContador() {
+
+    rotaContador.textContent =
+        `Foto ${rotaAtual + 1} de ${rotaSlides.length}`;
+
+}
+
+
+/* Vai para uma foto específica */
+
+function irParaFoto(index) {
+
+    if (index < 0) {
+        index = rotaSlides.length - 1;
+    }
+
+    if (index >= rotaSlides.length) {
+        index = 0;
+    }
+
+    rotaAtual = index;
+
+    rotaSlides[rotaAtual].scrollIntoView({
+        behavior: "smooth",
+        block: "nearest",
+        inline: "center"
+    });
+
+    atualizarContador();
+}
+
+
+/* Próxima */
+
+rotaNext.addEventListener("click", () => {
+    irParaFoto(rotaAtual + 1);
+});
+
+
+/* Anterior */
+
+rotaPrev.addEventListener("click", () => {
+    irParaFoto(rotaAtual - 1);
+});
+
+
+/* =========================================
+   ATUALIZAÇÃO AO DESLIZAR
+========================================= */
+
+rotaSlider.addEventListener("scroll", () => {
+
+    const largura = rotaSlider.offsetWidth;
+
+    if (!largura) return;
+
+    const novoIndice = Math.round(
+        rotaSlider.scrollLeft / largura
+    );
+
+    if (
+        novoIndice >= 0 &&
+        novoIndice < rotaSlides.length &&
+        novoIndice !== rotaAtual
+    ) {
+        rotaAtual = novoIndice;
+        atualizarContador();
+    }
+
+});
+
+
+/* =========================================
+   TECLADO
+========================================= */
+
+rotaSlider.addEventListener("keydown", (event) => {
+
+    if (event.key === "ArrowRight") {
+
+        event.preventDefault();
+        irParaFoto(rotaAtual + 1);
+
+    }
+
+    if (event.key === "ArrowLeft") {
+
+        event.preventDefault();
+        irParaFoto(rotaAtual - 1);
+
+    }
+
+});
+
+/* =========================================
+   ANIMAÇÃO AO ENTRAR NA TELA
+========================================= */
+
+const rotaSecao = document.getElementById("rotagastronomica");
+
+const rotaObserver = new IntersectionObserver(
+    (entries) => {
+
+        entries.forEach((entry) => {
+
+            if (entry.isIntersecting) {
+
+                rotaSecao.classList.add("rota-visivel");
+
+                rotaObserver.unobserve(rotaSecao);
+            }
+
+        });
+
+    },
+    {
+        threshold: 0.2
+    }
+);
+
+rotaObserver.observe(rotaSecao);
+
 /* ########## FILTRO CATÁLOGO ########## */
 
 function setupFiltroCatalogo() {

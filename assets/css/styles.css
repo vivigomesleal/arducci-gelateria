@@ -1147,6 +1147,387 @@ body {
 .sobre-numeros div:nth-child(3).ativo {
   animation-delay: 0.6s;
 }
+/* =========================================
+   ROTA GASTRONÔMICA
+========================================= */
+
+#rotagastronomica {
+width: 100%;
+min-height: 800px;
+padding: 60px 5%;
+box-sizing: border-box;
+overflow: hidden;
+background-color: #f3eee8;
+}
+
+.rota-container {
+width: 100%;
+max-width: 1400px;
+margin: 0 auto;
+}
+
+/* =================================
+TOPO
+GALERIA + TEXTO
+================================= */
+
+.rota-topo {
+display: grid;
+grid-template-columns: 55% 45%;
+align-items: center;
+gap: 50px;
+
+
+}
+
+/* =================================
+GALERIA
+================================= */
+
+.rota-galeria {
+position: relative;
+width: 100%;
+height: 400px;
+
+
+overflow: hidden;
+border-radius: 16px;
+
+
+}
+
+.rota-slider {
+display: flex;
+
+
+width: 100%;
+height: 100%;
+
+overflow-x: auto;
+
+scroll-snap-type: x mandatory;
+scroll-behavior: smooth;
+
+scrollbar-width: none;
+touch-action: pan-x;
+
+
+}
+
+.rota-slider::-webkit-scrollbar {
+display: none;
+}
+
+.rota-slide {
+flex: 0 0 100%;
+
+
+width: 100%;
+height: 100%;
+
+scroll-snap-align: center;
+
+
+}
+
+.rota-slide img {
+display: block;
+
+
+width: 100%;
+height: 100%;
+
+object-fit: cover;
+
+
+}
+
+/* =================================
+BOTÕES
+================================= */
+
+.rota-btn {
+position: absolute;
+
+
+top: 50%;
+transform: translateY(-50%);
+
+width: 48px;
+height: 48px;
+
+border: 0;
+border-radius: 50%;
+
+background: rgba(0, 0, 0, .65);
+color: #fff;
+
+display: flex;
+align-items: center;
+justify-content: center;
+
+cursor: pointer;
+z-index: 2;
+
+
+}
+
+.rota-btn:hover {
+background: rgba(0, 0, 0, .9);
+}
+
+.rota-btn:focus-visible {
+outline: 3px solid #fff;
+outline-offset: 3px;
+}
+
+.rota-btn span {
+font-size: 34px;
+}
+
+.rota-btn-prev {
+left: 15px;
+}
+
+.rota-btn-next {
+right: 15px;
+}
+
+/* =================================
+CONTADOR
+================================= */
+
+.rota-contador {
+position: absolute;
+
+
+left: 50%;
+bottom: 15px;
+
+transform: translateX(-50%);
+
+margin: 0;
+padding: 6px 12px;
+
+border-radius: 20px;
+
+background: rgba(0, 0, 0, .65);
+color: #fff;
+
+font-size: .8rem;
+
+
+}
+
+/* =================================
+INTRODUÇÃO
+================================= */
+
+.rota-introducao {
+max-width: 500px;
+}
+
+.rota-sobretitulo {
+margin: 0 0 12px;
+font-family: 'Montserrat', sans-serif;
+font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 8px;
+  font-size: 18px;
+  color: #8b5e52;
+
+}
+
+.rota-introducao h2 {
+margin: 0 0 10px;
+font-family: 'Playfair Display', serif;
+  font-size: clamp(36px, 5vw, 48px);
+  color: #4b2b24;
+  font-weight: 800;
+  margin-bottom: 18px;
+
+
+}
+
+.rota-chamada {
+margin: 0 0 5px;
+font-family: 'Cinzel', serif;
+  font-weight: 600;
+  font-size: clamp(20px, 3vw, 18px);
+  line-height: 1.05;
+  color: #432916;
+opacity: 0.75;
+
+
+}
+
+.rota-primeiro-paragrafo {
+margin-top: 5px 0  10px;
+
+
+font-family: 'Cinzel', serif;
+  font-weight: 600;
+  font-size: clamp(20px, 3vw, 20px);
+  line-height: 0.85;
+  color: #432916;
+  box-sizing: border-box;
+
+
+}
+
+/* =================================
+CONTINUAÇÃO
+================================= */
+
+.rota-continuacao {
+width: 100%;
+max-width: 1200px;
+
+
+margin: 0 auto;
+
+font-family: 'Cinzel', serif;
+  font-weight: 600;
+  font-size: clamp(20px, 3vw, 20px);
+  line-height: 1.05;
+  color: #432916;
+
+
+}
+/* 
+.rota-continuacao p {
+margin: 0 0 20px;
+
+
+} */
+
+.rota-continuacao a {
+font-weight: 800;
+
+color: #402613;
+text-decoration: underline;
+text-underline-offset: 3px;
+
+
+}
+
+.rota-continuacao a:focus-visible {
+outline: 2px solid currentColor;
+outline-offset: 3px;
+}
+
+/* =================================
+   ANIMAÇÃO - ROTA GASTRONÔMICA
+================================= */
+
+/* Estado inicial */
+#rotagastronomica .rota-galeria,
+#rotagastronomica .rota-introducao,
+#rotagastronomica .rota-continuacao {
+    opacity: 0;
+}
+
+
+/* Galeria entra pela esquerda */
+#rotagastronomica.rota-visivel .rota-galeria {
+    animation: entraEsquerda 1s ease-out forwards;
+}
+
+
+/* Título e primeiro parágrafo entram pela direita */
+#rotagastronomica.rota-visivel .rota-introducao {
+    animation: entraDireita 1s ease-out 0.2s forwards;
+}
+
+
+/* Continuação sobe depois */
+#rotagastronomica.rota-visivel .rota-continuacao {
+    animation: subirSuave 1s ease-out 0.45s forwards;
+}
+
+/* =================================
+TABLET
+================================= */
+
+@media (max-width: 900px) {
+
+
+#rotagastronomica {
+    min-height: auto;
+    padding: 50px 5%;
+}
+
+.rota-topo {
+    grid-template-columns: 1fr;
+    gap: 30px;
+}
+
+.rota-galeria {
+    height: 350px;
+}
+
+.rota-introducao {
+    max-width: 800px;
+}
+
+
+}
+
+/* =================================
+CELULAR
+================================= */
+
+@media (max-width: 600px) {
+
+
+#rotagastronomica {
+    padding: 40px 20px;
+}
+
+.rota-topo {
+    gap: 25px;
+    margin-bottom: 35px;
+}
+
+.rota-galeria {
+    height: 270px;
+    border-radius: 12px;
+}
+
+.rota-btn {
+    width: 42px;
+    height: 42px;
+}
+
+.rota-btn-prev {
+    left: 10px;
+}
+
+.rota-btn-next {
+    right: 10px;
+}
+
+.rota-btn span {
+    font-size: 28px;
+}
+
+.rota-introducao h2 {
+    font-size: 2rem;
+}
+
+.rota-sobretitulo {
+    font-size: .7rem;
+}
+
+.rota-primeiro-paragrafo,
+.rota-continuacao {
+    font-size: .95rem;
+    line-height: 1.7;
+}
+
+
+}
+
 
 /* ===== CURIOSIDADES ===== */
 
